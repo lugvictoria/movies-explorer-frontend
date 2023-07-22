@@ -1,15 +1,13 @@
+import AboutProject from '../AboutProject/AboutProject';
 import Article from '../Article/Article';
 import NavTab from '../NavTab/NavTab';
 import Promo from '../Promo/Promo';
-
 function Landing() {
   return (
     <main>
       <Promo />
       <NavTab />
-      <Article title="О&nbsp;проекте" navId="about-project">
-        <div>Описание диплома</div>
-      </Article>
+      <AboutProject />
       <Article title="Технологии" navId="techs" isThemed={true}>
         <div>7 технологий</div>
       </Article>
