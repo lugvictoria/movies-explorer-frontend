@@ -1,11 +1,13 @@
 import React from 'react';
 import './Navigation.css';
-
 function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false);
-
   function toggleMenu() {
     setIsOpen((state) => !state);
+  }
+
+  function handleOverlayClick(event) {
+    if (event.target === event.currentTarget) toggleMenu();
   }
 
   return (
@@ -16,11 +18,11 @@ function Navigation() {
         aria-label="Открыть меню"
         onClick={toggleMenu}
       ></button>
-
       <div
         className={`navigation__menu${
           isOpen ? ' navigation__menu_opened' : ''
         }`}
+        onClick={handleOverlayClick}
       >
         <nav className="navigation__panel">
           <button
@@ -29,7 +31,6 @@ function Navigation() {
             aria-label="Закрыть меню"
             onClick={toggleMenu}
           ></button>
-
           <ul className="navigation__list">
             <li className="navigation__list-item">
               <a className="navigation__link" href="#test">
@@ -63,5 +64,4 @@ function Navigation() {
     </div>
   );
 }
-
 export default Navigation;
