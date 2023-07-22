@@ -8,7 +8,7 @@
 
 Полностью приложение состоит из двух частей:
 
-1. [Movies Explorer (бэкенд-часть)] (https://github.com/lugvictoria/movies-explorer-api)
+1. [Movies Explorer (бэкенд-часть)](https://github.com/lugvictoria/movies-explorer-api)
 2. Movies Explorer (фронтенд-часть) ⬅ _этот репозиторий_
 
 
