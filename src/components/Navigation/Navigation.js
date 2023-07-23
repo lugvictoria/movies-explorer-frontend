@@ -5,10 +5,25 @@ function Navigation() {
   function toggleMenu() {
     setIsOpen((state) => !state);
   }
-
   function handleOverlayClick(event) {
     if (event.target === event.currentTarget) toggleMenu();
   }
+
+  function handleEscClose(event) {
+    if (event.key === 'Escape') {
+      toggleMenu();
+    }
+  }
+
+  React.useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscClose);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscClose);
+    }
+  });
 
   return (
     <div className="navigation">
