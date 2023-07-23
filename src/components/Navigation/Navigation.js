@@ -1,20 +1,20 @@
 import React from 'react';
 import './Navigation.css';
-function Navigation() {
+
+function Navigation({ hasLinkToMain = true }) {
   const [isOpen, setIsOpen] = React.useState(false);
+
   function toggleMenu() {
     setIsOpen((state) => !state);
   }
   function handleOverlayClick(event) {
     if (event.target === event.currentTarget) toggleMenu();
   }
-
   function handleEscClose(event) {
     if (event.key === 'Escape') {
       toggleMenu();
     }
   }
-
   React.useEffect(() => {
     if (isOpen) {
       document.addEventListener('keydown', handleEscClose);
@@ -22,7 +22,7 @@ function Navigation() {
 
     return () => {
       document.removeEventListener('keydown', handleEscClose);
-    }
+    };
   });
 
   return (
@@ -46,12 +46,16 @@ function Navigation() {
             aria-label="Закрыть меню"
             onClick={toggleMenu}
           ></button>
+
           <ul className="navigation__list">
-            <li className="navigation__list-item">
-              <a className="navigation__link" href="#test">
-                Главная
-              </a>
-            </li>
+            {hasLinkToMain && (
+              <li className="navigation__list-item navigation__list-item_type_main-page">
+                <a className="navigation__link" href="#test">
+                  Главная
+                </a>
+              </li>
+            )}
+
             <li className="navigation__list-item">
               <a
                 className="navigation__link navigation__link_active"
@@ -60,11 +64,13 @@ function Navigation() {
                 Фильмы
               </a>
             </li>
+
             <li className="navigation__list-item">
               <a className="navigation__link" href="#test">
                 Сохранённые фильмы
               </a>
             </li>
+
             <li className="navigation__list-item">
               <a
                 className="navigation__link navigation__link_type_account"
