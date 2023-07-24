@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import NavigationLink from '../NavigationLink/NavigationLink';
 import './Navigation.css';
 
 function Navigation({ hasLinkToMain = true }) {
@@ -44,45 +44,14 @@ function Navigation({ hasLinkToMain = true }) {
             aria-label="Закрыть меню"
             onClick={toggleMenu}
           ></button>
+
           <ul className="navigation__list">
             {hasLinkToMain && (
-              <li className="navigation__list-item navigation__list-item_type_main-page">
-                <NavLink
-                  className={({ isActive }) =>
-                    `navigation__link${
-                      isActive ? ' navigation__link_active' : ''
-                    }`
-                  }
-                  to="/"
-                >
-                  Главная
-                </NavLink>
-              </li>
+              <NavigationLink title="Главная" to="/" isLinkToMain />
             )}
-
-            <li className="navigation__list-item">
-              <NavLink
-                className={({isActive}) => `navigation__link${isActive ? ' navigation__link_active' : ''}`}
-                to="/movies"
-              >
-                Фильмы
-              </NavLink>
-            </li>
-
-            <li className="navigation__list-item">
-              <NavLink className={({isActive}) => `navigation__link${isActive ? ' navigation__link_active' : ''}`} to="/saved-movies">
-                Сохранённые фильмы
-              </NavLink>
-            </li>
-
-            <li className="navigation__list-item">
-              <NavLink
-                className={({isActive}) => `navigation__link${isActive ? ' navigation__link_active' : ''}`}
-                to="/profile"
-              >
-                Аккаунт
-              </NavLink>
-            </li>
+            <NavigationLink title="Фильмы" to="/movies" />
+            <NavigationLink title="Сохранённые фильмы" to="/saved-movies" />
+            <NavigationLink title="Аккаунт" to="/profile" isLinkToProfile />
           </ul>
         </nav>
       </div>
