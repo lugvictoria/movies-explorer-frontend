@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
-
 function NavigationLink({ isLinkToMain = false, title, to, isLinkToProfile }) {
   return (
     <li
@@ -17,11 +16,13 @@ function NavigationLink({ isLinkToMain = false, title, to, isLinkToProfile }) {
           )
         }
         to={to}
+        style={({ isActive }) => {
+          return isActive ? { pointerEvents: 'none' } : {};
+        }}
       >
         {title}
       </NavLink>
     </li>
   );
 }
-
 export default NavigationLink;
