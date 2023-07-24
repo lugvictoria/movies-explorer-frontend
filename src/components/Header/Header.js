@@ -1,19 +1,19 @@
 import './Header.css';
 import logo from '../../images/logo.svg';
+import { Link } from 'react-router-dom';
 
 function Header({ children, isThemed = false }) {
   return (
     <header className={`header section${isThemed ? ' header_themed' : ''}`}>
-      <a className="header__main-link" href="#main">
+      <Link className="header__main-link" to="/">
         <img
           className="header__logo"
-          alt="Логотип приложения: круг"
+          alt="Логотип приложения: окружность"
           src={logo}
         />
-      </a>
+      </Link>
       {children}
     </header>
   );
 }
-
 export default Header;

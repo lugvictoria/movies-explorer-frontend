@@ -1,9 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation({ hasLinkToMain = true }) {
   const [isOpen, setIsOpen] = React.useState(false);
-
   function toggleMenu() {
     setIsOpen((state) => !state);
   }
@@ -19,12 +19,10 @@ function Navigation({ hasLinkToMain = true }) {
     if (isOpen) {
       document.addEventListener('keydown', handleEscClose);
     }
-
     return () => {
       document.removeEventListener('keydown', handleEscClose);
     };
   });
-
   return (
     <div className="navigation">
       <button
@@ -46,38 +44,44 @@ function Navigation({ hasLinkToMain = true }) {
             aria-label="Закрыть меню"
             onClick={toggleMenu}
           ></button>
-
           <ul className="navigation__list">
             {hasLinkToMain && (
               <li className="navigation__list-item navigation__list-item_type_main-page">
-                <a className="navigation__link" href="#test">
+                <NavLink
+                  className={({ isActive }) =>
+                    `navigation__link${
+                      isActive ? ' navigation__link_active' : ''
+                    }`
+                  }
+                  to="/"
+                >
                   Главная
-                </a>
+                </NavLink>
               </li>
             )}
 
             <li className="navigation__list-item">
-              <a
-                className="navigation__link navigation__link_active"
-                href="#test"
+              <NavLink
+                className={({isActive}) => `navigation__link${isActive ? ' navigation__link_active' : ''}`}
+                to="/movies"
               >
                 Фильмы
-              </a>
+              </NavLink>
             </li>
 
             <li className="navigation__list-item">
-              <a className="navigation__link" href="#test">
+              <NavLink className={({isActive}) => `navigation__link${isActive ? ' navigation__link_active' : ''}`} to="/saved-movies">
                 Сохранённые фильмы
-              </a>
+              </NavLink>
             </li>
 
             <li className="navigation__list-item">
-              <a
-                className="navigation__link navigation__link_type_account"
-                href="#test"
+              <NavLink
+                className={({isActive}) => `navigation__link${isActive ? ' navigation__link_active' : ''}`}
+                to="/profile"
               >
                 Аккаунт
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
