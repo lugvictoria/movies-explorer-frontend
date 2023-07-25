@@ -22,6 +22,7 @@
 .auth__container {
   width: 100%;
   max-width: 396px;
+  height: 560px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -29,13 +30,13 @@
 
 @media (min-width: 768px) {
   .auth__container {
-    max-height: 560px;
+    flex-grow: 0;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .auth__container {
-    max-height: none;
+    flex-grow: 1;
   }
 }
 
@@ -106,7 +107,7 @@
 
 .auth__input {
   display: block;
-  border: none;
+  border: 1px solid transparent;
   background-color: var(--auth-input);
   border-radius: 8px;
   width: 100%;
@@ -116,11 +117,12 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 1.23;
+  transition: border 0.3s;
 }
 
 .auth__input:focus {
-  outline-offset: 0;
-  outline: 1px solid var(--primary);
+  outline: none;
+  border: 1px solid var(--primary);
 }
 
 .auth__error {
