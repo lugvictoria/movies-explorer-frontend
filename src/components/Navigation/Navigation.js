@@ -1,9 +1,11 @@
+import classNames from 'classnames';
 import React from 'react';
 import NavigationLink from '../NavigationLink/NavigationLink';
 import './Navigation.css';
 
-function Navigation({ hasLinkToMain = true }) {
+function Navigation({ hasLinkToMain = true, isThemed = false }) {
   const [isOpen, setIsOpen] = React.useState(false);
+
   function toggleMenu() {
     setIsOpen((state) => !state);
   }
@@ -23,8 +25,9 @@ function Navigation({ hasLinkToMain = true }) {
       document.removeEventListener('keydown', handleEscClose);
     };
   });
+
   return (
-    <div className="navigation">
+    <div className={classNames('navigation', {navigation_themed: isThemed})}>
       <button
         type="button"
         className="navigation__open-button"
@@ -44,7 +47,6 @@ function Navigation({ hasLinkToMain = true }) {
             aria-label="Закрыть меню"
             onClick={toggleMenu}
           ></button>
-
           <ul className="navigation__list">
             {hasLinkToMain && (
               <NavigationLink title="Главная" to="/" isLinkToMain />

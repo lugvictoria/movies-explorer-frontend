@@ -1,28 +1,21 @@
-import classNames from 'classnames';
-import { NavLink } from 'react-router-dom';
-function NavigationLink({ isLinkToMain = false, title, to, isLinkToProfile }) {
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import Navigation from '../Navigation/Navigation';
+import './Movies.css';
+function Movies() {
   return (
-    <li
-      className={classNames('navigation__list-item', {
-        'navigation__list-item_type_main-page': isLinkToMain,
-      })}
-    >
-      <NavLink
-        className={({ isActive }) =>
-          classNames(
-            'navigation__link',
-            { navigation__link_active: isActive },
-            { navigation__link_type_account: isLinkToProfile },
-          )
-        }
-        to={to}
-        style={({ isActive }) => {
-          return isActive ? { pointerEvents: 'none' } : {};
-        }}
-      >
-        {title}
-      </NavLink>
-    </li>
+    <>
+      <Header>
+        <Navigation />
+      </Header>
+      <Header isThemed>
+        <Navigation isThemed />
+      </Header>
+      <main>
+        Содержимое
+      </main>
+      <Footer />
+    </>
   );
 }
-export default NavigationLink;
+export default Movies;
