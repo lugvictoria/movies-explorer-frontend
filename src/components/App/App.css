@@ -14,6 +14,7 @@
     padding-inline: 30px;
   }
 }
+
 @media (min-width: 1280px) {
   .section {
     padding-inline: 70px;

@@ -32,7 +32,8 @@
   border-bottom: 1px solid var(--background-variant-secondary);
   padding-block: 15px;
   transition: border-bottom-color 0.3s;
-  padding-right: 60px; /* Space for input button */
+  padding-right: 60px;
+  /* Space for input button */
   /* Текст */
   font-style: normal;
   font-weight: 500;

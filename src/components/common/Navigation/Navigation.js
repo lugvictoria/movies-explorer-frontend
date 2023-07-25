@@ -27,7 +27,7 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
   });
 
   return (
-    <div className={classNames('navigation', {navigation_themed: isThemed})}>
+    <div className={classNames('navigation', { navigation_themed: isThemed })}>
       <button
         type="button"
         className="navigation__open-button"
@@ -35,9 +35,8 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
         onClick={toggleMenu}
       ></button>
       <div
-        className={`navigation__menu${
-          isOpen ? ' navigation__menu_opened' : ''
-        }`}
+        className={`navigation__menu${isOpen ? ' navigation__menu_opened' : ''
+          }`}
         onClick={handleOverlayClick}
       >
         <nav className="navigation__panel">

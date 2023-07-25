@@ -12,7 +12,7 @@ function Movies() {
         <Navigation />
       </Header>
       <main>
-      <SearchForm />
+        <SearchForm />
       </main>
       <Footer />
     </>
