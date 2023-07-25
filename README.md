@@ -1,5 +1,3 @@
-# movies-explorer-frontend
-
 # Movies Explorer (фронтенд-часть)
 
 Репозиторий для фронтенд-части приложения с интерфейсом на React
