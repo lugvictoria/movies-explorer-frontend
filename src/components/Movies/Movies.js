@@ -1,6 +1,6 @@
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
-import Navigation from '../Navigation/Navigation';
+import Footer from '../common/Header/Header';
+import Header from '../common/Footer/Footer';
+import Navigation from '../common/Navigation/Navigation';
 import './Movies.css';
 
 function Movies() {

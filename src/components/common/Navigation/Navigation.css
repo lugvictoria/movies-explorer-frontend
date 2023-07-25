@@ -1,11 +1,13 @@
 .navigation {
   color: var(--on-surface);
 }
+
 @media (min-width: 1280px) {
   .navigation {
     width: 100%;
   }
 }
+
 .navigation__open-button {
   /* Сброс стилей */
   display: block;
@@ -16,19 +18,22 @@
   width: 44px;
   aspect-ratio: 1;
   /* Иконка */
-  background-image: url(../../images/icon__menu.svg);
+  background-image: url(../../../images/icon__menu.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   /* Анимация */
   transition: opacity 0.3s, transform 0.3s;
 }
+
 .navigation__open-button:hover {
   opacity: 0.8;
 }
+
 .navigation__open-button:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
+
 @media (min-width: 1280px) {
   .navigation__open-button {
     display: none;
@@ -36,7 +41,7 @@
 }
 
 .navigation_themed .navigation__open-button {
-  background-image: url(../../images/icon__menu_white.svg);
+  background-image: url(../../../images/icon__menu_white.svg);
 }
 
 /* Всё меню, включая оверлей */
@@ -56,11 +61,13 @@
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
 }
+
 .navigation__menu_opened {
   /* Анимация */
   opacity: 1;
   visibility: visible;
 }
+
 @media (min-width: 1280px) {
   .navigation__menu {
     /* Сброс мобильной версии */
@@ -71,6 +78,7 @@
     backdrop-filter: none;
   }
 }
+
 .navigation__panel {
   /* Сброс */
   margin: 0;
@@ -79,35 +87,81 @@
   width: 100%;
   height: 100%;
   max-width: 520px;
-	@@ -128,106 +132,110 @@
+  padding: 144px 10px 46px;
+  /* Положение */
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  /* Анимация */
+  transition: transform 0.3s;
+  /* Фон */
+  background-color: var(--surface);
+}
+
+.navigation__menu_opened .navigation__panel {
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+  .navigation__panel {
+    padding: 160px 90px 90px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navigation__panel {
+    /* Сброс мобильной версии */
+    position: static;
+    transform: translateX(0);
+    background-color: transparent;
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.navigation__close-button {
+  /* Сброс */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  /* Позиционирование */
+  position: absolute;
+  top: 13px;
+  right: 13px;
   /* Размеры */
   width: 31px;
   aspect-ratio: 1;
   /* Иконка */
-  background-image: url(../../images/icon__close.svg);
+  background-image: url(../../../images/icon__close.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   /* Анимация */
   transition: opacity 0.3s, transform 0.3s;
 }
+
 .navigation__close-button:hover {
   opacity: 0.8;
 }
+
 .navigation__close-button:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
+
 @media (min-width: 768px) {
   .navigation__close-button {
     top: 30px;
     right: 30px;
   }
 }
+
 @media (min-width: 1280px) {
   .navigation__close-button {
     display: none;
   }
 }
+
 .navigation__list {
   /* Сброс */
   list-style: none;
@@ -121,11 +175,13 @@
   /* Размер */
   height: 100%;
 }
+
 @media (min-width: 768px) {
   .navigation__list {
     gap: 28px;
   }
 }
+
 @media (min-width: 1280px) {
   .navigation__list {
     /* Сброс мобильной версии */
@@ -133,20 +189,24 @@
     gap: 16px;
   }
 }
+
 .navigation__list-item:last-child {
   margin-top: auto;
 }
+
 @media (min-width: 1280px) {
   .navigation__list-item:last-child {
     margin-top: 0;
     margin-left: auto;
   }
 }
+
 @media (min-width: 1280px) {
   .navigation__list-item_type_main-page {
     display: none;
   }
 }
+
 .navigation__link {
   /* Сброс */
   display: block;
@@ -161,9 +221,11 @@
   /* Анимация */
   transition: opacity 0.3s;
 }
+
 .navigation__link:hover {
   opacity: 0.8;
 }
+
 @media (min-width: 1280px) {
   .navigation__link {
     font-weight: 400;
@@ -181,17 +243,20 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 11px;
 }
+
 @media (min-width: 1280px) {
   .navigation__link_active {
     text-decoration: none;
     font-weight: 500;
   }
 }
+
 .navigation__link_type_account {
   /* Текст */
   font-size: 14px;
   line-height: 1.14;
 }
+
 @media (min-width: 768px) {
   .navigation__link_type_account {
     /* Кнопка */
@@ -200,6 +265,7 @@
     background-color: var(--account-button);
   }
 }
+
 @media (min-width: 1280px) {
   .navigation__link_type_account {
     font-weight: 500;
@@ -211,3 +277,11 @@
     background-color: var(--promo-variant);
   }
 }
+
+@media (min-width: 768px) {
+  .navigation__link_active.navigation__link_type_account {
+    text-decoration: none;
+    outline: 2px solid;
+  }
+}
+

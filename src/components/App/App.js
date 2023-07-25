@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import Landing from '../Landing/Landing';
+import Landing from '../langing/Landing/Landing';
 import Movies from '../Movies/Movies';
 import Page404 from '../Page404/Page404';
 import './App.css';
