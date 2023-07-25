@@ -13,7 +13,7 @@ function Movies() {
       </Header>
       <main>
         <SearchForm />
-        <MoviesCardList />
+        <MoviesCardList type="all" />
         <More />
       </main>
       <Footer />
