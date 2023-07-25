@@ -1,6 +1,5 @@
 .profile {
   color: var(--on-surface);
-  /* Отступы */
   padding: 70px 30px 40px;
   /* Расположение элементов */
   display: flex;
@@ -69,6 +68,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .profile__input-container {
   display: flex;
   justify-content: space-between;
@@ -77,9 +77,11 @@
   padding-block: 10px;
   border-bottom: 1px solid var(--background-variant-secondary);
 }
+
 .profile__input-container:last-of-type {
   border-bottom: none;
 }
+
 .profile__input-label {
   width: max-content;
   font-style: normal;
@@ -87,6 +89,7 @@
   font-size: 11px;
   line-height: 1.18;
 }
+
 .profile__input {
   /* Сброс */
   display: block;
@@ -126,6 +129,7 @@
   text-align: center;
   color: var(--error);
 }
+
 .input__submit-button {
   cursor: pointer;
   border: none;
@@ -143,17 +147,21 @@
   /* Анимация */
   transition: opacity.3s, transform 0.3s;
 }
+
 .input__submit-button:hover {
   opacity: 0.8;
 }
+
 .input__submit-button:active {
   transform: scale(0.9);
 }
+
 .input__submit-button:disabled {
   background-color: var(--button-disabled);
   color: var(--on-button-disabled);
   pointer-events: none;
 }
+
 .profile__links {
   /* Сброс */
   list-style: none;
@@ -165,6 +173,7 @@
   align-items: center;
   gap: 16px;
 }
+
 .profile__link {
   /* Сброс */
   display: block;
@@ -180,15 +189,18 @@
   /* Анимация */
   transition: opacity 0.3s;
 }
+
 @media (min-width: 768px) {
   .profile__link {
     font-size: 13px;
     line-height: 1.23;
   }
 }
+
 .profile__link:hover {
   opacity: 0.7;
 }
+
 .profile__link_type_logout {
   font-weight: 500;
   color: var(--error);

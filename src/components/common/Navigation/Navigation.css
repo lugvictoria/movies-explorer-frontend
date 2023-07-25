@@ -284,3 +284,8 @@
     outline: 2px solid;
   }
 }
+
+.navigation__link_active.navigation__link_type_account {
+  text-decoration: none;
+  outline: 2px solid;
+}
