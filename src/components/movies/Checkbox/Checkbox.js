@@ -4,13 +4,13 @@ import './Checkbox.css';
 function Checkbox({ className, title }) {
   return (
     <label className={classNames(className, 'checkbox')}>
-      <input
+     <input
         type="checkbox"
-        class="checkbox__system-checkbox"
+        className="checkbox__system-checkbox"
         defaultChecked={true}
       />
-      <span class="checkbox__custom-checkbox"></span>
-      <span class="checkbox__label">{title}</span>
+      <span className="checkbox__custom-checkbox"></span>
+      <span className="checkbox__label">{title}</span>
     </label>
   );
 }
