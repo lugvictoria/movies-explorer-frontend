@@ -7,7 +7,7 @@ function Portfolio() {
       <ul className="portfolio__list">
         <li className="portfolio__list-item">
           <a
-            href="https://lugvictoria.github.io/how-to-learn/"
+            href="https://github.com/lugvictoria/how-to-learn"
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
