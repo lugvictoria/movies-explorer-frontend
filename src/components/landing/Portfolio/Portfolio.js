@@ -37,12 +37,12 @@ function Portfolio() {
         </li>
         <li className="portfolio__list-item">
           <a
-            href="https://lugvictoria.github.io/express-mesto-gha/"
+            href="https://lugvictoria.github.io/react-mesto-auth/"
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
           >
-            Четвертый проект
+            Сервис Mesto: интерактивная страница c регистрацией и авторизацией, куда можно добавлять фотографии, удалять их и ставить лайки.
           </a>
         </li>
       </ul>
