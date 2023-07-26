@@ -1,5 +1,5 @@
 import './AboutProject.css';
-import Article from '../Landing/Landing';
+import Article from '../Article/Article';
 
 function AboutProject() {
   return (
@@ -19,8 +19,8 @@ function AboutProject() {
             На&nbsp;выполнение диплома ушло 5&nbsp;недель
           </p>
           <p className="about-project__subtitle">
-            У&nbsp;каждого этапа был мягкий и&nbsp;жёсткий дедлайны,в которые
-            необходимо было уложиться, чтобы защитить дипломный проект.{' '}
+            У&nbsp;каждого этапа был мягкий и&nbsp;жёсткий дедлайн, которые
+            нужно было соблюдать, чтобы успешно защититься.{' '}
           </p>
         </div>
         <div className="about-project__illustration">

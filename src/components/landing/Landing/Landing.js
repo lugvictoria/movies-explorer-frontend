@@ -5,7 +5,7 @@ import Header from '../../common/Header/Header';
 import NavTab from '../NavTab/NavTab';
 import Promo from '../Promo/Promo';
 import Student from '../Student/Student';
-import Techs from '../Techs/Techs';
+import Techs from '../../landing/Techs/Techs';
 
 function Landing() {
   return (
@@ -26,4 +26,3 @@ function Landing() {
 }
 
 export default Landing;
-

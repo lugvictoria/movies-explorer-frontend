@@ -22,4 +22,5 @@ function AuthLinks() {
     </nav>
   );
 }
+
 export default AuthLinks;

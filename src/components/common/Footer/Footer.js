@@ -14,7 +14,7 @@ function Footer() {
             </a>
           </li>
           <li className="footer__links-item">
-            <a href="https://github.com/lugvictoria/movies-explorer-frontend" className="footer__link">
+            <a href="https://github.com/lugvictoria/" className="footer__link">
               Github
             </a>
           </li>

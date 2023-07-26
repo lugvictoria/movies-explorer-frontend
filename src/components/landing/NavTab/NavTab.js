@@ -1,4 +1,5 @@
 import './NavTab.css';
+
 function NavTab() {
   return (
     <nav className="navtab section" aria-label="Навигация по странице">
@@ -22,4 +23,5 @@ function NavTab() {
     </nav>
   );
 }
+
 export default NavTab;

@@ -25,4 +25,5 @@ function Header({ children, isThemed = false }) {
     </header>
   );
 }
+
 export default Header;

@@ -1,4 +1,5 @@
 import './Portfolio.css';
+
 function Portfolio() {
   return (
     <article className="portfolio">
@@ -6,12 +7,22 @@ function Portfolio() {
       <ul className="portfolio__list">
         <li className="portfolio__list-item">
           <a
+            href="https://lugvictoria.github.io/how-to-learn/"
+            className="portfolio__link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Первый проект;
+          </a>
+        </li>
+        <li className="portfolio__list-item">
+          <a
             href="https://lugvictoria.github.io/russian-travel/"
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
           >
-            проект один
+            Проект “Путешествия по России” Адаптивная верстка
           </a>
         </li>
         <li className="portfolio__list-item">
@@ -21,31 +32,22 @@ function Portfolio() {
             target="_blank"
             rel="noreferrer"
           >
-            проект второй
+            Проект “Место”  Одностраничный сайт-лендинг с иллюстрациями.
           </a>
         </li>
         <li className="portfolio__list-item">
           <a
-            href="https://lugvictoria.github.io/how-to-learn/"
+            href="https://lugvictoria.github.io/express-mesto-gha/"
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
           >
-            проект третий
-          </a>
-        </li>
-        <li className="portfolio__list-item">
-          <a
-            href="https://lugvictoria.github.io/react-mesto-auth/"
-            className="portfolio__link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            проект четвертый
+            Четвертый проект
           </a>
         </li>
       </ul>
     </article>
   );
 }
+
 export default Portfolio;
