@@ -1,7 +1,7 @@
-import './Auth.css';
 import logo from '../../../images/logo.svg';
 import { Link } from 'react-router-dom';
 import SubmitButton from '../SubmitButton/SubmitButton';
+import AuthInputForName from '../AuthInputForName/AuthInputForName';
 
 function Auth({ mode = 'register' }) {
   const MODES = {
@@ -28,7 +28,6 @@ function Auth({ mode = 'register' }) {
       ),
     },
   };
-
   return (
     <main className="auth content__stretched-element">
       <div className="auth__container">
@@ -41,10 +40,7 @@ function Auth({ mode = 'register' }) {
         </Link>
         <h1 className="auth__title">{MODES[mode].title}</h1>
         <form className="auth__form">
-          <label className="auth__input-container">
-            <span className="auth__label">Имя</span>
-            <input type="text" className="auth__input" name="name" required />
-          </label>
+          <AuthInputForName />
           <label className="auth__input-container">
             <span className="auth__label">E-mail</span>
             <input type="email" className="auth__input" name="email" required />
@@ -69,5 +65,4 @@ function Auth({ mode = 'register' }) {
     </main>
   );
 }
-
 export default Auth;
