@@ -8,7 +8,7 @@ function AuthInputForEmail() {
         type: 'email',
         name: 'email',
         required: true,
-        placeholder: 'mcclane@nakatomi.corp'
+        placeholder: 'pochta@yandex.ru'
       }}
     />
   );

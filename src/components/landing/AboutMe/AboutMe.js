@@ -1,5 +1,5 @@
 import './AboutMe.css';
-import photo from '../../../images/student-photo.jpg';
+import photo from '../../../images/photo_student.jpg';
 
 function AboutMe() {
   return (
@@ -9,10 +9,12 @@ function AboutMe() {
         <h3 className="about-me__name">Vicsenty</h3>
         <p className="about-me__subtitle">Фронтенд-разработчик</p>
         <p className="about-me__text">
-          Обо мне 1
+        Мечтаю стать фронтенд-девелопером, создавать красивые, понятные и полезные вебсайты для пользователей.
+        Начать с нуля новую деятельность было очень тяжело, но невероятно интересно.
         </p>
         <p className="about-me__text">
-          обо мне 2
+        Хочу продолжать изучать современные технологии и языки программирования,
+        и достичь профессионального уровня в новой сфере деятельности.
         </p>
         <ul className="about-me__link-list">
           <li className="about-me__link-list-item">

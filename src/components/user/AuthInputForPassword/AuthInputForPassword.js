@@ -8,7 +8,7 @@ function AuthInputForPassword() {
         type: 'password',
         name: 'password',
         required: true,
-        placeholder: 'akagi',
+        placeholder: 'movingTo',
       }}
     />
   );

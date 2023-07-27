@@ -7,12 +7,12 @@ function Portfolio() {
       <ul className="portfolio__list">
         <li className="portfolio__list-item">
           <a
-            href="https://github.com/lugvictoria/how-to-learn"
+            href="https://lugvictoria.github.io/how-to-learn/"
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
           >
-            Первый проект;
+            Одностраничный сайт «Научиться учиться»
           </a>
         </li>
         <li className="portfolio__list-item">
@@ -32,7 +32,7 @@ function Portfolio() {
             target="_blank"
             rel="noreferrer"
           >
-            Проект “Место”  Одностраничный сайт-лендинг с иллюстрациями.
+            Проект “Место”  Одностраничный сайт-лендинг с иллюстрациями
           </a>
         </li>
         <li className="portfolio__list-item">
@@ -42,7 +42,7 @@ function Portfolio() {
             target="_blank"
             rel="noreferrer"
           >
-            Сервис Mesto: интерактивная страница c регистрацией и авторизацией, куда можно добавлять фотографии, удалять их и ставить лайки.
+            Сервис Mesto: интерактивная страница c регистрацией и авторизацией, куда можно добавлять фотографии, удалять их и ставить лайки
           </a>
         </li>
       </ul>
