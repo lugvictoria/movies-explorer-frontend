@@ -1,0 +1,12 @@
+.promo {
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 248px auto;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--promo);
+  color: var(--on-promo);
+  background-image: url(../../../images/text__COLOR_landing-logo.svg);
+
+}

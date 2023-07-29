@@ -1,0 +1,20 @@
+/* Файл - normalize.css */
+@import url(../../vendor/normalize.css);
+
+/* Шрифты - Inter*/
+@import url(../../vendor/fonts/inter-web/inter.css);
+
+.page {
+  /* Шрифтовая схема для всей страницы */
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  /* Использование цветов в проекте */
+  --promo: #073042;
+
+  /* Сглаживание шрифтов */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
