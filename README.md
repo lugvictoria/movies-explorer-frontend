@@ -16,9 +16,9 @@
 
 ## Макет в Figma
 
-[Макет в фигме](https://www.figma.com/file/qV2C99wQG2k3pL1uWGtZcY/Diploma-(Copy)-Lugvictoria-(Community)?type=design&node-id=891-3857&mode=design)
+[Макет в фигме](https://www.figma.com/file/4VVPj4OIng00jjLDZ403r3/dark-5?type=design&node-id=932%3A2618&mode=design&t=jbD8bURpBZj4Lu5l-1)
 
-https://www.figma.com/file/qV2C99wQG2k3pL1uWGtZcY/Diploma-(Copy)-Lugvictoria-(Community)?type=design&node-id=891-3857&mode=design
+https://www.figma.com/file/4VVPj4OIng00jjLDZ403r3/dark-5?type=design&node-id=932%3A2618&mode=design&t=jbD8bURpBZj4Lu5l-1
 
 ## Функциональность
 
