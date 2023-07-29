@@ -2,7 +2,8 @@ import './Promo.css';
 
 function Promo() {
   return (
-    <section className="promo section">
+    <section className="promo">
+
       <h1 className="promo__title">
         Учебный проект студента факультета Веб-разработки.
       </h1>
@@ -12,6 +13,7 @@ function Promo() {
       <h3 className="promo__button">
        Узнать больше
       </h3>
+   
     </section>
   );
 }

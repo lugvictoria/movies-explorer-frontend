@@ -5,10 +5,16 @@
 @import url(../../vendor/fonts/inter-web/inter.css);
 
 .page {
+  width: 100%;
+  /* Цвета страницы по умолчанию */
+  background-color: var(--on-surface);
+  color: var(--text-on-page);
   /* Шрифтовая схема для всей страницы */
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   /* Использование цветов в проекте */
   --promo: #073042;
+  --on-surface: #000000;
+  --text-on-page: #FFFFFF;
 
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
@@ -17,4 +23,30 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+}
+
+.content {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  max-width: 1280px;
+  padding-inline: 18px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-inline: 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding-inline: 70px;
+  }
 }
