@@ -9,12 +9,17 @@
   /* Цвета страницы по умолчанию */
   background-color: var(--on-surface);
   color: var(--text-on-page);
+
   /* Шрифтовая схема для всей страницы */
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   /* Использование цветов в проекте */
   --promo: #073042;
   --on-surface: #000000;
   --text-on-page: #FFFFFF;
+  --time-block1: #3DDC84;
+  --time-block4: #303030;
+  --background-techs: #272727;
+  --list-items: #303030;
 
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
@@ -25,7 +30,16 @@
   text-rendering: optimizeLegibility;
 }
 
+.page > *,
+.page > *:after,
+.page > *:before{
+  color: var(--text-on-page);
+}
+
+
+
 .content {
+  color: var(--text-on-page);
   width: 100%;
   min-width: 320px;
   margin: 0 auto;

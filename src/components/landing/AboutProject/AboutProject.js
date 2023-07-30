@@ -2,12 +2,13 @@ import './AboutProject.css';
 
 function AboutProject() {
   return (
-    <section title="О&nbsp;бип-бип проекте" navId="about-project">
-      <article className="about-project">
-        <div className="about-project__context">
+    <section title="О&nbsp;проектах" navId="about-project">
           <p className="about-project__name-section">
             О&nbsp;проекте
           </p>
+      <article className="about-project">
+        <div className="about-project__context">
+
           <p className="about-project__title">
             Дипломный проект включал 5&nbsp;этапов
           </p>
