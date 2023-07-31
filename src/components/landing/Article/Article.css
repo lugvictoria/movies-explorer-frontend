@@ -1,31 +1,26 @@
 .article {
   color: var(--on-surface);
-  padding-block: 70px;
+  padding-block: 100px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .article {
     padding-block: 90px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 368px) {
   .article {
-    padding-block: 110px;
+    padding-block: 70px;
   }
-}
+} */
 
-@media (min-width: 768px) {
-  .article_themed {
-    background-color: var(--background);
-  }
-}
 
 .article__title {
-  margin: 0;
-  margin-bottom: 60px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--on-surface);
+  margin-top: 10px;
+  margin-bottom: 70px;
+  border-bottom: 1px solid #DADADA;
+  color: var(--text-on-page);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;

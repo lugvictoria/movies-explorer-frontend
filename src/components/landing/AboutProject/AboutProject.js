@@ -1,11 +1,12 @@
 import './AboutProject.css';
+import Article from '../Article/Article';
 
 function AboutProject() {
   return (
-    <section title="О&nbsp;проектах" navId="about-project">
-          <p className="about-project__name-section">
+    <Article title="О&nbsp;проекте" className="section" navId="about-project">
+          {/* <p className="about-project__name-section">
             О&nbsp;проекте
-          </p>
+          </p> */}
       <article className="about-project">
         <div className="about-project__context">
 
@@ -33,7 +34,7 @@ function AboutProject() {
           <p className="about-project__time-caption">Front-end</p>
         </div>
       </article>
-    </section>
+    </Article>
   );
 }
 

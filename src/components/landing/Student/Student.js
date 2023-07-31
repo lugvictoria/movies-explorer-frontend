@@ -5,7 +5,7 @@ import Portfolio from '../Portfolio/Portfolio';
 
 function Student() {
   return (
-    <Article title="Студент" navId="student">
+    <Article title="Студент" className="section" navId="student">
       <AboutMe />
       <Portfolio />
     </Article>

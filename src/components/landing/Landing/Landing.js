@@ -1,7 +1,7 @@
 import Promo from '../Promo/Promo';
 import AboutProject from '../AboutProject/AboutProject';
 import Header from '../../main/Header/Header';
-import Techs from '../Techs/Techs';
+import Technology from '../Technology/Technology';
 import AboutMe from '../AboutMe/AboutMe';
 
 function Landing() {
@@ -11,7 +11,7 @@ function Landing() {
       <main>
         <Promo />
         <AboutProject />
-        <Techs />
+        <Technology />
         <AboutMe />
       </main>
       </div>

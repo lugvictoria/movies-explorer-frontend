@@ -1,4 +1,9 @@
-/* .techs {
+.techs__color {
+  background-color: var(--background-techs);
+}
+
+
+.techs {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -7,11 +12,22 @@
   background-color: var(--background-techs);
 }
 
+.techs__name-section {
+  max-width: 1140px;
+  color: var(--text-on-page);
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  padding-top: 110px;
+  margin: 0 auto 23px 70px;
+  border-bottom: 1px solid #DADADA;
+}
+
 .techs__title {
   padding-top: 20px;
   padding-bottom: 26px;
   margin: auto;
-  max-width: 600px;
+
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -44,60 +60,58 @@
   color: var(--text-on-page);
 }
 
-/* @media (min-width: 768px) {
+ /* @media (min-width: 768px) {
   .techs__subtitle {
     margin-bottom: 83px;
     font-size: 12px;
     line-height: 1.5;
   }
-}
+} */
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .techs__subtitle {
     margin-bottom: 100px;
     font-size: 14px;
     line-height: 1.43;
   }
 } */
-/*
+
 .techs__list {
   list-style: none;
   padding: 0;
-  margin: auto;
-  width: 95%;
+  margin: 0;
+
   display: grid;
   gap: 10px;
-  color: var(--text-on-page);
-  grid-template-columns: repeat(auto-fit, minmax(84px, min-content));
-  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(84px, min-content)); */
+  /* justify-content: center; */
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .techs__list {
     grid-template-columns: repeat(auto-fit, minmax(90px, min-content));
   }
-}
+} */
 
 .techs__list-item {
-  display: flex;
-  background-color: var(--list-items);
   padding: 21px 14px;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-radius: 10px;
-
+  background-color: var(--background-variant-secondary);
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.25;
   letter-spacing: -0.04em;
-  color: var(--text-on-page);
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .techs__list-item {
     font-size: 14px;
     line-height: 1.21;
   }
-} */ 
+} */
