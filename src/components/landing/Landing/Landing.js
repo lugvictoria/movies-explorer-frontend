@@ -14,7 +14,7 @@ function Landing() {
         <Technology />
         <AboutMe />
       </main>
-      </div>
+    </div>
   );
 }
 

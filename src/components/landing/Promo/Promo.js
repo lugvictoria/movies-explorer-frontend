@@ -10,9 +10,9 @@ function Promo() {
         Листайте ниже, чтобы узнать больше про этот проект и его создателя.
       </h2>
       <div className="promo__button">
-      <h3 className="promo__button-text">
-       Узнать больше
-      </h3>
+        <h3 className="promo__button-text">
+          Узнать больше
+        </h3>
       </div>
     </section>
   );

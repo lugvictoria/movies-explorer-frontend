@@ -3,19 +3,6 @@
   padding-block: 100px;
 }
 
-/* @media (min-width: 768px) {
-  .article {
-    padding-block: 90px;
-  }
-}
-
-@media (min-width: 368px) {
-  .article {
-    padding-block: 70px;
-  }
-} */
-
-
 .article__title {
   margin-top: 10px;
   margin-bottom: 70px;
@@ -26,12 +13,4 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: -0.04em;
-}
-
-@media (min-width: 768px) {
-  .article__title {
-    margin-bottom: 70px;
-    padding-bottom: 23px;
-    font-size: 22px;
-  }
 }

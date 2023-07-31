@@ -4,7 +4,7 @@ import Article from '../Article/Article';
 function AboutProject() {
   return (
     <Article title="О&nbsp;проекте" className="section" navId="about-project">
-          {/* <p className="about-project__name-section">
+      {/* <p className="about-project__name-section">
             О&nbsp;проекте
           </p> */}
       <article className="about-project">

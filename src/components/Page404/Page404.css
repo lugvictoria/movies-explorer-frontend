@@ -1,0 +1,47 @@
+.page404 {
+  background-color: var(--surface-pages);
+}
+
+.page404_Textbox {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.page404__title {
+  display: flex;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 169px;
+  justify-content: center;
+  padding-top: 246px;
+  color: var(--text-on-page);
+}
+
+.page404__subtitle {
+  display: flex;
+  margin: 0;
+  padding-top: 5px;
+  justify-content: center;
+  padding-bottom: 184px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--text-on-page);
+}
+
+.page404__link {
+  display: flex;
+  color: var(--color-link);
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.3;
+}
+
+.page404__link:hover {
+  opacity: 0.7;
+}
