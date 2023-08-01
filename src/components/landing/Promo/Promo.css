@@ -1,53 +1,140 @@
-.promo {
-  width: 100%;
-  display: inline-block;
-  background-position: right 70px top 75px;
-  background-color: var(--promo);
-  background-repeat: no-repeat;
-  background-size: 310px auto;
-  background-image: url(../../../images/text__COLOR_landing-logo.svg);
-  margin: 0;
+@media (min-width: 320px) {
+  .promo {
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-position: center 70px;
+    background-repeat: no-repeat;
+    background-color: var(--promo);
+    background-size: 210px auto;
+    background-image: url(../../../images/text__COLOR_landing-logo.svg);
+    margin: 0;
+  }
 }
 
-.promo__title {
-  text-align: left;
-  max-width: 640px;
-  margin-top: 0;
-  padding-top: 75px;
-  margin-left: 70px;
-  margin-bottom: 0;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 58px;
-  letter-spacing: -0.0em;
+@media (min-width: 768px) {
+  .promo {
+    background-position: center 140px;
+    background-size: 310px auto;
+  }
 }
 
-.promo__subtitle {
-  max-width: 310px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 36px;
-  margin-left: 70px;
-  margin-bottom: 145px;
-  line-height: 16px;
-  opacity: 0.5;
+@media (min-width: 1280px) {
+  .promo {
+    background-position: right 70px top 75px;
+  }
 }
 
-.promo__button {
-  width: 128px;
-  height: 35px;
-  margin-left: 69px;
-  margin-bottom: 75px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+@media (min-width: 320px) {
+  .promo__title {
+    text-align: center;
+    padding-top: 320px;
+    margin: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.04em;
+  }
 }
 
-.promo__button-text {
-  margin: auto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  text-align: center;
-  line-height: 35px;
+@media (min-width: 768px) {
+  .promo__title {
+    max-width: 680px;
+    margin-top: 0;
+    padding-top: 490px;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.0em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .promo__title {
+    max-width: 640px;
+    text-align: left;
+    max-width: 640px;
+    margin-top: 0;
+    padding-top: 75px;
+    margin-left: 70px;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+  }
+}
+
+@media (min-width: 320px) {
+  .promo__subtitle {
+    max-width: 260px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 24px auto 80px auto;
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 768px) {
+  .promo__subtitle {
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .promo__subtitle {
+    max-width: 310px;
+    text-align: left;
+    margin-top: 36px;
+    margin-left: 70px;
+    margin-bottom: 145px;
+  }
+}
+
+@media (min-width: 320px) {
+  .promo__button {
+    width: 128px;
+    height: 35px;
+    margin: 0 auto 30px auto;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media (min-width: 1280px) {
+  .promo__button {
+    width: 128px;
+    height: 35px;
+    margin-left: 69px;
+    margin-bottom: 75px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media (min-width: 320px) {
+  .promo__button-text {
+    margin: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .promo__button-text {
+    margin: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+  }
 }

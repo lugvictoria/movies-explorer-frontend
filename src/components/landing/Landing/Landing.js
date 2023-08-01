@@ -3,6 +3,7 @@ import AboutProject from '../AboutProject/AboutProject';
 import Header from '../../main/Header/Header';
 import Technology from '../Technology/Technology';
 import AboutMe from '../AboutMe/AboutMe';
+import Student from '../Student/Student';
 
 function Landing() {
   return (
@@ -12,7 +13,7 @@ function Landing() {
         <Promo />
         <AboutProject />
         <Technology />
-        <AboutMe />
+        <Student/>
       </main>
     </div>
   );
