@@ -1,17 +1,16 @@
 /* Файл - normalize.css */
 @import url(../../vendor/normalize.css);
 
-/* Шрифты - Inter*/
+/* Шрифтовая схема - Inter*/
 @import url(../../vendor/fonts/inter-web/inter.css);
 
 .page {
   width: 100%;
+  /* Шрифтовая схема для всей страницы */
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
   /* Цвета страницы по умолчанию */
   background-color: var(--on-surface);
   color: var(--text-on-page);
-
-  /* Шрифтовая схема для всей страницы */
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
   /* Использование цветов в проекте */
   --promo: #073042;
   --on-surface: #000000;
@@ -47,7 +46,7 @@
 }
 
 .content__footer {
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 @media (min-width: 320px) {
