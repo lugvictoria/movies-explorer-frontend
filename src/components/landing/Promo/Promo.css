@@ -107,13 +107,16 @@
   }
 }
 
+@media (min-width: 768px) {
+  .promo__button {
+    margin: 0 auto 80px auto;
+  }
+}
+
 @media (min-width: 1280px) {
   .promo__button {
-    width: 128px;
-    height: 35px;
     margin-left: 69px;
     margin-bottom: 75px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
   }
 }
 

@@ -7,7 +7,7 @@
 
 @media (min-width: 768px) {
   .article {
-    padding-block: 140px;
+    padding-block: 90px;
   }
   }
 
@@ -34,7 +34,7 @@
 @media (min-width: 768px) {
   .article__title {
     margin-bottom: 70px;
-    padding-bottom: 23px;
+    padding-bottom: 22px;
     font-size: 22px;
     line-height: 27px;
   }

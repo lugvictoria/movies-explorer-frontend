@@ -1,3 +1,4 @@
+@media (min-width: 320px) {
 .header {
   padding-block: 18px;
   display: flex;
@@ -5,6 +6,23 @@
   align-items: center;
   gap: 44px;
 }
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-inline: 30px;
+  }
+  }
+
+  @media (min-width: 1280px) {
+    .header {
+      padding-block: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 44px;
+    }
+    }
 
 .landing-page header {
   background-color: var(--promo);
