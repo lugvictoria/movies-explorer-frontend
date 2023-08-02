@@ -10,11 +10,22 @@
   background-color: var(--promo);
 }
 
+@media (min-width: 320px) {
 .profile-page header {
   background-repeat: no-repeat;
   background-size: 44px auto;
+  background-position: right 15px top 15px;
   background-image: url(../../../images/icon__COLOR_icon-main.svg);
   margin: 0;
+}
+}
+
+@media (min-width: 1280px) {
+.profile-page header {
+  background-size: 100px auto;
+  background-position: right 15px top 15px;
+  background-image: url(../../../images/profile.svg);
+}
 }
 
 .header_themed {

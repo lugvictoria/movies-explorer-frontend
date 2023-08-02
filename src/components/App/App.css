@@ -25,6 +25,7 @@
   --color-link: #4285F4;
   --error-message: #EE3465;
   --line: #424242;
+  --text-under: #A0A0A0;
 
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
@@ -45,9 +46,13 @@
   flex-direction: column;
 }
 
+.content__footer {
+  margin-top: auto; 
+}
+
 @media (min-width: 320px) {
   .section {
-    padding-inline: 18px;
+    padding-inline: 14px;
   }
 }
 
