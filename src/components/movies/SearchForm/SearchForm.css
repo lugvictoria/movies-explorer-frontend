@@ -1,5 +1,5 @@
 .search-form {
-  padding-top: 75px;
+  padding-top: 72px;
   padding-bottom: 50px;
   display: grid;
   row-gap: 40px;
@@ -23,7 +23,7 @@
     padding-bottom: 47px;
     row-gap: 32px;
     background-color: var(--surface-pages);
-    color: var(--text-on-caption);
+    color: var(--text-on-page);
   }
 }
 
@@ -42,7 +42,7 @@
   font-size: 18px;
   line-height: 1.22;
   background-color: var(--surface-pages);
-  color: var(--text-on-caption);
+  color: var(--text-on-page);
 }
 
 @media (min-width: 768px) {
@@ -63,6 +63,7 @@
 }
 
 .search-form__checkbox {
+  color: var(--text-on-page);
   grid-area: checkbox;
   justify-self: center;
 }
@@ -78,6 +79,8 @@
     justify-self: start;
   }
 }
+
+
 
 .search-form__button {
   /* Расположение */

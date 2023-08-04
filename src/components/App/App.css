@@ -45,13 +45,17 @@
   flex-direction: column;
 }
 
+.content {
+  min-height: 700px;
+}
+
 .content__footer {
   margin-top: auto;
 }
 
 @media (min-width: 320px) {
   .section {
-    padding-inline: 14px;
+    padding-inline: 10px;
   }
 }
 

@@ -1,6 +1,6 @@
 .checkbox {
   /* Расположение чекбокса и подписи */
-  color: var(--on-surface);
+  
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -45,15 +45,16 @@
   height: 20px;
   border-radius: 20px;
   box-sizing: border-box;
+  background-image: url(../../../images/smalltumb.svg);
   /* Цвет */
-  background-color: var(--checkbox-disabled);
+  background-color: var(-time-block1);
   /* Анимация */
   transition: background-color 0.3s ease-in;
 }
 
 /* Нажатое состояние - фон контейнера */
 .checkbox__system-checkbox:checked+.checkbox__custom-checkbox {
-  background-color: var(--checkbox-enabled);
+  background-color: var(-time-block1);
 }
 
 /* Неактивное состояние */
@@ -76,7 +77,6 @@
   /* Половина border-radius */
   transform: translate(-50%, -50%);
   /* Цвет */
-  background-color: var(--on-checkbox-disabled);
   transition: left 0.3s ease-in;
 }
 
@@ -103,6 +103,6 @@
 .checkbox__system-checkbox:focus~.checkbox__label {
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: var(--primary);
+  text-decoration-color: var(--text-on-page);
   text-underline-offset: 5px;
 }

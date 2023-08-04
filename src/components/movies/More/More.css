@@ -8,7 +8,7 @@
 .more__button {
   /* Сброс */
   display: block;
-  border: none;
+  border: 2px solid var(--line);
   cursor: pointer;
   /* Внешний вид */
   background-color: var(--movie-button);
@@ -16,6 +16,9 @@
   min-width: 240px;
   padding: 10px 20px;
   /* Анимация */
+  color: white;
+  outline: none;
+  box-shadow: none; /* убираем тень */
   transition: opacity .3s, transform .3s;
 }
 

@@ -1,12 +1,10 @@
 .movie-card {
-  --gap: 14px;
   display: block;
   max-width: 600px;
   padding-block: var(--gap);
   /* Внешний вид */
   background-color: var(--card);
   border-radius: 6px;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
   color: var(--on-card);
   /* Расположение элементов */
   display: grid;
@@ -39,8 +37,9 @@
   /* Текст */
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
+  padding-top: 12px;
   /* Перенос слов */
   overflow-wrap: anywhere;
 }
@@ -54,6 +53,8 @@
 
 .movie-card__duration {
   grid-area: duration;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: 0;
   margin-right: var(--gap);
   /* Текст */
@@ -83,4 +84,5 @@
   grid-area: button;
   justify-self: center;
   margin-inline: var(--gap);
+
 }

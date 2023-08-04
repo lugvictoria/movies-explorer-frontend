@@ -15,7 +15,8 @@
   border: none;
   cursor: pointer;
   /* Размеры */
-  width: 44px;
+  height: 40px;
+  width: 43px;
   aspect-ratio: 1;
   /* Иконка */
   background-image: url(../../../images/icon__menu.svg);
@@ -25,6 +26,7 @@
   /* Анимация */
   transition: opacity 0.3s, transform 0.3s;
 }
+
 
 .navigation__open-button:hover {
   opacity: 0.8;

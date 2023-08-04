@@ -27,7 +27,7 @@ function MoviesCardList({ type }) {
               'https://api.nomoreparties.co/' +
               movie.image.formats.thumbnail.url
             }
-            type={type}
+            // type={type}
           />
         );
       })}

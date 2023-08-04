@@ -1,4 +1,5 @@
 import Checkbox from '../Checkbox/Checkbox';
+import find from '../../../images/find.svg';
 import './SearchForm.css';
 
 function SearchForm() {
@@ -12,7 +13,11 @@ function SearchForm() {
       />
       <Checkbox title="Короткометражки" className="search-form__checkbox" />
       <button type="submit" className="search-form__button">
-        Найти
+      <img
+          className="find__icon"
+          alt="Иконка поиска"
+          src={find}
+        />
       </button>
     </form>
   );
