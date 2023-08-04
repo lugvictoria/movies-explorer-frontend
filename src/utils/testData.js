@@ -419,7 +419,7 @@ const testData = [
   },
   {
     id: 9,
-    nameRU: ' 196 ударов в минуту',
+    nameRU: "33 слова о дизайне",
     nameEN: '196 BPM',
     director: 'Ромуальд Кармакар',
     country: 'Германия',

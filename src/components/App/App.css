@@ -25,6 +25,7 @@
   --error-message: #EE3465;
   --line: #424242;
   --text-under: #A0A0A0;
+  --surface-inputs: #2F2F2F;
 
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
@@ -76,4 +77,8 @@
   max-width: max-content;
   padding-inline: 70px;
   background-color: var(--background-techs);
+}
+
+.password-input {
+  
 }

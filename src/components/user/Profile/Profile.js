@@ -30,11 +30,6 @@ function Profile() {
               placeholder="pochta@yandex.ru"
             />
           </label>
-
-            <>
-
-
-            </>
         </form>
 
 

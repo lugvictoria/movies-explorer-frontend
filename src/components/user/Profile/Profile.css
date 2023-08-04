@@ -1,10 +1,9 @@
 .profile {
-  color: var(--text-on-page);
-  padding-inline: 30px;
-  /* Расположение элементов */
   display: flex;
   flex-direction: column;
+  padding-inline: 30px;
   align-items: center;
+  color: var(--text-on-page);
 }
 
 @media (min-width: 768px) {
@@ -21,31 +20,27 @@
 }
 
 .profile__container {
+  display: flex;
   width: 100%;
   max-width: 410px;
-  height: 445px;
-  flex-grow: 1;
-  display: flex;
-  padding-top: 70px;
   flex-direction: column;
+  padding-top: 70px;
 }
 
 @media (min-width: 768px) {
   .profile__container {
-    flex-grow: 0;
     padding-top: 236px;
   }
 }
 
 @media (min-width: 1280px) {
   .profile__container {
-
     padding-top: 0px;
   }
 }
 
 .profile__title {
-  margin: 0;
+  margin: 0px;
   margin-bottom: 70px;
   font-style: normal;
   font-weight: 500;
@@ -67,7 +62,6 @@
 }
 
 .profile__form {
-
   display: flex;
   flex-direction: column;
 }
@@ -94,20 +88,16 @@
 }
 
 .profile__input {
-  /* Сброс */
   display: block;
-  background-color: transparent;
   border: none;
-  /* Размер */
+  text-align: right;
   flex-grow: 1;
   padding-block: 16px;
   border-radius: 8px;
-  /* Текст */
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
-  text-align: right;
   /* Анимация */
   background-color: transparent;
   transition: opacity 0.3s, background-color 0.3s;
@@ -139,18 +129,16 @@
 }
 
 @media (min-width: 1280px) {
-.profile__error-message {
-  margin: 0;
-  margin-top: 0px;
-
-  margin-bottom: 16px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 1.18;
-  text-align: center;
-  color: var(--error-message);
-}
+  .profile__error-message {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.18;
+    color: var(--error-message);
+  }
 }
 
 .profile__links {
@@ -170,29 +158,27 @@
     padding-top: 150px;
     padding-bottom: 70px;
   }
-  }
+}
 
 @media (min-width: 1280px) {
   .profile__links {
     padding-top: 220px;
     padding-bottom: 70px;
   }
-  }
+}
 
 @media (min-width: 1280px) {
-.profile__links {
-  padding-top: 220px;
-  padding-bottom: 70px;
-}
+  .profile__links {
+    padding-top: 220px;
+    padding-bottom: 70px;
+  }
 }
 
 .profile__link {
-  /* Сброс */
   display: block;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  /* Текст */
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
