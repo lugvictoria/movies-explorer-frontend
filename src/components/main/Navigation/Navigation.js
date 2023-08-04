@@ -40,21 +40,19 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
         onClick={handleOverlayClick}
       >
         <nav className="navigation__panel">
-          <button
+          {/* <button
             type="button"
             className="navigation__close-button"
             aria-label="Закрыть меню"
             onClick={toggleMenu}
-          ></button>
+          ></button> */}
           <ul className="navigation__list">
-            {hasLinkToMain && (
-              <NavigationLink title="Главная" to="/" isLinkToMain />
-            )}
             <NavigationLink title="Фильмы" to="/movies" />
             <NavigationLink title="Сохранённые фильмы" to="/saved-movies" />
-            <NavigationLink title="Аккаунт" to="/profile" isLinkToProfile />
           </ul>
+
         </nav>
+        <NavigationLink title="Аккаунт" to="/profile" isLinkToProfile />
       </div>
     </div>
   );

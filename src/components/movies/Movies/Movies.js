@@ -5,6 +5,7 @@ import More from '../More/More';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import SearchForm from '../SearchForm/SearchForm';
 import './Movies.css';
+
 function Movies() {
   return (
     <>

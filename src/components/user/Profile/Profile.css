@@ -1,6 +1,6 @@
 .profile {
   color: var(--text-on-page);
-  padding: 70px 30px 40px;
+  padding-inline: 30px;
   /* Расположение элементов */
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 @media (min-width: 768px) {
   .profile {
-    padding-block: 70px;
+    padding-block: 0px;
     justify-content: center;
   }
 }
@@ -33,12 +33,14 @@
 @media (min-width: 768px) {
   .profile__container {
     flex-grow: 0;
+    padding-top: 236px;
   }
 }
 
 @media (min-width: 1280px) {
   .profile__container {
-    flex-grow: 1;
+
+    padding-top: 0px;
   }
 }
 
@@ -65,7 +67,7 @@
 }
 
 .profile__form {
-  flex-grow: 1;
+
   display: flex;
   flex-direction: column;
 }
@@ -136,17 +138,52 @@
   color: var(--error-message);
 }
 
+@media (min-width: 1280px) {
+.profile__error-message {
+  margin: 0;
+  margin-top: 0px;
+
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.18;
+  text-align: center;
+  color: var(--error-message);
+}
+}
+
 .profile__links {
-  /* Сброс */
+  padding-top: 310px;
+  padding-left: 0px;
   list-style: none;
   margin: 0;
-  padding: 0;
-  /* Расположение элементов */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   color: var(--text-on-page);
+}
+
+@media (min-width: 768px) {
+  .profile__links {
+    padding-top: 150px;
+    padding-bottom: 70px;
+  }
+  }
+
+@media (min-width: 1280px) {
+  .profile__links {
+    padding-top: 220px;
+    padding-bottom: 70px;
+  }
+  }
+
+@media (min-width: 1280px) {
+.profile__links {
+  padding-top: 220px;
+  padding-bottom: 70px;
+}
 }
 
 .profile__link {

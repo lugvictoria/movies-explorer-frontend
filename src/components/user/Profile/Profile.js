@@ -32,15 +32,16 @@ function Profile() {
           </label>
 
             <>
-              <p className="profile__error-message">
-                При обновлении профиля произошла ошибка.
-              </p>
+
 
             </>
         </form>
 
 
           <ul className="profile__links">
+          <p className="profile__error-message">
+                При обновлении профиля произошла ошибка.
+              </p>
             <li className="profile__links-item">
               <button className="profile__link">
                 Редактировать

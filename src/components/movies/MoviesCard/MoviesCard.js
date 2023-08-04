@@ -20,17 +20,13 @@ function MoviesCard({ name, duration, thumbnail, type }) {
 
   return (
     <li className="movie-card" ref={ref}>
-      <h3 className="movie-card__name">{name}</h3>
-      <p className="movie-card__duration">{`${duration} ${getNumDeclination(
-        duration,
-        ['минута', 'минуты', 'минут'],
-      )}`}</p>
       <img
         src={thumbnail}
         alt={`Кадр из фильма ${name}`}
         className="movie-card__thumbnail"
       />
-
+     <div className="movie-card__block">
+     <h3 className="movie-card__name">{name}</h3>
       {type === 'all' ? (
         isSaved ? (
           <CardButton
@@ -52,6 +48,11 @@ function MoviesCard({ name, duration, thumbnail, type }) {
           onClick={handleClickDelete}
         />
       )}
+       </div>
+       <p className="movie-card__duration">{`${duration} ${getNumDeclination(
+        duration,
+        ['минута', 'минуты', 'минут'],
+      )}`}</p>
     </li>
   );
 }

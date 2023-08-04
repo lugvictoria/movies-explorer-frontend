@@ -1,5 +1,5 @@
 .movie-card {
-  display: block;
+  flex-direction: column;
   max-width: 600px;
   padding-block: var(--gap);
   /* Внешний вид */
@@ -7,20 +7,18 @@
   border-radius: 6px;
   color: var(--on-card);
   /* Расположение элементов */
-  display: grid;
-  column-gap: var(--gap);
-  row-gap: var(--gap);
-  grid-template-columns: 1fr max-content;
+  /* column-gap: var(--gap);
+  row-gap: var(--gap); */
+  /* grid-template-columns: 1fr max-content;
   grid-template-rows: 1fr auto auto;
   grid-template-areas:
     'thumbnail thumbnail'
     'name button'
-    'duration button';
+    'duration button'; */
 }
 
 @media (min-width: 768px) {
   .movie-card {
-    --gap: 18px;
   }
 }
 
@@ -30,7 +28,21 @@
   }
 }
 
+.movie-card__block {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+@media (min-width: 1280px) {
+.movie-card__block {
+  padding-top: 10px;
+  padding-inline: 12px;
+}
+}
+
 .movie-card__name {
+  max-width: 206px;
   grid-area: name;
   margin: 0;
   margin-left: var(--gap);
@@ -39,7 +51,6 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
-  padding-top: 12px;
   /* Перенос слов */
   overflow-wrap: anywhere;
 }
@@ -69,6 +80,14 @@
   .movie-card__duration {
     font-size: 13px;
     line-height: 1.38;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movie-card__duration {
+    font-size: 13px;
+    line-height: 1.38;
+  padding-bottom: 14px;
   }
 }
 

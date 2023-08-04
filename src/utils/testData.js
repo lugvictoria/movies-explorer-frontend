@@ -1,7 +1,7 @@
 const testData = [
   {
     id: 1,
-    nameRU: '«Роллинг Стоунз» в изгнании',
+    nameRU: "33 слова о дизайне",
     nameEN: 'Stones in Exile',
     director: 'Стивен Кайак ',
     country: 'США',
@@ -55,7 +55,7 @@ const testData = [
   },
   {
     id: 2,
-    nameRU: "All Tomorrow's Parties",
+    nameRU: "33 слова о дизайне",
     nameEN: "All Tomorrow's Parties",
     director: ' Джонатан Кауэтт',
     country: 'Великобритания',
@@ -109,7 +109,7 @@ const testData = [
   },
   {
     id: 3,
-    nameRU: ' Без обратного пути',
+    nameRU: "33 слова о дизайне",
     nameEN: 'No Distance Left to Run',
     director: 'Уилл Лавлейс, Дилан Сотерн',
     country: 'Великобритания',
@@ -153,7 +153,7 @@ const testData = [
   },
   {
     id: 4,
-    nameRU: 'Bassweight',
+    nameRU: "33 слова о дизайне",
     nameEN: 'Bassweight',
     director: 'Сурид Хассан',
     country: 'Великобритания',
@@ -197,7 +197,7 @@ const testData = [
   },
   {
     id: 5,
-    nameRU: 'Taqwacore: The Birth of Punk Islam',
+    nameRU: "33 слова о дизайне",
     nameEN: 'Taqwacore: The Birth of Punk Islam',
     director: ' Омар Маджид',
     country: 'Канада',
@@ -251,7 +251,7 @@ const testData = [
   },
   {
     id: 6,
-    nameRU: 'Фавела на взрыве',
+    nameRU: "33 слова о дизайне",
     nameEN: 'Favela on Blast',
     director: 'Уэсли Пенц',
     country: 'Бразилия',
@@ -305,7 +305,7 @@ const testData = [
   },
   {
     id: 7,
-    nameRU: 'Постеры, сошедшие со стен',
+    nameRU: "33 слова о дизайне",
     nameEN: 'The Posters Came from the Walls',
     director: 'Джереми Деллер, Николас Абрахамс',
     country: 'Великобритания',
@@ -375,7 +375,7 @@ const testData = [
   },
   {
     id: 8,
-    nameRU: 'Soul Power',
+    nameRU: "33 слова о дизайне",
     nameEN: 'Soul Power',
     director: 'Джеффри Леви-Хинте',
     country: 'США',

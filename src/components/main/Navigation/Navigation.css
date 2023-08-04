@@ -8,25 +8,53 @@
   }
 }
 
+.navigation__panel {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+  padding: 144px 10px 46px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  background-color: var(--surface);
+}
+
+@media (min-width: 768px) {
+  .navigation__panel {
+    padding: 160px 90px 90px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navigation__panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    transform: translateX(0);
+    background-color: transparent;
+    max-width: none;
+    padding: 0;
+  }
+}
+
 .navigation__open-button {
-  /* Сброс стилей */
   display: block;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  /* Размеры */
   height: 40px;
   width: 43px;
-  aspect-ratio: 1;
-  /* Иконка */
   background-image: url(../../../images/icon__menu.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  /* Анимация */
   transition: opacity 0.3s, transform 0.3s;
 }
-
 
 .navigation__open-button:hover {
   opacity: 0.8;
@@ -48,7 +76,6 @@
 
 /* Всё меню, включая оверлей */
 .navigation__menu {
-  /* Положение */
   z-index: 1;
   position: fixed;
   top: 0;
@@ -72,7 +99,9 @@
 
 @media (min-width: 1280px) {
   .navigation__menu {
-    /* Сброс мобильной версии */
+    display: flex;
+  align-items: center;
+    flex-direction: row;
     position: static;
     opacity: 1;
     visibility: visible;
@@ -81,65 +110,27 @@
   }
 }
 
-.navigation__panel {
-  /* Сброс */
-  margin: 0;
-  /* Размеры */
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  max-width: 520px;
-  padding: 144px 10px 46px;
-  /* Положение */
-  position: fixed;
-  top: 0;
-  right: 0;
-  transform: translateX(100%);
-  /* Анимация */
-  transition: transform 0.3s;
-  /* Фон */
-  background-color: var(--surface);
-}
-
 .navigation__menu_opened .navigation__panel {
   transform: translateX(0);
 }
 
-@media (min-width: 768px) {
-  .navigation__panel {
-    padding: 160px 90px 90px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .navigation__panel {
-    /* Сброс мобильной версии */
-    position: static;
-    transform: translateX(0);
-    background-color: transparent;
-    max-width: none;
-    padding: 0;
-  }
-}
-
 .navigation__close-button {
-  /* Сброс */
   background-color: transparent;
   border: none;
   cursor: pointer;
-  /* Позиционирование */
+
   position: absolute;
   top: 13px;
   right: 13px;
-  /* Размеры */
+
   width: 31px;
   aspect-ratio: 1;
-  /* Иконка */
+
   background-image: url(../../../images/icon__close.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  /* Анимация */
+
   transition: opacity 0.3s, transform 0.3s;
 }
 
@@ -165,11 +156,9 @@
 }
 
 .navigation__list {
-  /* Сброс */
   list-style: none;
   margin: 0;
   padding: 0;
-  /* Расположение элементов внутри */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,7 +175,10 @@
 
 @media (min-width: 1280px) {
   .navigation__list {
-    /* Сброс мобильной версии */
+    display: flex;
+    
+    align-items: center;
+    margin: auto;
     flex-direction: row;
     gap: 16px;
   }
@@ -198,8 +190,8 @@
 
 @media (min-width: 1280px) {
   .navigation__list-item:last-child {
-    margin-top: 0;
-    margin-left: auto;
+    /* margin-top: 0;
+    margin-left: auto; */
   }
 }
 
@@ -210,11 +202,9 @@
 }
 
 .navigation__link {
-  /* Сброс */
   display: block;
   color: inherit;
   text-decoration: none;
-  /* Текст */
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -231,6 +221,7 @@
 
 @media (min-width: 1280px) {
   .navigation__link {
+
     font-weight: 400;
     font-size: 13px;
     line-height: 1.38;
