@@ -80,5 +80,5 @@
 }
 
 .password-input {
-  
+  color: var(--error-message);
 }

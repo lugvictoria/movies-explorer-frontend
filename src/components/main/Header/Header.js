@@ -17,7 +17,7 @@ function Header({ children, isThemed = false }) {
       >
         <img
           className="header__logo"
-          alt="Логотип приложения: круг"
+          alt="Логотип приложения"
           src={logo}
         />
       </NavLink>
