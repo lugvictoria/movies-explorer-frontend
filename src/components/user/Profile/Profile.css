@@ -35,13 +35,13 @@
 
 @media (min-width: 1280px) {
   .profile__container {
-    padding-top: 0px;
+    padding-top: 74px;
   }
 }
 
 .profile__title {
   margin: 0px;
-  margin-bottom: 70px;
+  margin-bottom: 68px;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -156,7 +156,7 @@
 
 @media (min-width: 1280px) {
   .profile__links {
-    padding-top: 220px;
+    padding-top: 160px;
   }
 }
 

@@ -52,13 +52,14 @@
 
 @media (min-width: 320px) {
   .section {
+    margin: 0;
     padding-inline: 10px;
   }
 }
 
 @media (min-width: 768px) {
   .section {
-    padding-inline: 50px;
+    padding-inline: 30px;
   }
 }
 

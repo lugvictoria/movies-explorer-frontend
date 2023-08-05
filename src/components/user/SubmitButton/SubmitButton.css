@@ -6,7 +6,7 @@
   margin-top: 140px;
   padding: 15px;
   align-self: stretch;
-
+  margin-top: 230px;
   color: var(--on-secondary);
   font-style: normal;
   font-weight: 500;
@@ -19,7 +19,7 @@
 
 @media (min-width: 768px) {
   .submit-button {
-    margin-top: 55px;
+    margin-top: 145px;
     font-size: 14px;
     line-height: 17px;
   }

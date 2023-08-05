@@ -4,10 +4,6 @@ import React, { useRef } from 'react';
 const Promo = () => {
   const nextScreenRef = useRef(null);
 
-  const scrollToNextScreen = () => {
-    nextScreenRef.current.scrollIntoView({ behavior: 'smooth' });
-  }
-
   return (
     <section className="promo">
       <h1 className="promo__title">
