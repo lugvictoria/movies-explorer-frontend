@@ -1,10 +1,10 @@
-import './Footer.css';
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer content__footer">
       <p className="footer__text">
-      Учебный проект Яндекс.Практикум х BeatFilm.
+        Учебный проект Яндекс.Практикум х BeatFilm.
       </p>
       <nav className="footer__links">
         <ul className="footer__links-list">

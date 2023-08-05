@@ -49,22 +49,22 @@
     display: flex;
     margin: 0;
     justify-content: center;
+    padding-top: 10px;
     padding-bottom: 284px;
     font-style: normal;
     font-weight: 400;
-    color: var(--text-on-page);
-    padding-top: 10px;
     font-size: 12px;
     line-height: 15px;
+    color: var(--text-on-page);
   }
 }
 
 @media (min-width: 768px) {
   .page404__subtitle {
     padding-top: 5px;
+    padding-bottom: 184px;
     font-size: 16px;
     line-height: 19px;
-    padding-bottom: 184px;
   }
 }
 
@@ -90,8 +90,6 @@
 
 @media (min-width: 1280px) {
   .page404__link {
-    font-size: 14px;
-    line-height: 17px;
     padding-bottom: 60px;
   }
 }

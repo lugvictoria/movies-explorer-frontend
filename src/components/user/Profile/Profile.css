@@ -98,7 +98,7 @@
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
-  /* Анимация */
+
   background-color: transparent;
   transition: opacity 0.3s, background-color 0.3s;
 }
@@ -132,12 +132,6 @@
   .profile__error-message {
     margin-top: 0px;
     margin-bottom: 16px;
-    text-align: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 1.18;
-    color: var(--error-message);
   }
 }
 
@@ -163,14 +157,6 @@
 @media (min-width: 1280px) {
   .profile__links {
     padding-top: 220px;
-    padding-bottom: 70px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .profile__links {
-    padding-top: 220px;
-    padding-bottom: 70px;
   }
 }
 
@@ -184,7 +170,7 @@
   font-size: 12px;
   line-height: 1.25;
   text-align: center;
-  /* Анимация */
+
   transition: opacity 0.3s;
   color: var(--text-on-page);
 }

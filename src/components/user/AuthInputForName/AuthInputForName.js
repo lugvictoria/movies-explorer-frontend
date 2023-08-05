@@ -1,16 +1,16 @@
-import AuthInput from '../AuthInput/AuthInput';
+import AuthInput from "../AuthInput/AuthInput";
 
 function AuthInputForName() {
   return (
     <AuthInput
       label="Имя"
       params={{
-        type: 'text',
-        name: 'name',
+        type: "text",
+        name: "name",
         required: true,
         minLength: 2,
         maxLength: 30,
-        placeholder: 'Виталий',
+        placeholder: "Виталий",
       }}
     />
   );

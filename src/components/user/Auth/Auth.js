@@ -1,33 +1,33 @@
-import './Auth.css';
-import logo from '../../../images/logo.svg';
-import { Link } from 'react-router-dom';
-import SubmitButton from '../SubmitButton/SubmitButton';
+import "./Auth.css";
+import logo from "../../../images/logo.svg";
+import { Link } from "react-router-dom";
+import SubmitButton from "../SubmitButton/SubmitButton";
 
-function Auth({ mode = 'register', children }) {
+function Auth({ mode = "register", children }) {
   const MODES = {
     register: {
-      title: 'Добро пожаловать!',
+      title: "Добро пожаловать!",
       hint: (
         <p className="auth__hint">
-          Уже зарегистрированы?{' '}
+          Уже зарегистрированы?{" "}
           <Link to="/signin" className="auth__hint-link">
             Войти
           </Link>
         </p>
       ),
-      buttonText: 'Зарегистрироваться',
+      buttonText: "Зарегистрироваться",
     },
     login: {
-      title: 'Рады видеть!',
+      title: "Рады видеть!",
       hint: (
         <p className="auth__hint">
-          Ещё не зарегистрированы?{' '}
+          Ещё не зарегистрированы?{" "}
           <Link to="/signup" className="auth__hint-link">
             Регистрация
           </Link>
         </p>
       ),
-      buttonText: 'Войти',
+      buttonText: "Войти",
     },
   };
 

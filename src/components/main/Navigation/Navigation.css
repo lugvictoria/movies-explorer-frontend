@@ -100,7 +100,7 @@
 @media (min-width: 1280px) {
   .navigation__menu {
     display: flex;
-  align-items: center;
+    align-items: center;
     flex-direction: row;
     position: static;
     opacity: 1;
@@ -118,19 +118,15 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-
   position: absolute;
   top: 13px;
   right: 13px;
-
   width: 31px;
   aspect-ratio: 1;
-
   background-image: url(../../../images/icon__close.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
   transition: opacity 0.3s, transform 0.3s;
 }
 
@@ -176,7 +172,6 @@
 @media (min-width: 1280px) {
   .navigation__list {
     display: flex;
-    
     align-items: center;
     margin: auto;
     flex-direction: row;
@@ -221,7 +216,6 @@
 
 @media (min-width: 1280px) {
   .navigation__link {
-
     font-weight: 400;
     font-size: 13px;
     line-height: 1.38;
