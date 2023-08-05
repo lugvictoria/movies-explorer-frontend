@@ -1,5 +1,5 @@
-import './AboutProject.css';
-import Article from '../Article/Article';
+import "./AboutProject.css";
+import Article from "../Article/Article";
 
 function AboutProject() {
   return (
@@ -9,7 +9,6 @@ function AboutProject() {
           </p> */}
       <article className="about-project">
         <div className="about-project__context">
-
           <p className="about-project__title">
             Дипломный проект включал&nbsp;5 этапов
           </p>
@@ -20,11 +19,11 @@ function AboutProject() {
         </div>
         <div className="about-project__context">
           <p className="about-project__title">
-            На&nbsp;выполнение диплома&nbsp;ушло&nbsp;5  недель
+            На&nbsp;выполнение диплома&nbsp;ушло&nbsp;5 недель
           </p>
           <p className="about-project__subtitle">
             У&nbsp;каждого этапа был мягкий и&nbsp;жёсткий дедлайн, которые
-            нужно было соблюдать, чтобы успешно защититься.{' '}
+            нужно было соблюдать, чтобы успешно защититься.{" "}
           </p>
         </div>
         <div className="about-project__blockline">

@@ -21,6 +21,8 @@
   .about-project {
     column-gap: 40px;
     row-gap: 110px;
+    max-width: 1140px;
+    grid-template-columns: repeat(2, minmax(550px, min-content));
   }
 }
 
@@ -69,7 +71,7 @@
 @media (min-width: 768px) {
   .about-project__title {
     max-width: 319px;
-    margin: 0 0 22px 0;
+    margin-bottom: 22px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -77,7 +79,7 @@
 
 @media (min-width: 1280px) {
   .about-project__title {
-    margin: 0 0 26px 0;
+    margin-bottom: 26px;
     max-width: 550px;
   }
 }

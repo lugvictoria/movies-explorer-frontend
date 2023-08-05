@@ -46,10 +46,6 @@
   flex-direction: column;
 }
 
-.content {
-  min-height: 700px;
-}
-
 .content__footer {
   margin-top: auto;
 }

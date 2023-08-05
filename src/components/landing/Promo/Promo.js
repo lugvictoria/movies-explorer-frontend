@@ -1,6 +1,13 @@
 import './Promo.css';
+import React, { useRef } from 'react';
 
-function Promo() {
+const Promo = () => {
+  const nextScreenRef = useRef(null);
+
+  const scrollToNextScreen = () => {
+    nextScreenRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <section className="promo">
       <h1 className="promo__title">
@@ -9,11 +16,12 @@ function Promo() {
       <h2 className="promo__subtitle">
         Листайте ниже, чтобы узнать больше про этот проект и его создателя.
       </h2>
-      <div className="promo__button">
+      <div className="promo__button" onClick={() => window.scrollTo(0, window.innerHeight)}>
         <h3 className="promo__button-text">
           Узнать больше
         </h3>
       </div>
+      <div ref={nextScreenRef}></div>
     </section>
   );
 }

@@ -3,22 +3,21 @@
 }
 
 @media (min-width: 320px) {
-.techs {
-  display: flex;
-
-  padding-inline: 18px;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-on-page);
-  background-color: var(--background-techs);
-}
+  .techs {
+    display: flex;
+    padding-inline: 18px;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-on-page);
+    background-color: var(--background-techs);
+  }
 }
 
 @media (min-width: 768px) {
   .techs {
     padding-inline: 0px;
   }
-  }
+}
 
 @media (min-width: 320px) {
   .techs__name-section {
@@ -37,27 +36,19 @@
 @media (min-width: 768px) {
   .techs__name-section {
     max-width: 1140px;
-    color: var(--text-on-page);
     font-size: 22px;
     line-height: 27px;
-    letter-spacing: -0.04em;
     padding-top: 90px;
     padding-bottom: 22px;
-    margin: 0 50px 80px 50px;
+    margin-bottom: 80px;
     border-bottom: 1px solid #dadada;
   }
 }
 
 @media (min-width: 1280px) {
   .techs__name-section {
-    max-width: 1140px;
-    color: var(--text-on-page);
-    font-size: 22px;
-    line-height: 27px;
-    letter-spacing: -0.04em;
     padding-top: 108px;
-    padding-bottom: 22px;
-    margin: 0px auto 90px 70px;
+    margin-bottom: 90px;
     border-bottom: 1px solid #dadada;
   }
 }
@@ -82,32 +73,15 @@
   .techs__title {
     padding-top: 0px;
     padding-bottom: 22px;
-    margin: auto;
-    font-style: normal;
-    font-weight: 400;
     font-size: 50px;
     line-height: 58px;
-    text-align: center;
-    align-items: center;
-    letter-spacing: -0.04em;
-    color: var(--text-on-page);
   }
 }
 
 @media (min-width: 1280px) {
   .techs__title {
-    padding-top: 0px;
     padding-bottom: 26px;
     margin: auto;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 58px;
-    text-align: center;
-    align-items: center;
-    letter-spacing: -0.04em;
-    color: var(--text-on-page);
   }
 }
 
@@ -129,33 +103,18 @@
 
 @media (min-width: 768px) {
   .techs__subtitle {
-    margin: 0 auto 83px auto;
+    margin-bottom: 83px;
     max-width: 460px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120px;
-    text-align: center;
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: -0.04em;
-    color: var(--text-on-page);
   }
 }
 
 @media (min-width: 1280px) {
   .techs__subtitle {
-    margin: 0 auto 100px auto;
-    max-width: 460px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120px;
-    text-align: center;
+    margin-bottom: 100px;
     font-size: 14px;
     line-height: 1.43;
-    letter-spacing: -0.04em;
-    color: var(--text-on-page);
   }
 }
 
@@ -164,11 +123,10 @@
     list-style: none;
     padding-bottom: 70px;
     margin: 0;
-  padding-inline: 0;
+    padding-inline: 0;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2, minmax(84px, min-content));
-    /* grid-template-columns: repeat(auto-fit, minmax(84px, min-content)); */
     justify-content: center;
   }
 }
@@ -177,8 +135,6 @@
   .techs__list {
     padding-bottom: 90px;
     grid-template-columns: repeat(7, minmax(84px, min-content));
-    /* grid-template-columns: repeat(auto-fit, minmax(84px, min-content)); */
-    /* justify-content: center; */
   }
 }
 
@@ -186,8 +142,6 @@
   .techs__list {
     padding-bottom: 100px;
     grid-template-columns: repeat(7, minmax(90px, min-content));
-    /* grid-template-columns: repeat(auto-fit, minmax(84px, min-content)); */
-    /* justify-content: center; */
   }
 }
 
@@ -208,27 +162,9 @@
   }
 }
 
-@media (min-width: 768px) {
-  .techs__list-item {
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-
 @media (min-width: 1280px) {
   .techs__list-item {
-    padding: 21px 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-    background-color: var(--list-items);
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    letter-spacing: -0.04em;
   }
 }
-

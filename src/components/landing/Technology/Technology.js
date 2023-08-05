@@ -1,12 +1,10 @@
-import './Technology.css';
+import "./Technology.css";
 
 function Technology() {
   return (
     <section className="techs__color">
-      <p className="techs__name-section">
-        Технологии
-      </p>
-      <article className="techs" >
+      <p className="techs__name-section">Технологии</p>
+      <article className="techs">
         <p className="techs__title">7&nbsp;технологий</p>
         <p className="techs__subtitle">
           На&nbsp;курсе веб-разработки мы&nbsp;освоили технологии, которые

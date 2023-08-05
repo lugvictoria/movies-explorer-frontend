@@ -40,12 +40,6 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
         onClick={handleOverlayClick}
       >
         <nav className="navigation__panel">
-          {/* <button
-            type="button"
-            className="navigation__close-button"
-            aria-label="Закрыть меню"
-            onClick={toggleMenu}
-          ></button> */}
           <ul className="navigation__list">
             <NavigationLink title="Фильмы" to="/movies" />
             <NavigationLink title="Сохранённые фильмы" to="/saved-movies" />
