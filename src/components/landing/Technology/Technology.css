@@ -1,7 +1,10 @@
+@media (min-width: 320px) {
 .techs__section {
   background-color: var(--background-techs);
   padding-inline: 18px;
+  padding-top: 71px;
   padding-bottom: 70px;
+}
 }
 
 @media (min-width: 768px) {
@@ -14,7 +17,8 @@
 
 @media (min-width: 1280px) {
   .techs__section {
-    padding-top: 110px;
+    padding-top: 105px;
+    padding-bottom: 100px;
     padding-inline: 70px;
   }
 }
@@ -37,14 +41,13 @@
 
 @media (min-width: 320px) {
   .techs__name-section {
+    margin: 0;
     max-width: 284px;
     color: var(--text-on-page);
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.04em;
-    padding-top: 71px;
     padding-bottom: 28px;
-    margin: 0 auto 28px auto;
     border-bottom: 1px solid #000000;
   }
 }
@@ -69,8 +72,8 @@
 
 @media (min-width: 320px) {
   .techs__title {
-    padding-top: 35px;
-    padding-bottom: 23px;
+    padding-top: 65px;
+    padding-bottom: 24px;
     margin: auto;
     font-style: normal;
     font-weight: 400;
@@ -94,6 +97,7 @@
 
 @media (min-width: 1280px) {
   .techs__title {
+    padding-top: 85px;
     padding-bottom: 26px;
     margin: auto;
   }

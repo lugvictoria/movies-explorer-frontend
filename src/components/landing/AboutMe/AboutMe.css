@@ -1,7 +1,7 @@
 @media (min-width: 320px) {
   .about-me__section {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 0px;
     padding-inline: 14px;
   }
 }
@@ -25,10 +25,11 @@
 @media (min-width: 320px) {
   .about-me__table {
     display: grid;
+    padding-top: 60px;
     color: var(--text-on-page);
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    gap: 40px;
+    gap: 37px;
     grid-template-areas:
     "photo"
     "name"
@@ -42,6 +43,8 @@
     padding-top: 66px;
     grid-template-columns: 364px 255px;
     gap: 50px;
+    grid-template-areas:
+    "description photo";
   }
 }
 

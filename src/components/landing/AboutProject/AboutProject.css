@@ -1,24 +1,48 @@
 @media (min-width: 320px) {
+.about-project__section {
+  padding-inline: 18px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+}
+
+@media (min-width: 768px) {
+  .about-project__section {
+    padding-inline: 50px;
+    padding-top: 87px;
+    padding-bottom: 90px;
+  }
+  }
+
+  @media (min-width: 1280px) {
+    .about-project__section {
+      padding-inline: 70px;
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+    }
+
   .about-project {
+    padding-top: 60px;
     color: var(--text-on-page);
     display: grid;
     grid-template-columns: 1fr;
     gap: 56px;
-    padding-inline: 4px;
+
   }
-}
 
 @media (min-width: 768px) {
   .about-project {
+    padding-top: 70px;
     grid-template-columns: repeat(2, minmax(320px, min-content));
     column-gap: 30px;
     row-gap: 93px;
-    padding-inline: 20px;
   }
 }
 
 @media (min-width: 1280px) {
   .about-project {
+    padding-top: 65px;
     column-gap: 40px;
     row-gap: 110px;
     max-width: 1140px;
@@ -28,17 +52,25 @@
 
 @media (min-width: 320px) {
   .about-project__name-section {
+    margin: 0;
     color: var(--text-on-page);
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 18px;
+    line-height: 22px;
     letter-spacing: -0.04em;
-    margin-top: 111px;
-    margin-bottom: 70px;
+    padding-bottom: 26px;
     border-bottom: 1px solid #dadada;
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__name-section {
+    font-size: 22px;
+    line-height: 27px;
     padding-bottom: 23px;
   }
 }
+
 
 @media (min-width: 1280px) {
   .about-project__name-section {
@@ -59,11 +91,12 @@
 @media (min-width: 320px) {
   .about-project__title {
     max-width: 284px;
-    margin: 0 0 16px 0;
+    margin: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+    padding-bottom: 16px;
     letter-spacing: -0.04em;
   }
 }
@@ -74,6 +107,7 @@
     margin-bottom: 22px;
     font-size: 20px;
     line-height: 24px;
+    padding-bottom: 0px;
   }
 }
 
@@ -128,7 +162,6 @@
 
 @media (min-width: 1280px) {
   .about-project__blockline {
-    padding-bottom: 5px;
     grid-template-columns: 20% 80%;
   }
 }

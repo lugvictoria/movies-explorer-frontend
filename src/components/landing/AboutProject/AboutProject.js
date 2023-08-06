@@ -3,10 +3,10 @@ import Article from "../Article/Article";
 
 function AboutProject() {
   return (
-    <Article title="О&nbsp;проекте" className="section" navId="about-project">
-      {/* <p className="about-project__name-section">
+    <section className="about-project__section" navId="about-project">
+      <h2 className="about-project__name-section">
             О&nbsp;проекте
-          </p> */}
+          </h2>
       <article className="about-project">
         <div className="about-project__context">
           <p className="about-project__title">
@@ -33,7 +33,7 @@ function AboutProject() {
           <p className="about-project__time-caption">Front-end</p>
         </div>
       </article>
-    </Article>
+    </section>
   );
 }
 
