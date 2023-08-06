@@ -1,16 +1,18 @@
 .search-form {
-  padding-top: 72px;
+  padding-inline: 14px;
+  padding-top: 75px;
   padding-bottom: 50px;
   display: grid;
   row-gap: 40px;
   grid-template-columns: 1fr min-content;
   grid-template-areas:
-    'input button'
-    'checkbox checkbox';
+    "input button"
+    "checkbox checkbox";
 }
 
 @media (min-width: 768px) {
   .search-form {
+    padding-inline: 30px;
     padding-top: 67px;
     padding-bottom: 60px;
     row-gap: 30px;
@@ -19,6 +21,7 @@
 
 @media (min-width: 1280px) {
   .search-form {
+    padding-inline: 70px;
     padding-top: 57px;
     padding-bottom: 47px;
     row-gap: 32px;
@@ -30,19 +33,18 @@
 .search-form__input {
   grid-area: input;
   grid-column: 1/-1;
+  padding: 0;
   border: none;
   border-bottom: 1px solid var(--line);
   padding-block: 15px;
   transition: border-bottom-color 0.3s;
   padding-right: 60px;
-  /* Space for input button */
-  /* Текст */
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.22;
+  line-height: 22px;
   background-color: var(--surface-pages);
-  color: var(--text-on-page);
+  color: var(--text-on-caption);
 }
 
 @media (min-width: 768px) {
@@ -80,27 +82,19 @@
   }
 }
 
-
-
 .search-form__button {
-  /* Расположение */
-  grid-area: button;
-  align-self: center;
-  /* Сброс */
+  padding: 0;
   cursor: pointer;
   border: none;
   background-color: var(--secondary);
   color: var(--on-secondary);
-  /* Размеры */
-  padding: 8px 10px;
   border-radius: 48px;
-  /* Текст */
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
   line-height: 1.64;
-  /* Анимация */
   transition: opacity 0.3s, transform 0.3s;
+  grid-area: button;
 }
 
 .search-form__button:hover {

@@ -6,6 +6,7 @@ import Movies from '../movies/Movies/Movies';
 import SavedMovies from '../movies/SavedMovies/SavedMovies';
 import Register from '../user/Register/Register';
 import Login from '../user/Login/Login';
+import Menu from '../user/Menu/Menu';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/signup" element={<Register />} />
         <Route path="/signin" element={<Login />} />
         <Route path="*" element={<Page404 />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
     </div>
   );

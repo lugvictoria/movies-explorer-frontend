@@ -1,7 +1,7 @@
 .movie-card {
   flex-direction: column;
   max-width: 600px;
-  padding-block: var(--gap);
+
   /* Внешний вид */
   background-color: var(--card);
   border-radius: 6px;
@@ -34,41 +34,46 @@
   padding-top: 12px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
 .movie-card__block {
-  padding-top: 10px;
-  padding-inline: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
 }
+}
+
+@media (min-width: 1280px) {
+  .movie-card__block {
+    padding-top: 10px;
+    padding-inline: 12px;
+  }
 }
 
 .movie-card__name {
   max-width: 206px;
   grid-area: name;
   margin: 0;
-  margin-left: var(--gap);
-  /* Текст */
+  margin-left: 12px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.5;
-  /* Перенос слов */
+  font-size: 13px;
+  line-height: 16px;
   overflow-wrap: anywhere;
 }
 
 @media (min-width: 768px) {
   .movie-card__name {
-    font-size: 15px;
-    line-height: 1.2;
+    font-size: 13px;
+    line-height: 16px;
   }
 }
 
 .movie-card__duration {
   grid-area: duration;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   margin: 0;
-  margin-right: var(--gap);
-  /* Текст */
+  margin-left: 12px;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -78,8 +83,10 @@
 
 @media (min-width: 768px) {
   .movie-card__duration {
-    font-size: 13px;
-    line-height: 1.38;
+    font-size: 11px;
+    line-height: 13px;
+    padding-top: 10px;
+    padding-bottom: 12px;
   }
 }
 
@@ -87,7 +94,7 @@
   .movie-card__duration {
     font-size: 13px;
     line-height: 1.38;
-  padding-bottom: 14px;
+    padding-bottom: 14px;
   }
 }
 
@@ -99,9 +106,14 @@
   object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .movie-card__thumbnail {
+    max-width: 339px;
+  }
+}
+
 .movie-card__button {
   grid-area: button;
   justify-self: center;
   margin-inline: var(--gap);
-
 }

@@ -16,7 +16,7 @@ function MoviesCardList({ type }) {
   }, []);
 
   return (
-    <ul className="movie-card-list section" aria-label="Список фильмов">
+    <ul className="movie-card-list" aria-label="Список фильмов">
       {movies.map((movie) => {
         return (
           <MoviesCard
