@@ -5,10 +5,10 @@ import Portfolio from "../Portfolio/Portfolio";
 
 function Student() {
   return (
-    <Article title="Студент" className="section" navId="student">
+    <section className="student__section" navId="student">
       <AboutMe />
       <Portfolio />
-    </Article>
+    </section>
   );
 }
 

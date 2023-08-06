@@ -26,6 +26,9 @@
   --line: #424242;
   --text-under: #A0A0A0;
   --surface-inputs: #2F2F2F;
+  --line-portfolio: #E6E6E6;
+
+
 
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
@@ -50,7 +53,7 @@
   margin-top: auto;
 }
 
-@media (min-width: 320px) {
+/* @media (min-width: 320px) {
   .section {
     margin: 0;
     padding-inline: 10px;
@@ -68,9 +71,9 @@
     max-width: 1280px;
     padding-inline: 70px;
   }
-}
+} */
 
-.section-techs {
+/* .section-techs {
   max-width: max-content;
   padding-inline: 70px;
   background-color: var(--background-techs);
@@ -78,4 +81,4 @@
 
 .password-input {
   color: var(--error-message);
-}
+} */

@@ -1,17 +1,19 @@
 .portfolio {
-  padding-top: 70px;
+  padding-inline: 18px;
   color: var(--on-surface);
 }
 
 @media (min-width: 768px) {
   .portfolio {
-    padding-top: 90px;
+    padding-inline: 50px;
+    padding-bottom: 90px;
   }
 }
 
 @media (min-width: 1280px) {
   .portfolio {
-    padding-top: 100px;
+    padding-inline: 70px;
+    padding-bottom: 125px;
   }
 }
 
@@ -40,7 +42,7 @@
 }
 
 .portfolio__list-item {
-  border-top: 1px solid var(--on-surface-variant-secondary);
+  border-top: 1px solid var(--line-portfolio);
 }
 
 .portfolio__list-item:first-of-type {
