@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import React from "react";
 import NavigationLink from "../NavigationLink/NavigationLink";
+import { Link } from "react-router-dom";
+import account from "../../../images/profile.svg";
 import "./Navigation.css";
 
 function Navigation({ hasLinkToMain = true, isThemed = false }) {
@@ -46,7 +48,10 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
             <NavigationLink title="Сохранённые фильмы" to="/saved-movies" />
           </ul>
         </nav>
-        <NavigationLink title="Аккаунт" to="/profile" isLinkToProfile />
+        {/* <NavigationLink title="Аккаунт" to="/profile" isLinkToProfile /> */}
+        <Link className="navigation__link" to="/signin" isLinkToProfile >
+          <img className="" alt="Аккаунт" src={account} />
+        </Link>
       </div>
     </div>
   );

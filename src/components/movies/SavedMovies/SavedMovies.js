@@ -7,7 +7,7 @@ import './SavedMovies.css';
 
 function SavedMovies() {
   return (
-    <>
+    <div className="movies-page">
       <Header>
         <Navigation />
       </Header>
@@ -16,7 +16,7 @@ function SavedMovies() {
         <MoviesCardList type="saved" />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

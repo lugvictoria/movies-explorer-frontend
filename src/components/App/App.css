@@ -9,7 +9,7 @@
   /* Шрифтовая схема для всей страницы */
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   /* Цвета страницы по умолчанию */
-  background-color: var(--on-surface);
+  background-color: var(--surface-pages);
   color: var(--text-on-page);
   /* Использование цветов в проекте */
   --promo: #073042;

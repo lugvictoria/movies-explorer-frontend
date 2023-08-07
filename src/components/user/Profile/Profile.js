@@ -1,7 +1,9 @@
 import React from "react";
 import "./Profile.css";
+
 function Profile() {
   return (
+    <div className="profile-page">
     <main className="profile content__stretched-element ">
       <div className="profile__container">
         <h1 className="profile__title">Привет, Виталий!</h1>
@@ -45,6 +47,7 @@ function Profile() {
         </ul>
       </div>
     </main>
+    </div>
   );
 }
 export default Profile;

@@ -8,7 +8,7 @@ import './Movies.css';
 
 function Movies() {
   return (
-    <>
+    <div className="movies-page">
       <Header>
         <Navigation />
       </Header>
@@ -19,7 +19,7 @@ function Movies() {
        {/* <Preloader /> will ve set later */}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 export default Movies;
