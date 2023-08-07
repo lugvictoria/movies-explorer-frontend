@@ -7,7 +7,7 @@
 .page {
   width: 100%;
   /* Шрифтовая схема для всей страницы */
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   /* Цвета страницы по умолчанию */
   background-color: var(--surface-pages);
   color: var(--text-on-page);
@@ -15,21 +15,18 @@
   --promo: #073042;
   --on-surface: #000000;
   --surface-pages: #202020;
-  --text-on-page: #FFFFFF;
-  --time-block1: #3DDC84;
+  --text-on-page: #ffffff;
+  --time-block1: #3ddc84;
   --time-block4: #303030;
   --background-techs: #272727;
   --list-items: #303030;
-  --text-on-caption: #8B8B8B;
-  --color-link: #4285F4;
-  --error-message: #EE3465;
+  --text-on-caption: #8b8b8b;
+  --color-link: #4285f4;
+  --error-message: #ee3465;
   --line: #424242;
-  --text-under: #A0A0A0;
-  --surface-inputs: #2F2F2F;
-  --line-portfolio: #E6E6E6;
-
-
-
+  --text-under: #a0a0a0;
+  --surface-inputs: #2f2f2f;
+  --line-portfolio: #e6e6e6;
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,33 +49,3 @@
 .content__footer {
   margin-top: auto;
 }
-
-/* @media (min-width: 320px) {
-  .section {
-    margin: 0;
-    padding-inline: 10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .section {
-    padding-inline: 30px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .section {
-    max-width: 1280px;
-    padding-inline: 70px;
-  }
-} */
-
-/* .section-techs {
-  max-width: max-content;
-  padding-inline: 70px;
-  background-color: var(--background-techs);
-}
-
-.password-input {
-  color: var(--error-message);
-} */

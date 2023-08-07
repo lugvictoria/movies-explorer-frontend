@@ -6,20 +6,17 @@
 }
 
 .more__button {
-  /* Сброс */
   display: block;
   border: 2px solid var(--line);
   cursor: pointer;
-  /* Внешний вид */
   background-color: var(--movie-button);
   border-radius: 6px;
   min-width: 240px;
   padding: 10px 20px;
-  /* Анимация */
   color: white;
   outline: none;
-  box-shadow: none; /* убираем тень */
-  transition: opacity .3s, transform .3s;
+  box-shadow: none;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 @media (min-width: 768px) {

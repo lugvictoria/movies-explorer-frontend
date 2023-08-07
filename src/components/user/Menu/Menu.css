@@ -1,5 +1,6 @@
 .menu {
   background-color: var(--surface-pages);
+  z-index: 5;
 }
 
 @media (min-width: 320px) {
@@ -20,6 +21,15 @@
     margin: 0 0 0 auto;
     max-width: 520px;
     padding-top: 159px;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu_opacity {
+    flex-direction: column;
+    justify-content: left;
+    opacity: 0;
   }
 }
 

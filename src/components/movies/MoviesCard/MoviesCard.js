@@ -1,7 +1,7 @@
-import './MoviesCard.css';
-import CardButton from '../CardButton/CardButton';
-import React from 'react';
-import getNumDeclination from '../../../utils/getNumDeclination';
+import "./MoviesCard.css";
+import CardButton from "../CardButton/CardButton";
+import React from "react";
+import getNumDeclination from "../../../utils/getNumDeclination";
 
 function MoviesCard({ name, duration, thumbnail, type }) {
   // DEMO FOR BUTTON CLICK
@@ -25,33 +25,33 @@ function MoviesCard({ name, duration, thumbnail, type }) {
         alt={`Кадр из фильма ${name}`}
         className="movie-card__thumbnail"
       />
-     <div className="movie-card__block">
-     <h3 className="movie-card__name">{name}</h3>
-      {type === 'all' ? (
-        isSaved ? (
-          <CardButton
-            className="movie-card__button"
-            type="done"
-            onClick={handleClickSave}
-          />
+      <div className="movie-card__block">
+        <h3 className="movie-card__name">{name}</h3>
+        {type === "all" ? (
+          isSaved ? (
+            <CardButton
+              className="movie-card__button"
+              type="done"
+              onClick={handleClickSave}
+            />
+          ) : (
+            <CardButton
+              className="movie-card__button"
+              type="save"
+              onClick={handleClickSave}
+            />
+          )
         ) : (
           <CardButton
             className="movie-card__button"
-            type="save"
-            onClick={handleClickSave}
+            type="delete"
+            onClick={handleClickDelete}
           />
-        )
-      ) : (
-        <CardButton
-          className="movie-card__button"
-          type="delete"
-          onClick={handleClickDelete}
-        />
-      )}
-       </div>
-       <p className="movie-card__duration">{`${duration} ${getNumDeclination(
+        )}
+      </div>
+      <p className="movie-card__duration">{`${duration} ${getNumDeclination(
         duration,
-        ['минута', 'минуты', 'минут'],
+        ["минута", "минуты", "минут"]
       )}`}</p>
     </li>
   );

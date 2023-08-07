@@ -3,7 +3,8 @@
   /* border: none;
   cursor: pointer;
   /* Анимация */
-  transition: transform 0.3s, opacity 0.3s, background-color 0.6s linear, color 0.6s linear;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.6s linear,
+    color 0.6s linear;
   /* Текст */
   /* font-style: normal;
   font-weight: 400;

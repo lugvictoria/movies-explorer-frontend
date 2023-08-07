@@ -35,11 +35,11 @@
 }
 
 @media (min-width: 768px) {
-.movie-card__block {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 14px;
-}
+  .movie-card__block {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+  }
 }
 
 @media (min-width: 1280px) {

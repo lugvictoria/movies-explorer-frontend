@@ -31,10 +31,10 @@
     grid-auto-flow: dense;
     gap: 37px;
     grid-template-areas:
-    "photo"
-    "name"
-    "subtitle"
-    "link";
+      "photo"
+      "name"
+      "subtitle"
+      "link";
   }
 }
 
@@ -43,8 +43,7 @@
     padding-top: 66px;
     grid-template-columns: 364px 255px;
     gap: 50px;
-    grid-template-areas:
-    "description photo";
+    grid-template-areas: "description photo";
   }
 }
 
@@ -53,8 +52,7 @@
     padding-top: 65px;
     grid-template-columns: 1fr 270px;
     grid-template-rows: 1;
-    grid-template-areas:
-    "description photo";
+    grid-template-areas: "description photo";
   }
 }
 

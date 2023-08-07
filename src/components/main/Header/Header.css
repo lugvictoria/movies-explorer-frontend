@@ -17,6 +17,7 @@
 .landing-page .header {
   background-color: var(--promo);
 }
+
 .landing-page .header__button-container_films {
   display: none;
 }
@@ -28,6 +29,7 @@
 .landing-page .header__menu-button {
   display: none;
 }
+
 /*Страница Movies*/
 .movies-page .header__button-entrance {
   display: none;
@@ -40,6 +42,7 @@
 .movies-page .header__button-container {
   display: none;
 }
+
 /*Страница Profile*/
 .profile-page .header__button-entrance {
   display: none;
@@ -127,6 +130,12 @@
   cursor: pointer;
 }
 
+@media (min-width: 1280px) {
+  .movies-page .header__menu-button {
+    display: none;
+  }
+}
+
 .header__account-button:hover {
   cursor: pointer;
   opacity: 0.6;
@@ -142,6 +151,10 @@
     display: flex;
   }
 
+  .movies-page .header__button-container {
+    display: flex;
+  }
+
   .profile-page .header__button-container_films {
     display: flex;
   }
@@ -153,5 +166,3 @@
     display: none;
   }
 }
-
-

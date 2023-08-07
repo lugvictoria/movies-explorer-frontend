@@ -1,11 +1,8 @@
 .checkbox {
-  /* Расположение чекбокса и подписи */
-  
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   gap: 12px;
-  /* Анимация */
   transition: opacity 0.3s;
   cursor: pointer;
 }
@@ -22,12 +19,10 @@
   }
 }
 
-/* При наведении */
 .checkbox:hover {
   opacity: 0.8;
 }
 
-/* Скрытие системного чекбокса */
 .checkbox__system-checkbox {
   position: absolute;
   height: 1px;
@@ -36,41 +31,31 @@
   clip: rect(0 0 0 0);
 }
 
-/* Контейнер, в котором движется рычаг (выключенное состояние) */
 .checkbox__custom-checkbox {
-  /* Позиционирование */
   position: relative;
-  /* Размеры */
   width: 36px;
   height: 20px;
   border-radius: 20px;
   box-sizing: border-box;
   background-image: url(../../../images/smalltumb.svg);
-  /* Цвет */
   background-color: var(-time-block1);
-  /* Анимация */
   transition: background-color 0.3s ease-in;
 }
 
-/* Нажатое состояние - фон контейнера */
-.checkbox__system-checkbox:checked+.checkbox__custom-checkbox {
+.checkbox__system-checkbox:checked + .checkbox__custom-checkbox {
   background-color: var(-time-block1);
 }
 
-/* Неактивное состояние */
-.checkbox__system-checkbox:disabled+.checkbox__custom-checkbox {
+.checkbox__system-checkbox:disabled + .checkbox__custom-checkbox {
   opacity: 0.3;
 }
 
-/* Рычаг (выключенное состояние) */
 .checkbox__custom-checkbox::after {
-  content: '';
-  /* Размеры */
+  content: "";
   box-sizing: border-box;
   height: 40%;
   aspect-ratio: 1;
   border-radius: 50%;
-  /* Положение */
   position: absolute;
   top: 50%;
   left: 10px;
@@ -80,8 +65,8 @@
   transition: left 0.3s ease-in;
 }
 
-/* Нажатое состояние - положение ручага */
-.checkbox__system-checkbox:checked+.checkbox__custom-checkbox::after {
+/* Нажатое состояние - рычаг */
+.checkbox__system-checkbox:checked + .checkbox__custom-checkbox::after {
   left: 26px;
 }
 
@@ -99,8 +84,7 @@
   }
 }
 
-/* В фокусе */
-.checkbox__system-checkbox:focus~.checkbox__label {
+.checkbox__system-checkbox:focus ~ .checkbox__label {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--text-on-page);

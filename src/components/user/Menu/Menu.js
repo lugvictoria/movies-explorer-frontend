@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import account from "../../../images/profile.svg";
+import Movies from "../../movies/Movies/Movies";
 import "./Menu.css";
 
 const Menu = () => {
@@ -13,11 +14,13 @@ const Menu = () => {
 
   return (
     <div>
-      <button onClick={toggleMenu}>Menu</button>
-      {isOpen && (
-        <main className="menu">
+      {/* <button onClick={toggleMenu}>Menu</button> */}
+      {/* {isOpen && ( */}
+      <main>
+        <div className="menu">
+          <div className="menu_opacity"></div>
           <div className="menu_box">
-            <div className="menu">
+            <div className="menu-column">
               <NavLink
                 to="/"
                 activeClassName="active"
@@ -47,31 +50,11 @@ const Menu = () => {
               </Link>
             </div>
           </div>
-        </main>
-      )}
+        </div>
+      </main>
+      {/* )} */}
     </div>
   );
 };
 
 export default Menu;
-
-// function Menu() {
-//   return (
-//     <main className="menu">
-//       <div className="menu_box">
-//         <Link to="/" className="menu__main">
-//           Главная
-//         </Link>
-//         <Link to="/movies" className="menu__movies">
-//           Фильмы
-//         </Link>
-//         <Link to="/saved-movies" className="menu__saved">
-//           Сохраненные фильмы
-//         </Link>
-//       </div>
-//       <Link className="menu__link" to={-1}>
-//         Аккаунт
-//       </Link>
-//     </main>
-//   );
-// }

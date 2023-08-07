@@ -3,9 +3,7 @@ import "./AboutProject.css";
 function AboutProject() {
   return (
     <section className="about-project__section" navId="about-project">
-      <h2 className="about-project__name-section">
-            О&nbsp;проекте
-          </h2>
+      <h2 className="about-project__name-section">О&nbsp;проекте</h2>
       <article className="about-project">
         <div className="about-project__context">
           <p className="about-project__title">

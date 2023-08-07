@@ -1,8 +1,8 @@
-import React from 'react';
-import MoviesCard from '../MoviesCard/MoviesCard';
-import './MoviesCardList.css';
+import React from "react";
+import MoviesCard from "../MoviesCard/MoviesCard";
+import "./MoviesCardList.css";
 
-import testData from '../../../utils/testData';
+import testData from "../../../utils/testData";
 
 function MoviesCardList({ type }) {
   const [movies, setMovies] = React.useState([]);
@@ -24,7 +24,7 @@ function MoviesCardList({ type }) {
             name={movie.nameRU}
             duration={movie.duration}
             thumbnail={
-              'https://api.nomoreparties.co/' +
+              "https://api.nomoreparties.co/" +
               movie.image.formats.thumbnail.url
             }
             // type={type}
