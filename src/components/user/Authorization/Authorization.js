@@ -1,9 +1,9 @@
-import "./Auth.css";
+import "./Authorization.css";
 import logo from "../../../images/logo.svg";
 import { Link } from "react-router-dom";
 import SubmitButton from "../SubmitButton/SubmitButton";
 
-function Auth({ mode = "register", children }) {
+function Authorization({ mode = "register", children }) {
   const MODES = {
     register: {
       title: "Добро пожаловать!",
@@ -56,4 +56,4 @@ function Auth({ mode = "register", children }) {
     </main>
   );
 }
-export default Auth;
+export default Authorization;

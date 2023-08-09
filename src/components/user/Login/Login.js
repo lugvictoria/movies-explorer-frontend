@@ -1,13 +1,13 @@
-import Auth from "../Auth/Auth";
+import Authorization from "../Authorization/Authorization";
 import AuthInputEmail from "../AuthInputEmail/AuthInputEmail";
 import AuthInputPassword from "../AuthInputPassword/AuthInputPassword";
 
 function Login() {
   return (
-    <Auth mode="login">
+    <Authorization mode="login">
       <AuthInputEmail />
       <AuthInputPassword />
-    </Auth>
+    </Authorization>
   );
 }
 
