@@ -20,7 +20,7 @@
   }
 }
 
-@media (min-width: 790px) {
+@media (min-width: 1280px) {
   .movie-card-list {
     padding-inline: 70px;
     gap: 25px 20px;
