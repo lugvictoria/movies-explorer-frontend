@@ -39,7 +39,7 @@
 }
 
 @media (min-width: 320px) {
-  .footer__text {
+  .footer__title {
     margin: 0;
     text-align: center;
     padding-bottom: 20px;
@@ -50,12 +50,12 @@
 }
 
 @media (min-width: 1280px) {
-  .footer__text {
+  .footer__title {
     padding-top: 20px;
   }
 }
 
-.footer__links {
+.footer__caption {
   color: var(--text-on-page);
 }
 
