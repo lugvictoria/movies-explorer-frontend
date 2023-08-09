@@ -28,8 +28,3 @@
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   }
 }
-/* @media (min-width: 1281px) {
-  .movie-card-list {
-    grid-template-columns: repeat(auto-fill, minmax(339px, 1fr));
-  }
-} */

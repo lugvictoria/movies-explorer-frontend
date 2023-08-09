@@ -95,12 +95,6 @@
   object-fit: cover;
 }
 
-@media (min-width: 768px) {
-  .movie-card__thumbnail {
-    /* max-width: 339px; */
-  }
-}
-
 .movie-card__button {
   grid-area: button;
   justify-self: center;
