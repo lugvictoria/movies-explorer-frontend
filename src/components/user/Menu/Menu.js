@@ -12,11 +12,8 @@ const Menu = ({ isActive, tooggleActive }) => {
 
   return (
     <div>
-      {/* <button onClick={toggleMenu}>Menu</button> */}
-      {/* {isOpen && ( */}
       <main>
         <div className={`menu ${isActive ? "menu__active" : ""}`.trim()}>
-          {/* <div className="menu_opacity"></div> */}
 
           <div className="menu_box">
             <div className="menu-content">
@@ -53,9 +50,7 @@ const Menu = ({ isActive, tooggleActive }) => {
               </div>
 
               <Link className="menu__link" to="/signin">
-                {/* <img className="" alt="Аккаунт" src={account} /> */}
                 <span className="menu__link__text">Аккаунт</span>
-
                 <div className="menu__link__img">
                   <img src={small} alt="small-account-icon" />
                 </div>
@@ -66,12 +61,6 @@ const Menu = ({ isActive, tooggleActive }) => {
               onClick={() => tooggleActive(!isActive)}
               className={"menu__button"}
             >
-              {/* {test ? (
-                <AiOutlineClose size={22} />
-              ) : (
-                <AiOutlineMenu size={22} />
-              )} */}
-
               <img
                 className="menu__button__icon"
                 alt="Закрыть"

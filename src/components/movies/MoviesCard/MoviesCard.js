@@ -16,6 +16,12 @@ function MoviesCard({ name, duration, thumbnail, type }) {
     ref.current.remove();
   }
 
+  function convertToHoursAndMinutes(duration) {
+    var hours = Math.floor(duration / 60);
+    var minutes = duration % 60;
+    return hours + " ч " + minutes + " м";
+  }
+
   return (
     <li className="movie-card" ref={ref}>
       <img
@@ -27,7 +33,9 @@ function MoviesCard({ name, duration, thumbnail, type }) {
         <h3 className="movie-card__name">{name}</h3>
         <CardButton />
       </div>
-      <p className="movie-card__duration">{duration}</p>
+      <p className="movie-card__duration">{`${convertToHoursAndMinutes(
+        duration
+      )}`}</p>
     </li>
   );
 }
