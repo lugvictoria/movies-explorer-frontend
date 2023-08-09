@@ -198,7 +198,7 @@
 }
 
 @media (min-width: 320px) {
-  .about-project__time-caption {
+  .about-project__time-text {
     margin: 0;
     grid-row: 2;
     font-style: normal;
@@ -211,14 +211,14 @@
 }
 
 @media (min-width: 768px) {
-  .about-project__time-caption {
+  .about-project__time-text {
     font-size: 14px;
     line-height: 17px;
   }
 }
 
 @media (min-width: 1280px) {
-  .about-project__time-caption {
+  .about-project__time-text {
     color: var(--text-on-caption);
   }
 }

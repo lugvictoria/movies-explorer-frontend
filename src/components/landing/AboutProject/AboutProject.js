@@ -25,9 +25,9 @@ function AboutProject() {
         </div>
         <div className="about-project__blockline">
           <p className="about-project__time-block">1&nbsp;неделя</p>
-          <p className="about-project__time-caption">Back-end</p>
+          <p className="about-project__time-text">Back-end</p>
           <p className="about-project__time-block">4&nbsp;недели</p>
-          <p className="about-project__time-caption">Front-end</p>
+          <p className="about-project__time-text">Front-end</p>
         </div>
       </article>
     </section>
