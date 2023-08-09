@@ -19,15 +19,11 @@
 }
 
 .auth-links__link {
-  /* Сброс */
   display: block;
   color: inherit;
   text-decoration: none;
-  /* Размеры */
   padding: 5px 0;
-  /* Анимация */
   transition: opacity 0.3s;
-  /* Текст */
   font-style: normal;
   font-weight: 500;
   font-size: 10px;

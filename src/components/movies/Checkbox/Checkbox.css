@@ -59,13 +59,10 @@
   position: absolute;
   top: 50%;
   left: 10px;
-  /* Половина border-radius */
   transform: translate(-50%, -50%);
-  /* Цвет */
   transition: left 0.3s ease-in;
 }
 
-/* Нажатое состояние - рычаг */
 .checkbox__system-checkbox:checked + .checkbox__custom-checkbox::after {
   left: 26px;
 }

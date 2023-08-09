@@ -24,6 +24,15 @@
   display: flex;
   gap: 16px;
   margin-left: 44px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.header__button-container {
+ max-width: 100px;
+ max-height: 32px;
 }
 
 /*Страница Landing*/

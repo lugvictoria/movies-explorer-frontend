@@ -1,20 +1,9 @@
 .movie-card {
   flex-direction: column;
   max-width: 600px;
-
-  /* Внешний вид */
   background-color: var(--card);
   border-radius: 6px;
   color: var(--on-card);
-  /* Расположение элементов */
-  /* column-gap: var(--gap);
-  row-gap: var(--gap); */
-  /* grid-template-columns: 1fr max-content;
-  grid-template-rows: 1fr auto auto;
-  grid-template-areas:
-    'thumbnail thumbnail'
-    'name button'
-    'duration button'; */
 }
 
 @media (min-width: 768px) {

@@ -32,7 +32,7 @@ function Auth({ mode = "register", children }) {
   };
 
   return (
-    <main className="auth content__stretched-element">
+    <main className="auth">
       <div className="auth__container">
         <Link className="auth__logo-link" to="/">
           <img

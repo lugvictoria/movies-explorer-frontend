@@ -50,7 +50,6 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
             <NavigationLink title="Сохранённые фильмы" to="/saved-movies" />
           </ul>
         </nav>
-        {/* <NavigationLink title="Аккаунт" to="/profile" isLinkToProfile /> */}
         <Link className="navigation__link" to="/signin" isLinkToProfile>
           <img className="" alt="Аккаунт" src={account} />
         </Link>

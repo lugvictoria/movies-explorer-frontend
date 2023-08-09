@@ -49,3 +49,7 @@
 .content__footer {
   margin-top: auto;
 }
+
+.password-input {
+  color: var(--error-message);
+}

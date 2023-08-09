@@ -108,6 +108,7 @@
   font-size: 13px;
   line-height: 1.23;
   transition: border 0.3s;
+  box-sizing: border-box;
 }
 
 .auth__input-password {
@@ -164,4 +165,8 @@
 
 .auth__hint-link:hover {
   opacity: 0.7;
+}
+
+.password-input {
+  color: var(red);
 }

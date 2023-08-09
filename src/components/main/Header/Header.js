@@ -75,8 +75,6 @@ function Header() {
               />
             </button>
           )}
-
-          {/* {isClicked ? <Navigation handleClose={handleClose} /> : ""} */}
         </header>
       )}
 

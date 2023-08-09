@@ -1,7 +1,5 @@
 import Footer from "../../main/Footer/Footer";
 import Header from "../../main/Header/Header";
-import Navigation from "../../main/Navigation/Navigation";
-import Menu from "../../user/Menu/Menu";
 import More from "../More/More";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import SearchForm from "../SearchForm/SearchForm";
@@ -11,7 +9,6 @@ function Movies() {
   return (
     <div className="movies-page">
       <Header />
-
       <main>
         <SearchForm />
         <MoviesCardList type="all" />

@@ -4,7 +4,7 @@ import "./Profile.css";
 function Profile() {
   return (
     <div className="profile-page">
-      <main className="profile content__stretched-element ">
+      <main className="profile">
         <div className="profile__container">
           <h1 className="profile__title">Привет, Виталий!</h1>
           <form className="profile__form">

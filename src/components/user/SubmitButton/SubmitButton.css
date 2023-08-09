@@ -6,14 +6,12 @@
   margin-top: 140px;
   padding: 15px;
   align-self: stretch;
-  margin-top: 230px;
   color: var(--on-secondary);
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.25;
   text-align: center;
-
   transition: opacity.3s, transform 0.3s;
 }
 
@@ -22,6 +20,7 @@
     margin-top: 145px;
     font-size: 14px;
     line-height: 17px;
+    height: 45px;
   }
 }
 

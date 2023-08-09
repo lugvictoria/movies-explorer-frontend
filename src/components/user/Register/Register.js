@@ -3,7 +3,7 @@ import logo from "../../../images/logo.svg";
 
 function Register() {
   return (
-    <main className="auth content__stretched-element">
+    <main className="auth">
       <div className="auth__container">
         <a className="auth__logo-link" to="/">
           <img className="header__logo" alt="Логотип приложения" src={logo} />
