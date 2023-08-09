@@ -1,5 +1,26 @@
+@media (min-width: 768px) {
+  .auth-links__link {
+    padding-block: 8px;
+    font-size: 12px;
+    line-height: 1.33;
+  }
+}
+
+.auth-links__link_type_login {
+  color: var(--surface-pages);
+  background-color: var(--time-block1);
+  border-radius: 3px;
+  padding-inline: 12px;
+}
+
+@media (min-width: 768px) {
+  .auth-links__link_type_login {
+    padding-inline: 20px;
+  }
+}
+
 .auth-links {
-  color: var(--on-promo);
+  color: var(--text-on-page);
   margin: 0;
 }
 
@@ -32,25 +53,4 @@
 
 .auth-links__link:hover {
   opacity: 0.7;
-}
-
-@media (min-width: 768px) {
-  .auth-links__link {
-    padding-block: 8px;
-    font-size: 12px;
-    line-height: 1.33;
-  }
-}
-
-.auth-links__link_type_login {
-  color: var(--surface-pages);
-  background-color: var(--time-block1);
-  border-radius: 3px;
-  padding-inline: 12px;
-}
-
-@media (min-width: 768px) {
-  .auth-links__link_type_login {
-    padding-inline: 20px;
-  }
 }
