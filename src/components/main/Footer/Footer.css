@@ -1,6 +1,6 @@
 .footer {
   color: var(--text-on-page);
-  padding-top: 215px;
+  padding-top: 79px;
   padding-bottom: 10px;
   font-style: normal;
   font-weight: 400;
@@ -26,6 +26,7 @@
       "text text"
       "copyright links";
     gap: 20px;
+    padding-top: 79px;
   }
 }
 

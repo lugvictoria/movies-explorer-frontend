@@ -3,8 +3,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-inline: 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding-inline: 70px;
+  }
 }
 
 .header__button-container_films {
@@ -84,21 +97,37 @@
 .header__button-entrance {
   margin-left: auto;
   display: flex;
-  gap: 30px;
+  gap: 14px;
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .header__button-entrance {
+    gap: 30px;
+  }
+}
+
 .header__button {
-  min-height: 32px;
+  min-height: 26px;
+  min-width: 54px;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .header__button {
+    font-size: 12px;
+    line-height: 16px;
+    min-height: 32px;
+    min-width: 76px;
+  }
 }
 
 .header__button:hover {
@@ -109,7 +138,6 @@
 .header__button-green {
   color: black;
   background-color: var(--time-block1);
-  min-width: 76px;
   border-radius: 3px;
 }
 

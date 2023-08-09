@@ -1,6 +1,6 @@
 import AuthInput from "../AuthInput/AuthInput";
 
-function AuthInputForEmail() {
+function AuthInputEmail() {
   return (
     <AuthInput
       label="E-mail"
@@ -14,4 +14,4 @@ function AuthInputForEmail() {
   );
 }
 
-export default AuthInputForEmail;
+export default AuthInputEmail;

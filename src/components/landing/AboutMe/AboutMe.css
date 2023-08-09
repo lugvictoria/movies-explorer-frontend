@@ -1,23 +1,23 @@
 @media (min-width: 320px) {
   .about-me__section {
+    padding-inline: 14px;
     padding-top: 70px;
     padding-bottom: 0px;
-    padding-inline: 14px;
   }
 }
 
 @media (min-width: 768px) {
   .about-me__section {
+    padding-inline: 50px;
     padding-top: 90px;
     padding-bottom: 90px;
-    padding-inline: 50px;
   }
 }
 
 @media (min-width: 1280px) {
   .about-me__section {
     padding-inline: 70px;
-    padding-top: 121px;
+    padding-top: 110px;
     padding-bottom: 100px;
   }
 }
@@ -26,14 +26,14 @@
   .about-me__table {
     display: grid;
     padding-top: 60px;
+    padding-bottom: 28px;
     color: var(--text-on-page);
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    gap: 37px;
+    gap: 42px;
     grid-template-areas:
       "photo"
       "name"
-      "subtitle"
       "link";
   }
 }
@@ -41,6 +41,7 @@
 @media (min-width: 768px) {
   .about-me__table {
     padding-top: 66px;
+    padding-bottom: 0px;
     grid-template-columns: 364px 255px;
     gap: 50px;
     grid-template-areas: "description photo";
@@ -52,7 +53,6 @@
     padding-top: 65px;
     grid-template-columns: 1fr 270px;
     grid-template-rows: 1;
-    grid-template-areas: "description photo";
   }
 }
 
@@ -171,9 +171,9 @@
 @media (min-width: 1280px) {
   .about-me__subtitle {
     max-width: 600px;
-    margin-bottom: 22px;
     font-size: 18px;
     line-height: 1.11;
+    margin-bottom: 26px;
   }
 }
 
@@ -200,7 +200,6 @@
 @media (min-width: 1280px) {
   .about-me__text {
     max-width: 600px;
-    margin: 0;
     margin-bottom: 99px;
     font-size: 14px;
     line-height: 1.57;

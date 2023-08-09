@@ -1,6 +1,6 @@
 import AuthInput from "../AuthInput/AuthInput";
 
-function AuthInputForPassword() {
+function AuthInputPassword() {
   return (
     <AuthInput
       label="Пароль"
@@ -15,4 +15,4 @@ function AuthInputForPassword() {
   );
 }
 
-export default AuthInputForPassword;
+export default AuthInputPassword;

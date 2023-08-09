@@ -47,7 +47,7 @@ function CardButton() {
       className={`movie-card__toggle ${
         isActive ? "movie-card__toggle__active" : ""
       }`.trim()}
-      onClick={() => setActive(prev => !prev)}
+      onClick={() => setActive((prev) => !prev)}
     ></button>
   );
 }

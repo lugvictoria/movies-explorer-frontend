@@ -1,12 +1,12 @@
 import Auth from "../Auth/Auth";
-import AuthInputForEmail from "../AuthInputForEmail/AuthInputForEmail";
-import AuthInputForPassword from "../AuthInputForPassword/AuthInputForPassword";
+import AuthInputEmail from "../AuthInputEmail/AuthInputEmail";
+import AuthInputPassword from "../AuthInputPassword/AuthInputPassword";
 
 function Login() {
   return (
     <Auth mode="login">
-      <AuthInputForEmail />
-      <AuthInputForPassword />
+      <AuthInputEmail />
+      <AuthInputPassword />
     </Auth>
   );
 }

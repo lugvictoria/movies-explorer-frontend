@@ -20,7 +20,7 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
       toggleMenu();
     }
   }
-  
+
   useEffect(() => {
     if (isOpen) {
       document.addEventListener("keydown", handleEscClose);

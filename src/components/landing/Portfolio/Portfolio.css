@@ -1,14 +1,14 @@
 .portfolio {
   padding-inline: 14px;
   color: var(--on-surface);
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
   .portfolio {
     padding-top: 0px;
     padding-inline: 50px;
-    padding-bottom: 90px;
+    padding-bottom: 70px;
   }
 }
 
