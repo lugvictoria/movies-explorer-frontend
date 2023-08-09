@@ -48,7 +48,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 900px) {
   .about-me__table {
     padding-top: 65px;
     grid-template-columns: 1fr 270px;

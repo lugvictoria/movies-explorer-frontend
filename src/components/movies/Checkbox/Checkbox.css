@@ -23,7 +23,7 @@
   opacity: 0.8;
 }
 
-.checkbox__system-checkbox {
+.checkbox__system-box {
   position: absolute;
   height: 1px;
   width: 1px;
@@ -42,11 +42,11 @@
   transition: background-color 0.3s ease-in;
 }
 
-.checkbox__system-checkbox:checked + .checkbox__custom-checkbox {
+.checkbox__system-box:checked + .checkbox__custom-box {
   background-color: var(-time-block1);
 }
 
-.checkbox__system-checkbox:disabled + .checkbox__custom-checkbox {
+.checkbox__system-box:disabled + .checkbox__custom-box {
   opacity: 0.3;
 }
 
@@ -63,7 +63,7 @@
   transition: left 0.3s ease-in;
 }
 
-.checkbox__system-checkbox:checked + .checkbox__custom-checkbox::after {
+.checkbox__system-box:checked + .checkbox__custom-box::after {
   left: 26px;
 }
 
@@ -81,7 +81,7 @@
   }
 }
 
-.checkbox__system-checkbox:focus ~ .checkbox__label {
+.checkbox__system-box:focus ~ .checkbox__label {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--text-on-page);

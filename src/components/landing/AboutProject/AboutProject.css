@@ -30,10 +30,10 @@
   gap: 56px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 690px) {
   .about-project {
     padding-top: 70px;
-    grid-template-columns: repeat(2, minmax(320px, min-content));
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
     column-gap: 30px;
     row-gap: 93px;
   }
