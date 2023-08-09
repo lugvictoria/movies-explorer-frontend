@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useEffect } from "react";
 import NavigationLink from "../NavigationLink/NavigationLink";
 import { Link } from "react-router-dom";
 import account from "../../../images/profile.svg";
@@ -14,12 +14,14 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
   function handleOverlayClick(event) {
     if (event.target === event.currentTarget) toggleMenu();
   }
+
   function handleEscClose(event) {
     if (event.key === "Escape") {
       toggleMenu();
     }
   }
-  React.useEffect(() => {
+  
+  useEffect(() => {
     if (isOpen) {
       document.addEventListener("keydown", handleEscClose);
     }

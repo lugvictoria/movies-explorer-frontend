@@ -130,8 +130,20 @@
   cursor: pointer;
 }
 
+.header__mobile-toggle {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  display: inline-flex;
+  padding: 0;
+}
+
 @media (min-width: 1280px) {
   .movies-page .header__menu-button {
+    display: none;
+  }
+
+  .header__mobile-toggle {
     display: none;
   }
 }

@@ -1,23 +1,27 @@
-import "./Header.css";
 import logo from "../../../images/logo.svg";
 import account from "../../../images/profile.svg";
 import menu from "../../../images/menu.svg";
 import React, { useState } from "react";
-import Navigation from "../Navigation/Navigation";
-
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Menu from "../../user/Menu/Menu";
+import "./Header.css";
 
 const loggedIn = true;
 
 function Header() {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isRightActive, setRightActive] = useState(false);
+  const location = useLocation();
 
-  function handleOpen() {
-    setIsClicked(true);
-  }
+  function toggleRightMenu(value) {
+    setRightActive(value);
 
-  function handleClose() {
-    setIsClicked(false);
+    const html = document.querySelector("html");
+
+    if (value) {
+      html.classList.add("right-menu-open");
+    } else {
+      html.classList.remove("right-menu-open");
+    }
   }
 
   return (
@@ -55,16 +59,32 @@ function Header() {
               Войти
             </Link>
           </div>
+
           <div className="header__button-container">
             <Link to="/profile">
               <img src={account} alt="аккаунт" />
             </Link>
           </div>
-          <Link to="/menu" className="header__menu-button">
-            <img src={menu} alt="меню" />
-          </Link>
-          {isClicked ? <Navigation handleClose={handleClose} /> : ""}
+
+          {location.pathname !== "/" && (
+            <button className="header__mobile-toggle">
+              <img
+                src={menu}
+                alt="меню"
+                onClick={() => toggleRightMenu(true)}
+              />
+            </button>
+          )}
+
+          {/* {isClicked ? <Navigation handleClose={handleClose} /> : ""} */}
         </header>
+      )}
+
+      {location.pathname !== "/" && (
+        <Menu
+          isActive={isRightActive}
+          tooggleActive={(value) => toggleRightMenu(value)}
+        />
       )}
     </>
   );
