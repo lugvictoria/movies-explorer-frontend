@@ -178,12 +178,6 @@
   margin-top: auto;
 }
 
-@media (min-width: 1280px) {
-  .navigation__list-item_type_main-page {
-    display: none;
-  }
-}
-
 .navigation__link {
   display: block;
   color: inherit;
@@ -244,10 +238,6 @@
     font-size: 14px;
     line-height: 1.14;
   }
-
-  /* .navigation_themed .navigation__link_type_account {
-    background-color: var(--promo-variant);
-  } */
 }
 
 @media (min-width: 768px) {
