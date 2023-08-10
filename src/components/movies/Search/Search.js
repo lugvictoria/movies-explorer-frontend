@@ -1,22 +1,22 @@
 import Checkbox from "../Checkbox/Checkbox";
 import find from "../../../images/find.svg";
-import "./SearchForm.css";
+import "./Search.css";
 
-function SearchForm() {
+function Search() {
   return (
-    <form className="search-form">
+    <form className="search">
       <input
         type="text"
-        className="search-form__input"
+        className="search__input"
         placeholder="Фильм"
         required
       />
-      <Checkbox title="Короткометражки" className="search-form__checkbox" />
-      <button type="submit" className="search-form__button">
+      <Checkbox title="Короткометражки" className="search__checkbox" />
+      <button type="submit" className="search__button">
         <img className="find__icon" alt="Иконка поиска" src={find} />
       </button>
     </form>
   );
 }
 
-export default SearchForm;
+export default Search;

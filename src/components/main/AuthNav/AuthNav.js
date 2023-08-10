@@ -1,19 +1,19 @@
 import { NavLink } from "react-router-dom";
-import "./AuthLinks.css";
+import "./AuthNav.css";
 
-function AuthLinks() {
+function AuthNav() {
   return (
     <nav className="auth-links">
       <ul className="auth-links__list">
-        <li className="auth-links__link">
-          <NavLink to="/signup" className="auth-links__link">
+        <li className="auth-nav__link">
+          <NavLink to="/signup" className="auth-nav__link">
             Регистрация
           </NavLink>
         </li>
-        <li className="auth-links__link">
+        <li className="auth-nav__link">
           <NavLink
             to="/signin"
-            className="auth-links__link auth-links__link_type_login"
+            className="auth-nav__link auth-nav__link_type_login"
           >
             Войти
           </NavLink>
@@ -23,4 +23,4 @@ function AuthLinks() {
   );
 }
 
-export default AuthLinks;
+export default AuthNav;

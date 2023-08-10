@@ -1,6 +1,6 @@
 import Promo from "../Promo/Promo";
 import AboutProject from "../AboutProject/AboutProject";
-import AuthLinks from "../../main/AuthLinks/AuthLinks";
+import AuthLinks from "../../main/AuthNav/AuthNav";
 import Header from "../../main/Header/Header";
 import Footer from "../../main/Footer/Footer";
 import Technology from "../Technology/Technology";

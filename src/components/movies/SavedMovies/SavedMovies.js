@@ -1,7 +1,7 @@
 import Footer from "../../main/Footer/Footer";
 import Header from "../../main/Header/Header";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import SearchForm from "../SearchForm/SearchForm";
+import SearchForm from "../Search/Search";
 import "./SavedMovies.css";
 
 function SavedMovies() {

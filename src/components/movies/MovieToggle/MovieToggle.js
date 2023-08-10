@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./CardButton.css";
+import "./MovieToggle.css";
 
-function CardButton() {
+function MovieToggle() {
   const [isActive, setActive] = useState(false);
 
   return (
@@ -14,4 +14,4 @@ function CardButton() {
   );
 }
 
-export default CardButton;
+export default MovieToggle;

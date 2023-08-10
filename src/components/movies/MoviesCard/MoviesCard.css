@@ -57,7 +57,7 @@
   }
 }
 
-.movie-card__duration {
+.movie-card__time {
   grid-area: duration;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -71,7 +71,7 @@
 }
 
 @media (min-width: 768px) {
-  .movie-card__duration {
+  .movie-card__time {
     font-size: 11px;
     line-height: 13px;
     padding-top: 10px;
@@ -80,15 +80,14 @@
 }
 
 @media (min-width: 1280px) {
-  .movie-card__duration {
+  .movie-card__time {
     font-size: 13px;
     line-height: 1.38;
     padding-bottom: 14px;
   }
 }
 
-.movie-card__thumbnail {
-  grid-area: thumbnail;
+.movie-card__photo {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-position: center;
