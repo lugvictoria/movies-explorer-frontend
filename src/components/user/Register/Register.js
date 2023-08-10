@@ -49,7 +49,7 @@ function Register() {
         </form>
         <p className="auth__hint">
           Уже зарегистрированы?{" "}
-          <Link to="/signin" className="auth__hint-link">
+          <Link to="/signin" className="auth__link">
             Войти
           </Link>
         </p>

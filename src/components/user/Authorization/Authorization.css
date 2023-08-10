@@ -163,7 +163,7 @@
 }
 
 .auth__link {
-  color: var(--text-on-page);
+  color: var(--color-link);
   text-decoration: none;
   transition: opacity 0.3s;
 }
