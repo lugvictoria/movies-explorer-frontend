@@ -186,5 +186,5 @@
 
 .profile__link_type_logout {
   font-weight: 500;
-  color: var(--error-message);
+  color: var(--password-input);
 }

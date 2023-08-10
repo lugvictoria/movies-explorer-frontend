@@ -62,7 +62,7 @@
     margin: 0;
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--text-on-page);
+    border-bottom: 1px solid var(--line);
     color: var(--text-on-caption);
     grid-area: first;
   }
