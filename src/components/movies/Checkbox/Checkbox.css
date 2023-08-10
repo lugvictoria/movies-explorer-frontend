@@ -1,22 +1,10 @@
 .checkbox {
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
-  gap: 12px;
   transition: opacity 0.3s;
   cursor: pointer;
-}
-
-@media (min-width: 1280px) {
-  .checkbox {
-    gap: 16px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .checkbox {
-    flex-direction: row;
-  }
+  align-items: center;
+  gap: 12px;
 }
 
 .checkbox:hover {
@@ -31,14 +19,26 @@
   clip: rect(0 0 0 0);
 }
 
+@media (min-width: 1280px) {
+  .checkbox {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .checkbox {
+    flex-direction: row;
+  }
+}
+
 .checkbox__custom-checkbox {
+  box-sizing: border-box;
+  background-image: url(../../../images/smalltumb.svg);
+  background-color: var(-time-block1);
   position: relative;
   width: 36px;
   height: 20px;
   border-radius: 20px;
-  box-sizing: border-box;
-  background-image: url(../../../images/smalltumb.svg);
-  background-color: var(-time-block1);
   transition: background-color 0.3s ease-in;
 }
 
@@ -51,14 +51,14 @@
 }
 
 .checkbox__custom-checkbox::after {
+  top: 50%;
+  left: 10px;
   content: "";
   box-sizing: border-box;
   height: 40%;
   aspect-ratio: 1;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  left: 10px;
   transform: translate(-50%, -50%);
   transition: left 0.3s ease-in;
 }
@@ -82,8 +82,8 @@
 }
 
 .checkbox__system-box:focus ~ .checkbox__label {
-  text-decoration: underline;
-  text-decoration-style: dotted;
   text-decoration-color: var(--text-on-page);
   text-underline-offset: 5px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }

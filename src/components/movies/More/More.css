@@ -1,24 +1,3 @@
-.more {
-  padding-top: 50px;
-  padding-bottom: 80px;
-  display: flex;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-.more {
-  padding-top: 50px;
-  padding-bottom: 80px;
-}
-}
-
-@media (min-width: 1280px) {
-  .more {
-    padding-top: 35px;
-    padding-bottom: 100px;
-  }
-  }
-
 .more__button {
   display: block;
   border: 2px solid var(--line);
@@ -36,6 +15,27 @@
   line-height: normal;
   transition: opacity 0.3s, transform 0.3s;
 }
+
+.more {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+.more {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+}
+
+@media (min-width: 1280px) {
+  .more {
+    padding-top: 35px;
+    padding-bottom: 100px;
+  }
+  }
 
 @media (min-width: 768px) {
   .more__button {

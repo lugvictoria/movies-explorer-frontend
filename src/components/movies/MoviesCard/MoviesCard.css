@@ -1,5 +1,4 @@
 .movie-card {
-
   flex-direction: column;
   background-color: var(--card);
   border-radius: 6px;

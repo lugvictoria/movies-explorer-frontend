@@ -1,31 +1,13 @@
-.auth {
-  padding: 56px 30px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-on-page);
-}
-
-@media (min-width: 768px) {
-  .auth {
-    padding-block: 232px;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1280px) {
-  .auth {
-    justify-content: start;
-    padding-block: 70px;
-  }
-}
-
 .auth__container {
   width: 100%;
   max-width: 396px;
   height: 560px;
   display: flex;
   flex-direction: column;
+}
+
+.password-input {
+  color: var(red);
 }
 
 .auth__logo-link {
@@ -47,19 +29,20 @@
 }
 
 .auth__logo {
+  object-fit: contain;
   width: 38px;
   aspect-ratio: 1;
-  object-fit: contain;
 }
 
 .auth__title {
   margin: 0;
   margin-bottom: 80px;
+  text-align: center;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.21;
-  text-align: center;
+
 }
 
 @media (min-width: 768px) {
@@ -70,10 +53,10 @@
 }
 
 .auth__form {
+  flex-direction: column;
   flex-grow: 1;
   margin: 0;
   display: flex;
-  flex-direction: column;
 }
 
 .auth__input-container {
@@ -86,12 +69,34 @@
 
 .auth__label {
   display: block;
+  color: var(--text-on-page);
   margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;
+}
+
+.auth {
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 30px 30px;
+  display: flex;
   color: var(--text-on-page);
+}
+
+@media (min-width: 768px) {
+  .auth {
+    padding-block: 232px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .auth {
+    justify-content: start;
+    padding-block: 70px;
+  }
 }
 
 .auth__input {
@@ -103,12 +108,12 @@
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
+  transition: border 0.3s;
+  box-sizing: border-box;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.23;
-  transition: border 0.3s;
-  box-sizing: border-box;
 }
 
 .auth__input-password {
@@ -127,11 +132,11 @@
 .auth__error {
   margin: 0;
   margin-block: 10px;
+  color: var(--error-message);
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;
-  color: var(--error-message);
 }
 
 .auth__submit-button {
@@ -141,12 +146,12 @@
 .auth__hint {
   margin: 0;
   margin-top: 14px;
+  color: car(--error-message);
   text-align: center;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.25;
-  color: car(--error-message);
 }
 
 @media (min-width: 768px) {
@@ -165,8 +170,4 @@
 
 .auth__hint-link:hover {
   opacity: 0.7;
-}
-
-.password-input {
-  color: var(red);
 }
