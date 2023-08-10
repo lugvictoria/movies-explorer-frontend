@@ -1,4 +1,4 @@
-import CardButton from "../MovieToggle/MovieToggle";
+import MovieToggle from "../MovieToggle/MovieToggle";
 import { useState, useRef } from "react";
 import "./MoviesCard.css";
 
@@ -31,7 +31,7 @@ function MoviesCard({ name, duration, thumbnail, type }) {
       />
       <div className="movie-card__block">
         <h3 className="movie-card__name">{name}</h3>
-        <CardButton />
+        <MovieToggle />
       </div>
       <p className="movie-card__time">{`${convertToHoursAndMinutes(
         duration
