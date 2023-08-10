@@ -5,6 +5,7 @@
   height: 16px;
   width: 16px;
   margin-right: 12px;
+  padding: 0;
 }
 
 .movie-card__toggle.movie-card__toggle__active {

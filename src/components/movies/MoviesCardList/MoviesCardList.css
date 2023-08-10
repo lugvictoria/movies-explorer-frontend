@@ -13,7 +13,7 @@
 @media (min-width: 768px) {
   .movie-card-list {
     padding-inline: 30px;
-    column-gap: 24px;
+    column-gap: 30px;
     row-gap: 35px;
     padding-top: 70px;
     grid-template-columns: repeat(auto-fill, minmax(339px, 1fr));

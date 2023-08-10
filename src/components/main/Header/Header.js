@@ -69,9 +69,12 @@ function Header() {
           {location.pathname !== "/" && (
             <button className="header__mobile-toggle">
               <img
+className="icon_menu"
                 src={menu}
                 alt="меню"
-                onClick={() => toggleRightMenu(true)}
+                onClick={() => toggleRightMenu(true)
+
+                }
               />
             </button>
           )}

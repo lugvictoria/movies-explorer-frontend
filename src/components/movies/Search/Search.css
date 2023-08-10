@@ -17,7 +17,7 @@
 
 @media (min-width: 768px) {
   .search__input {
-    padding-block: 13px;
+    padding-block: 12px;
     font-size: 28px;
     line-height: 1.21;
   }
@@ -52,7 +52,7 @@
 
 .search {
   padding-inline: 14px;
-  padding-top: 75px;
+  padding-top: 70px;
   padding-bottom: 50px;
   display: grid;
   row-gap: 40px;
@@ -65,8 +65,8 @@
 @media (min-width: 768px) {
   .search {
     padding-inline: 30px;
-    padding-top: 67px;
-    padding-bottom: 60px;
+    padding-top: 65px;
+    padding-bottom: 57px;
     row-gap: 30px;
   }
 }
