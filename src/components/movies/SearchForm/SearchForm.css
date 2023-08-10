@@ -24,12 +24,12 @@
 }
 
 .search-form__input:focus {
-  border-bottom-color: var(--primary);
+  border-bottom-color: var(--text-on-page);
   outline: none;
 }
 
 .search-form__input::placeholder {
-  color: var(--on-surface-variant);
+  color: var(--text-on-caption);
 }
 
 .search-form__checkbox {
@@ -86,8 +86,7 @@
   padding: 0;
   cursor: pointer;
   border: none;
-  background-color: var(--secondary);
-  color: var(--on-secondary);
+  background-color: var(--surface-pages);
   border-radius: 48px;
   transition: opacity 0.3s, transform 0.3s;
   grid-area: button;

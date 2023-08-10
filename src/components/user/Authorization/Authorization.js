@@ -10,7 +10,7 @@ function Authorization({ mode = "register", children }) {
       hint: (
         <p className="auth__hint">
           Уже зарегистрированы?{" "}
-          <Link to="/signin" className="auth__hint-link">
+          <Link to="/signin" className="auth__link">
             Войти
           </Link>
         </p>
@@ -22,7 +22,7 @@ function Authorization({ mode = "register", children }) {
       hint: (
         <p className="auth__hint">
           Ещё не зарегистрированы?{" "}
-          <Link to="/signup" className="auth__hint-link">
+          <Link to="/signup" className="auth__link">
             Регистрация
           </Link>
         </p>

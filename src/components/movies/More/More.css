@@ -2,7 +2,7 @@
   display: block;
   border: 2px solid var(--line);
   cursor: pointer;
-  background-color: var(--movie-button);
+  background-color: var(--surface-pages);
   border-radius: 6px;
   min-width: 240px;
   padding: 10px 20px;

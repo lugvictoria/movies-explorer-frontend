@@ -73,7 +73,7 @@
   }
 
   .menu__link__text {
-    color: #fff;
+    color: var(--text-on-page);
     font-feature-settings: "clig" off, "liga" off;
     font-family: Inter;
     font-size: 13px;

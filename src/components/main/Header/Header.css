@@ -145,7 +145,7 @@
 }
 
 .header__button-green {
-  color: black;
+  color: var(--on-surface);
   background-color: var(--time-block1);
   border-radius: 3px;
 }

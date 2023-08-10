@@ -1,8 +1,8 @@
 .movie-card {
   flex-direction: column;
-  background-color: var(--card);
+  background-color: var(--surface-pages);
   border-radius: 6px;
-  color: var(--on-card);
+  color: var(-text-on-page);
 }
 
 @media (min-width: 1280px) {
@@ -67,7 +67,7 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 1.8;
-  color: var(--on-card-variant);
+  color: var(--text-on-caption);
 }
 
 @media (min-width: 768px) {

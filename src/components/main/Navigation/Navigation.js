@@ -32,12 +32,12 @@ function Navigation({ hasLinkToMain = true, isThemed = false }) {
 
   return (
     <div className={classNames("navigation", { navigation_themed: isThemed })}>
-      <button
+      {/* <button
         type="button"
         className="navigation__open-button"
         aria-label="Открыть меню"
         onClick={toggleMenu}
-      ></button>
+      ></button> */}
       <div
         className={`navigation__menu${
           isOpen ? " navigation__menu_opened" : ""
