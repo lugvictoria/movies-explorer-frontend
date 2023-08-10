@@ -4,6 +4,7 @@
   border-radius: 100%;
   height: 16px;
   width: 16px;
+  margin-right: 12px;
 }
 
 .movie-card__toggle.movie-card__toggle__active {

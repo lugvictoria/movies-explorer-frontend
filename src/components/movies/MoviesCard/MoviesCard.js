@@ -19,7 +19,7 @@ function MoviesCard({ name, duration, thumbnail, type }) {
   function convertToHoursAndMinutes(duration) {
     var hours = Math.floor(duration / 60);
     var minutes = duration % 60;
-    return hours + " ч " + minutes + " м";
+    return hours + "ч" + minutes + "м";
   }
 
   return (
@@ -33,9 +33,7 @@ function MoviesCard({ name, duration, thumbnail, type }) {
         <h3 className="movie-card__name">{name}</h3>
         <MovieToggle />
       </div>
-      <p className="movie-card__time">{`${convertToHoursAndMinutes(
-        duration
-      )}`}</p>
+      <p className="movie-card__time">{`${convertToHoursAndMinutes(duration)}`}</p>
     </li>
   );
 }

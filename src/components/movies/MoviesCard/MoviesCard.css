@@ -81,8 +81,8 @@
 
 @media (min-width: 1280px) {
   .movie-card__time {
-    font-size: 13px;
-    line-height: 1.38;
+    font-size: 11px;
+    line-height: 13px;
     padding-bottom: 14px;
   }
 }
