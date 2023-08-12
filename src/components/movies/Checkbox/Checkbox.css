@@ -45,7 +45,7 @@
 }
 
 /* Нажатое состояние - смена иконки */
-.checkbox__system-checkbox:checked+.checkbox__custom-checkbox {
+.checkbox__system-box:checked+.checkbox__custom-checkbox {
   background-image: url(./../../../images/smalltumboff.svg);
 }
 
@@ -55,7 +55,7 @@
 }
 
 /* скрытый системный чекбокс */
-.checkbox__system-checkbox {
+.checkbox__system-box {
   position: absolute;
   height: 1px;
   width: 1px;
@@ -64,7 +64,7 @@
 }
 
 /* Неактивное состояние */
-.checkbox__system-checkbox:disabled+.checkbox__custom-checkbox {
+.checkbox__system-box:disabled+.checkbox__custom-checkbox {
   opacity: 0.7;
 }
 
@@ -80,6 +80,6 @@
 }
 
 /* Нажатое состояние */
-.checkbox__system-checkbox:checked+.checkbox__custom-checkbox::after {
+.checkbox__system-box:checked+.checkbox__custom-checkbox::after {
   left: 26px;
 }

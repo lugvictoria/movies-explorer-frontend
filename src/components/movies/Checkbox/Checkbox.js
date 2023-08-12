@@ -6,7 +6,7 @@ function Checkbox({ className, title }) {
     <label className={classNames(className, 'checkbox')}>
      <input
         type="checkbox"
-        className="checkbox__system-checkbox"
+        className="checkbox__system-box"
         defaultChecked={true}
       />
       <span className="checkbox__custom-checkbox"></span>
