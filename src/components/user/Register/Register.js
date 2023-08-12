@@ -6,9 +6,12 @@ function Register() {
   return (
     <main className="auth">
       <div className="auth__container">
-        <a className="auth__logo-link" to="/">
-          <img className="header__logo" alt="Логотип приложения" src={logo} />
-        </a>
+      <Link to="/" className="auth__logo-link">
+            <img src={logo} alt="логотип" />
+          </Link>
+        {/* <a className="auth__logo-link" to="/"> */}
+          {/* <img className="header__logo" alt="Логотип приложения" src={logo} /> */}
+        {/* </a> */}
         <h1 className="auth__title">Добро пожаловать!</h1>
         <form className="auth__form">
           <label className="auth__input-container">
@@ -36,11 +39,11 @@ function Register() {
           <label className="auth__input-container">
             <span className="auth__label">Пароль</span>
             <input
-              className="auth__input auth__password-input"
+              className="auth__password-input"
               type="password"
               name="password"
               required
-              placeholder="................."
+              placeholder=".............."
             ></input>
           </label>
           <p className="auth__error">Что-то пошло не так...</p>

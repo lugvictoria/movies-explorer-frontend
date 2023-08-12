@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./MovieCardToggle.css";
 
-function MovieToggle() {
+function MovieCardToggle() {
   const [isActive, setActive] = useState(false);
 
   return (
@@ -14,4 +14,4 @@ function MovieToggle() {
   );
 }
 
-export default MovieToggle;
+export default MovieCardToggle;

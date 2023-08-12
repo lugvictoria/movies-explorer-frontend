@@ -28,7 +28,7 @@ function Header() {
     <>
       {!loggedIn ? (
         <header className="header" id="header">
-          <Link to="/" className="form__logo">
+          <Link to="/" className="header__logo">
             <img src={logo} alt="логотип" />
           </Link>
           <div className="header__button-container">
@@ -42,7 +42,9 @@ function Header() {
         </header>
       ) : (
         <header className="header" id="header">
-          <img src={logo} alt="логотип" className="form__logo" />
+            <Link to="/" className="header__logo">
+          <img src={logo} alt="логотип" className="header__logo" />
+          </Link>
           <div className="header__button-container_films">
             <Link to="/movies" className="header__button">
               Фильмы
