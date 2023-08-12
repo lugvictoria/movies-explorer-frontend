@@ -52,7 +52,7 @@ const Menu = ({ isActive, tooggleActive }) => {
               <Link className="menu__link" to="/signin">
                 <span className="menu__link__text">Аккаунт</span>
                 <div className="menu__link__img">
-                  <img src={small} alt="small-account-icon" />
+                  <img src={small} alt="Войти в аккаунт" />
                 </div>
               </Link>
             </div>

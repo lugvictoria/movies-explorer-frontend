@@ -8,7 +8,7 @@ function AuthInputPassword() {
         type: "password",
         name: "password",
         required: true,
-        id: "password-input",
+        id: "auth__password-input",
         placeholder: "",
       }}
     />

@@ -1,5 +1,57 @@
-.footer__caption {
+.footer {
   color: var(--text-on-page);
+  padding-top: 79px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "first"
+    "links"
+    "copyright";
+  gap: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-inline: 30px;
+    padding-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.23;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+      "first first"
+      "copyright links";
+    gap: 20px;
+    padding-top: 79px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    padding-top: 37px;
+    padding-inline: 70px;
+  }
+}
+
+@media (min-width: 320px) {
+  .footer__title {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-on-caption);
+    grid-area: first;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer__title {
+    padding-top: 20px;
+  }
 }
 
 .footer__links-list {
@@ -29,6 +81,10 @@
   align-self: end;
 }
 
+.footer__caption {
+  color: var(--text-on-page);
+}
+
 .footer__link {
   display: block;
   color: inherit;
@@ -38,60 +94,4 @@
 
 .footer__link:hover {
   opacity: 0.7;
-}
-
-.footer {
-  color: var(--text-on-page);
-  padding-top: 79px;
-  padding-bottom: 10px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "first"
-    "links"
-    "copyright";
-  gap: 30px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.25;
-}
-
-@media (min-width: 320px) {
-  .footer__title {
-    margin: 0;
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--line);
-    color: var(--text-on-caption);
-    grid-area: first;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer {
-    padding-inline: 30px;
-    padding-bottom: 20px;
-    font-size: 13px;
-    line-height: 1.23;
-    grid-template-columns: max-content 1fr;
-    grid-template-areas:
-      "first first"
-      "copyright links";
-    gap: 20px;
-    padding-top: 79px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .footer {
-    padding-top: 37px;
-    padding-inline: 70px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .footer__title {
-    padding-top: 20px;
-  }
 }

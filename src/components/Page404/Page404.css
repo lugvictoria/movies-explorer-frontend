@@ -3,7 +3,7 @@
 }
 
 @media (min-width: 320px) {
-  .page404_Textbox {
+  .page404_textbox {
     display: flex;
     margin: auto;
     justify-content: center;
@@ -13,13 +13,13 @@
 }
 
 @media (min-width: 768px) {
-  .page404_Textbox {
+  .page404_textbox {
     padding-top: 408px;
   }
 }
 
 @media (min-width: 1280px) {
-  .page404_Textbox {
+  .page404_textbox {
     padding-top: 246px;
   }
 }

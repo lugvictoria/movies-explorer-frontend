@@ -1,9 +1,9 @@
 import Footer from "../../main/Footer/Footer";
 import Header from "../../main/Header/Header";
 import More from "../More/More";
-import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import MovieCardList from "../MovieCardList/MovieCardList";
 import SearchBlock from "../Search/Search";
-import "./Movies.css";
+import "./Movie.css";
 
 function Movies() {
   return (
@@ -11,7 +11,7 @@ function Movies() {
       <Header />
       <main>
         <SearchBlock />
-        <MoviesCardList type="all" />
+        <MovieCardList type="all" />
         <More />
         {/* <Preloader /> */}
       </main>

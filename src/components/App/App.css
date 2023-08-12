@@ -8,9 +8,6 @@
   width: 100%;
   /* Шрифтовая схема для всей страницы */
   font-family: "Inter", Helvetica, Arial, sans-serif;
-  /* Цвета страницы по умолчанию */
-  background-color: var(--surface-pages);
-  color: var(--text-on-page);
   /* Использование цветов в проекте */
   --promo: #073042;
   --on-surface: #000000;
@@ -27,7 +24,10 @@
   --text-under: #a0a0a0;
   --surface-inputs: #2f2f2f;
   --line-portfolio: #e6e6e6;
-  --password-input: #EE3465;
+  --password-input: #ee3465;
+  /* Цвета страницы по умолчанию */
+  background-color: var(--surface-pages);
+  color: var(--text-on-page);
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,8 +49,4 @@
 
 .content__footer {
   margin-top: auto;
-}
-
-.password-input {
-  color: var(--error-message);
 }

@@ -29,7 +29,7 @@
 .checkbox__custom-checkbox {
   box-sizing: border-box;
   background-image: url(../../../images/smalltumb.svg);
-  background-color: var(-time-block1);
+  background-color: var(--time-block1);
   position: relative;
   width: 36px;
   height: 20px;
@@ -38,7 +38,7 @@
 }
 
 .checkbox__system-box:checked + .checkbox__custom-box {
-  background-color: var(-time-block1);
+  background-color: var(--time-block1);
 }
 
 .checkbox__system-box:disabled + .checkbox__custom-box {
@@ -51,7 +51,6 @@
   content: "";
   box-sizing: border-box;
   height: 40%;
-  aspect-ratio: 1;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);

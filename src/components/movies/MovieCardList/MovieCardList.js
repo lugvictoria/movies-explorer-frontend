@@ -1,6 +1,6 @@
 import React from "react";
-import MoviesCard from "../MoviesCard/MoviesCard";
-import "./MoviesCardList.css";
+import MoviesCard from "../MovieCard/MovieCard";
+import "./MovieCardList.css";
 
 import testData from "../../../utils/testData";
 

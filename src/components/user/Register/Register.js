@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo.svg";
+import "./../Auth/Auth.css";
 
 function Register() {
   return (
@@ -35,7 +36,7 @@ function Register() {
           <label className="auth__input-container">
             <span className="auth__label">Пароль</span>
             <input
-              className="auth__input password-input"
+              className="auth__input auth__password-input"
               type="password"
               name="password"
               required

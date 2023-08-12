@@ -3,7 +3,7 @@ import AboutProject from "../AboutProject/AboutProject";
 import AuthLinks from "../../main/AuthNav/AuthNav";
 import Header from "../../main/Header/Header";
 import Footer from "../../main/Footer/Footer";
-import Technology from "../Technology/Technology";
+import Techs from "../Techs/Techs";
 import Student from "../Student/Student";
 
 function Landing() {
@@ -15,7 +15,7 @@ function Landing() {
       <main>
         <Promo />
         <AboutProject />
-        <Technology />
+        <Techs />
         <Student />
       </main>
       <Footer />

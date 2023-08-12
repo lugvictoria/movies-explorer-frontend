@@ -1,4 +1,4 @@
-import Authorization from "../Authorization/Authorization";
+import Authorization from "../Auth/Auth";
 import AuthInputEmail from "../AuthInputEmail/AuthInputEmail";
 import AuthInputPassword from "../AuthInputPassword/AuthInputPassword";
 

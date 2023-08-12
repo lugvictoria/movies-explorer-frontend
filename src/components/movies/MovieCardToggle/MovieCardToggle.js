@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./MovieToggle.css";
+import "./MovieCardToggle.css";
 
 function MovieToggle() {
   const [isActive, setActive] = useState(false);

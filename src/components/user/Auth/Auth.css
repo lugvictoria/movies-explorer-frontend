@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-.password-input {
+.auth__password-input {
   color: var(--password-input);
 }
 
@@ -31,7 +31,6 @@
 .auth__logo {
   object-fit: contain;
   width: 38px;
-  aspect-ratio: 1;
 }
 
 .auth__title {
@@ -146,7 +145,7 @@
 .auth__hint {
   margin: 0;
   margin-top: 14px;
-  color: car(--password-input);
+  color: var(--password-input);
   text-align: center;
   font-style: normal;
   font-weight: 400;

@@ -1,8 +1,8 @@
-import MovieToggle from "../MovieToggle/MovieToggle";
+import MovieToggle from "../MovieCardToggle/MovieCardToggle";
 import { useState, useRef } from "react";
-import "./MoviesCard.css";
+import "./MovieCard.css";
 
-function MoviesCard({ name, duration, thumbnail, type }) {
+function MovieCard({ name, duration, thumbnail, type }) {
   const [isSaved, setIsSaved] = useState(false);
 
   function handleClickSave() {
@@ -37,4 +37,4 @@ function MoviesCard({ name, duration, thumbnail, type }) {
     </li>
   );
 }
-export default MoviesCard;
+export default MovieCard;

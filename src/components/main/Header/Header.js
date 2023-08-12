@@ -18,9 +18,9 @@ function Header() {
     const html = document.querySelector("html");
 
     if (value) {
-      html.classList.add("right-menu-open");
+      html.classList.add("header__right-menu-open");
     } else {
-      html.classList.remove("right-menu-open");
+      html.classList.remove("header__right-menu-open");
     }
   }
 
@@ -62,19 +62,19 @@ function Header() {
 
           <div className="header__button-container">
             <Link to="/profile">
-              <img src={account} alt="аккаунт" />
+              <img
+              src={account}
+              alt="аккаунт" />
             </Link>
           </div>
 
           {location.pathname !== "/" && (
             <button className="header__mobile-toggle">
               <img
-className="icon_menu"
+                className="header__icon-menu"
                 src={menu}
                 alt="меню"
-                onClick={() => toggleRightMenu(true)
-
-                }
+                onClick={() => toggleRightMenu(true)}
               />
             </button>
           )}

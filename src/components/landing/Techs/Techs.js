@@ -1,4 +1,4 @@
-import "./Technology.css";
+import "./Techs.css";
 
 function Technology() {
   return (

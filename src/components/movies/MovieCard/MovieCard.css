@@ -2,7 +2,7 @@
   flex-direction: column;
   background-color: var(--surface-pages);
   border-radius: 6px;
-  color: var(-text-on-page);
+  color: var(--text-on-page);
 }
 
 @media (min-width: 1280px) {

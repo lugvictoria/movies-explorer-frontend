@@ -4,7 +4,7 @@ import "./Page404.css";
 function Page404() {
   return (
     <main className={("page404", "section")}>
-      <div className="page404_Textbox">
+      <div className="page404_textbox">
         <h1 className="page404__title">404</h1>
       </div>
       <p className="page404__subtitle">Страница не найдена</p>

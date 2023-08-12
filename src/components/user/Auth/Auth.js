@@ -1,4 +1,4 @@
-import "./Authorization.css";
+import "./Auth.css";
 import logo from "../../../images/logo.svg";
 import { Link } from "react-router-dom";
 import SubmitButton from "../SubmitButton/SubmitButton";
