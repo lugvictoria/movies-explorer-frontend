@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo.svg";
-import "./../Auth/Auth.css";
+import "../Auth/Auth.css";
 
 function Register() {
   return (

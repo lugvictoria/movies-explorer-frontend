@@ -1,8 +1,9 @@
 .movie-card {
   flex-direction: column;
-  background-color: var(--surface-pages);
-  border-radius: 6px;
+  background-color: #222222;
+  border-radius: 10px;
   color: var(--text-on-page);
+  filter: drop-shadow(16px 16px 24px #000000);
 }
 
 @media (min-width: 1280px) {
@@ -89,7 +90,9 @@
 
 .movie-card__photo {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  aspect-ratio: 16/9;
   object-position: center;
   object-fit: cover;
 }
