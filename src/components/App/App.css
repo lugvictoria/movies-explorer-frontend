@@ -6,6 +6,7 @@
 
 .page {
   width: 100%;
+  margin: 0;
   /* Шрифтовая схема для всей страницы */
   font-family: "Inter", Helvetica, Arial, sans-serif;
   /* Использование цветов в проекте */

@@ -1,0 +1,23 @@
+.checkbox__toggle {
+  background-image: url(./../../../images/smalltumb.svg);
+  width: 36px;
+  height: 20px;
+  background-color: var(--surface-pages);
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+  gap: 15px;
+}
+
+.checkbox__toggle.checkbox__toggle__active {
+  background-image: url(./../../../images/smalltumboff.svg);
+}
+
+.checkbox__toggle__label {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox__toggle__active .checkbox__toggle__label {
+  left: calc(100% + 5px);
+}

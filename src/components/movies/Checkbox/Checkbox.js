@@ -1,12 +1,12 @@
-import classNames from "classnames";
-import "./Checkbox.css";
+import classNames from 'classnames';
+import './Checkbox.css';
 
 function Checkbox({ className, title }) {
   return (
-    <label className={classNames(className, "checkbox")}>
-      <input
+    <label className={classNames(className, 'checkbox')}>
+     <input
         type="checkbox"
-        className="checkbox__system-box"
+        className="checkbox__system-checkbox"
         defaultChecked={true}
       />
       <span className="checkbox__custom-checkbox"></span>
