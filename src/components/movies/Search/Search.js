@@ -13,7 +13,7 @@ function Search() {
       />
       <Checkbox title="Короткометражки" className="search__checkbox" />
       <button type="submit" className="search__button">
-        <img className="find__icon" alt="Иконка поиска" src={find} />
+        <img className="search__icon" alt="Иконка поиска" src={find} />
       </button>
     </form>
   );
