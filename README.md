@@ -3,7 +3,6 @@
 Репозиторий для фронтенд-части приложения с интерфейсом на React
 
 ### Используемые API
-
 - [собственное API для регистрации/авторизации и хранения сохраненных фильмов:](api.movies-lugvictoria.nomoredomains.work)
 'api.movies-lugvictoria.nomoredomains.work'
 
