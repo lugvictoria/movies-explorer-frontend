@@ -40,13 +40,13 @@
   height: 20px;
   border-radius: 20px;
   box-sizing: border-box;
-  background-image: url(./../../../images/smalltumb.svg);
+  background-image: url(./../../../images/smalltumboff.svg);
   color: var(--text-on-page);
 }
 
 /* Нажатое состояние - смена иконки */
 .checkbox__system-box:checked+.checkbox__custom-checkbox {
-  background-image: url(./../../../images/smalltumboff.svg);
+  background-image: url(./../../../images/smalltumb.svg);
 }
 
 /* При наведении */

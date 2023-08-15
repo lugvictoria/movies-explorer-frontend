@@ -1,9 +1,13 @@
 import "./More.css";
 
-function More() {
+function More({ onClick }) {
   return (
     <section className="more section">
-      <button className="more__button" type="button">
+      <button
+        className="more__button"
+        type="button"
+        onClick={onClick}
+      >
         Ещё
       </button>
     </section>

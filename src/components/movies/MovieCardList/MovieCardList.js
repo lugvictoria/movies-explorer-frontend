@@ -1,20 +1,8 @@
-import React from "react";
 import MoviesCard from "../MovieCard/MovieCard";
 import "./MovieCardList.css";
+import { API_SERVICE } from "../../../defines";
 
-import testData from "../../../utils/testData";
-
-function MoviesCardList({ type }) {
-  const [movies, setMovies] = React.useState([]);
-
-  function testGetMovies() {
-    setMovies(testData);
-  }
-
-  React.useEffect(() => {
-    testGetMovies();
-  }, []);
-
+function MoviesCardList({ type, movies }) {
   return (
     <ul className="movie-card-list" aria-label="Список фильмов">
       {movies.map((movie) => {
@@ -23,10 +11,7 @@ function MoviesCardList({ type }) {
             key={movie.id}
             name={movie.nameRU}
             duration={movie.duration}
-            thumbnail={
-              "https://api.nomoreparties.co/" +
-              movie.image.formats.thumbnail.url
-            }
+            thumbnail={API_SERVICE + movie.image.formats.thumbnail.url}
             // type={type}
           />
         );

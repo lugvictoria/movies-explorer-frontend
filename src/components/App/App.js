@@ -6,24 +6,19 @@ import Movie from "../movies/Movie/Movie";
 import SavedMovies from "../movies/SavedMovies/SavedMovies";
 import Register from "../user/Register/Register";
 import Login from "../user/Login/Login";
-import { createContext, useContext } from "react";
 import "./App.css";
-
-const defAppContext = { isRightShow: false };
-const AppContext = createContext(defAppContext);
-export const useAppContext = () => useContext(AppContext);
 
 function App() {
   return (
     <div className="content">
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/signup" element={<Register />} />
-        <Route path="/signin" element={<Login />} />
-        <Route path="*" element={<Page404 />} />
-        <Route path="/movies" element={<Movie />} />
-        <Route path="/saved-movies" element={<SavedMovies />} />
+        <Route path="/" element={<Landing/>}/>
+        <Route path="/profile" element={<ProfilePage/>}/>
+        <Route path="/signup" element={<Register/>}/>
+        <Route path="/signin" element={<Login/>}/>
+        <Route path="*" element={<Page404/>}/>
+        <Route path="/movies" element={<Movie/>}/>
+        <Route path="/saved-movies" element={<SavedMovies/>}/>
       </Routes>
     </div>
   );
