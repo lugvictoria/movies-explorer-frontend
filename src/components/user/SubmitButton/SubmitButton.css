@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+  .submit-button {
+    margin-top: 145px;
+    font-size: 14px;
+    line-height: 17px;
+    height: 45px;
+  }
+}
+
+.submit-button {
+  color: var(--text-on-page);
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-link);
+  border-radius: 3px;
+  margin-top: 140px;
+  padding: 15px;
+  align-self: stretch;
+  text-align: center;
+  transition: opacity.3s, transform 0.3s;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.submit-button:hover {
+  opacity: 0.8;
+}
+
+.submit-button:active {
+  transform: scale(0.9);
+}
+
+.submit-button:disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+  pointer-events: none;
+}

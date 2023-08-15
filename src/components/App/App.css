@@ -1,0 +1,54 @@
+/* Файл - normalize.css */
+@import url(../../vendor/normalize.css);
+
+/* Шрифтовая схема - Inter*/
+@import url(../../vendor/fonts/inter-web/inter.css);
+
+.page {
+  width: 100%;
+  margin: 0;
+  /* Шрифтовая схема для всей страницы */
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  /* Использование цветов в проекте */
+  --promo: #073042;
+  --on-surface: #000000;
+  --surface-pages: #202020;
+  --text-on-page: #ffffff;
+  --time-block1: #3ddc84;
+  --time-block4: #303030;
+  --background-techs: #272727;
+  --list-items: #303030;
+  --text-on-caption: #8b8b8b;
+  --color-link: #4285f4;
+  --error-message: #ee3465;
+  --line: #424242;
+  --text-under: #a0a0a0;
+  --surface-inputs: #2f2f2f;
+  --line-portfolio: #e6e6e6;
+  --password-input: #ee3465;
+  /* Цвета страницы по умолчанию */
+  background-color: var(--surface-pages);
+  color: var(--text-on-page);
+  /* Сглаживание шрифтов */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.content {
+  color: var(--text-on-page);
+  width: 100%;
+  max-width: 1280px;
+  min-width: 320px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__footer {
+  margin-top: auto;
+}

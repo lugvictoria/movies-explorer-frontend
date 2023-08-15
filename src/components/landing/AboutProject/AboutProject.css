@@ -1,0 +1,224 @@
+@media (min-width: 320px) {
+  .about-project__section {
+    padding-inline: 18px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__section {
+    padding-inline: 50px;
+    padding-top: 87px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-project__section {
+    padding-inline: 70px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+}
+
+.about-project {
+  padding-top: 60px;
+  color: var(--text-on-page);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+}
+
+@media (min-width: 690px) {
+  .about-project {
+    padding-top: 70px;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    column-gap: 30px;
+    row-gap: 93px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-project {
+    padding-top: 70px;
+    column-gap: 40px;
+    row-gap: 110px;
+    max-width: 1140px;
+    grid-template-columns: repeat(2, minmax(550px, min-content));
+  }
+}
+
+@media (min-width: 320px) {
+  .about-project__name-section {
+    margin: 0;
+    color: var(--text-on-page);
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #dadada;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__name-section {
+    font-size: 22px;
+    line-height: 27px;
+    padding-bottom: 23px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-project__name-section {
+    max-width: 1140px;
+  }
+}
+
+.about-project__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-project__context {
+  max-width: 550px;
+}
+
+@media (min-width: 320px) {
+  .about-project__title {
+    max-width: 284px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 16px;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__title {
+    max-width: 319px;
+    margin-bottom: 22px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-project__title {
+    margin-bottom: 26px;
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 320px) {
+  .about-project__subtitle {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__subtitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-project__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 320px) {
+  .about-project__blockline {
+    grid-column: 1/-1;
+    display: grid;
+    padding-top: 3px;
+    grid-template-columns: 35% 65%;
+    row-gap: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__blockline {
+    padding-top: 0px;
+    grid-template-columns: 21% 79%;
+    row-gap: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-project__blockline {
+    grid-template-columns: 20% 80%;
+  }
+}
+
+@media (min-width: 320px) {
+  .about-project__time-block {
+    margin: 0;
+    grid-row: 1;
+    height: 35px;
+    background-color: var(--time-block4);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__time-block {
+    height: 36px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media (min-width: 320px) {
+  .about-project__time-block:nth-of-type(4n - 3) {
+    background-color: var(--time-block1);
+    color: var(--on-surface);
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 320px) {
+  .about-project__time-text {
+    margin: 0;
+    grid-row: 2;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: var(--text-under);
+  }
+}
+
+@media (min-width: 768px) {
+  .about-project__time-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-project__time-text {
+    color: var(--text-on-caption);
+  }
+}
