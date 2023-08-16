@@ -1,68 +1,59 @@
-import Checkbox from "../Checkbox/Checkbox";
-import find from "../../../images/find.svg";
-import "./Search.css";
 import { useEffect, useState } from "react";
+import Checkbox from "../Checkbox/Checkbox";
+import { LS_SEARCH_KEY } from "../../../defines";
+import "./Search.css";
+import find from "../../../images/find.svg";
+import Joi from "joi";
+import { validateJsonByJoiSchema } from "../../../utils";
 
 export const getInitialSearch = () => ({ query: "", isShort: false });
 
-const LS_SEARCH_KEY = "_me_search_history";
+const searchSchema = Joi.object({
+  query: Joi.string().allow("").required(),
+  isShort: Joi.boolean().required(),
+});
 
 function clearHistory() {
   window.localStorage.removeItem(LS_SEARCH_KEY);
 }
 
-function qtyKeys(obj) {
-  return Object.keys(obj).length;
-}
 
 function getSearchHistory() {
-  const initial = getInitialSearch();
   const json = window.localStorage.getItem(LS_SEARCH_KEY);
+  const { value, error } = validateJsonByJoiSchema(json, searchSchema, getInitialSearch());
 
-  if (!json) return initial;
+  if (error) clearHistory();
 
-  try {
-    const state = JSON.parse(json);
-
-    if (typeof state !== "object" || Array.isArray(state) || qtyKeys(initial) !== qtyKeys(state)) {
-      clearHistory();
-      return initial;
-    }
-
-    for (const key in initial) {
-      const isValid = key in state && typeof initial[key] === typeof state[key];
-
-      if (!isValid) {
-        clearHistory();
-        return initial;
-      }
-    }
-
-    return state;
-  } catch (e) {
-    clearHistory();
-    return initial;
-  }
+  return value;
 }
 
-function Search({ onChange }) {
-  const [search, setSearch] = useState(getSearchHistory);
+function Search({ onChange, filterBySubmit = undefined, useHistory = undefined }) {
+  const [search, setSearch] = useState(() => {
+    return useHistory ? getSearchHistory() : getInitialSearch();
+  });
 
   useEffect(() => {
-    window.localStorage.setItem(LS_SEARCH_KEY, JSON.stringify(search));
-    // Вариант с моментальной фильтрацией
-    if (typeof onChange === "function") onChange(search);
+    if (!filterBySubmit) onChange(search);
+
+    if (useHistory) {
+      window.localStorage.setItem(LS_SEARCH_KEY, JSON.stringify(search));
+    }
   }, [search]);
 
-  // Вариант с нажатием сабмита
-  // useEffect(() => {
-  //   if (typeof onChange === "function") onChange(search);
-  // }, []);
+  useEffect(() => {
+    submitOnChange()
+  }, []);
+
+  function submitOnChange() {
+    if (typeof onChange !== "function") return;
+    if (!filterBySubmit) return;
+
+    onChange(search);
+  }
 
   function saveSearchQuery(e) {
     e.preventDefault();
-    // Вариант с нажатием сабмита
-    // if (typeof onChange === "function") onChange(search);
+    submitOnChange()
   }
 
   return (

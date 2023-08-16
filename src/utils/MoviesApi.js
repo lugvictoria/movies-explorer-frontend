@@ -1,7 +1,8 @@
 import { API_SERVICE } from "../defines";
 
 class MoviesApi {
-  static apiUrl = API_SERVICE + "beatfilm-movies";
+  static apiUrl = API_SERVICE + "/beatfilm-movies";
+
 
   static async getAll() {
 

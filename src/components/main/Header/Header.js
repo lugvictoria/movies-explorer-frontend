@@ -10,7 +10,7 @@ import "./Header.css";
 
 function Header({ isThemed = false }) {
   const [isRightActive, setRightActive] = useState(false);
-  
+
   const { user } = useAuth();
 
   function toggleRightMenu(value) {
