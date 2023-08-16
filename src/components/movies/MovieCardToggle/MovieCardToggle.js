@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./MovieCardToggle.css";
 
-function MovieCardToggle() {
+function MovieCardToggle({ onToggle }) {
   const [isActive, setActive] = useState(false);
 
   return (
@@ -9,7 +9,10 @@ function MovieCardToggle() {
       className={`movie-card__toggle ${
         isActive ? "movie-card__toggle__active" : ""
       }`.trim()}
-      onClick={() => setActive((prev) => !prev)}
+      onClick={() => {
+        setActive((prev) => !prev);
+        if (onToggle) onToggle();
+      }}
     ></button>
   );
 }

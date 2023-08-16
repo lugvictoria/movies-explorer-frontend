@@ -19,7 +19,7 @@ function AboutMe() {
           <ul className="about-me__link-list">
             <li className="about-me__link-list-item">
               <a
-                href="https://github.com/lugvictoria"
+                href=""
                 className="about-me__link"
               >
                 Github
