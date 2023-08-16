@@ -2,15 +2,16 @@ import logo from "../../../images/logo.svg";
 import account from "../../../images/profile.svg";
 import menu from "../../../images/menu.svg";
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Menu from "../../user/Menu/Menu";
+import { useAuth } from "../../auth/AuthProvider";
+import classNames from "classnames";
 import "./Header.css";
 
-const loggedIn = true;
-
-function Header() {
+function Header({ isThemed = false }) {
   const [isRightActive, setRightActive] = useState(false);
-  const location = useLocation();
+  
+  const { user } = useAuth();
 
   function toggleRightMenu(value) {
     setRightActive(value);
@@ -26,11 +27,12 @@ function Header() {
 
   return (
     <>
-      {!loggedIn ? (
-        <header className="header" id="header">
+      {!user ? (
+        <header id="header" className={classNames("header", isThemed ? "header_themed" : "")}>
           <Link to="/" className="header__logo">
-            <img src={logo} alt="логотип" />
+            <img src={logo} alt="логотип"/>
           </Link>
+
           <div className="header__button-container">
             <Link to="/signup" className="header__button">
               Регистрация
@@ -41,10 +43,11 @@ function Header() {
           </div>
         </header>
       ) : (
-        <header className="header" id="header">
-            <Link to="/" className="header__logo">
-          <img src={logo} alt="логотип" className="header__logo" />
+        <header id="header" className={classNames("header", isThemed ? "header_themed" : "")}>
+          <Link to="/" className="header__logo">
+            <img src={logo} alt="логотип" className="header__logo"/>
           </Link>
+
           <div className="header__button-container_films">
             <Link to="/movies" className="header__button">
               Фильмы
@@ -53,37 +56,36 @@ function Header() {
               Сохранённые фильмы
             </Link>
           </div>
-          <div className="header__button-entrance">
-            <Link to="/signup" className="header__button">
-              Регистрация
-            </Link>
-            <Link to="/signin" className="header__button header__button-green">
-              Войти
-            </Link>
-          </div>
+
+          {/* <div className="header__button-entrance"> */}
+          {/*   <Link to="/signup" className="header__button"> */}
+          {/*     Регистрация */}
+          {/*   </Link> */}
+          {/*   <Link to="/signin" className="header__button header__button-green"> */}
+          {/*     Войти */}
+          {/*   </Link> */}
+          {/* </div> */}
 
           <div className="header__button-container">
             <Link to="/profile">
               <img
-              src={account}
-              alt="аккаунт" />
+                src={account}
+                alt="аккаунт"/>
             </Link>
           </div>
 
-          {location.pathname !== "/" && (
-            <button className="header__mobile-toggle">
-              <img
-                className="header__icon-menu"
-                src={menu}
-                alt="меню"
-                onClick={() => toggleRightMenu(true)}
-              />
-            </button>
-          )}
+          <button className="header__mobile-toggle">
+            <img
+              className="header__icon-menu"
+              src={menu}
+              alt="меню"
+              onClick={() => toggleRightMenu(true)}
+            />
+          </button>
         </header>
       )}
 
-      {location.pathname !== "/" && (
+      {user && (
         <Menu
           isActive={isRightActive}
           tooggleActive={(value) => toggleRightMenu(value)}

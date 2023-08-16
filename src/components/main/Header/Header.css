@@ -8,19 +8,6 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  .header {
-    padding-inline: 30px;
-    padding-top: 17px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .header {
-    padding-inline: 70px;
-  }
-}
-
 .header__button-container_films {
   display: flex;
   gap: 16px;
@@ -32,10 +19,9 @@
 }
 
 .header__button-container {
-  max-width: 100px;
   max-height: 32px;
   display: flex;
-  max-width: 100px;
+  column-gap: 30px;
   align-items: center;
 }
 
@@ -44,12 +30,6 @@
   display: flex;
   gap: 14px;
   align-items: center;
-}
-
-@media (min-width: 768px) {
-  .header__button-entrance {
-    gap: 30px;
-  }
 }
 
 .header__right-menu-open {
@@ -88,15 +68,6 @@
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
-  .header__button {
-    font-size: 12px;
-    line-height: 16px;
-    min-height: 32px;
-    min-width: 76px;
-  }
-}
-
 .header__button:hover {
   cursor: pointer;
   opacity: 0.6;
@@ -125,30 +96,6 @@
   cursor: pointer;
 }
 
-@media (min-width: 320px) {
-  .header__mobile-toggle {
-    border: 0;
-    outline: none;
-    background-color: transparent;
-    display: inline-flex;
-    padding: 0;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  .header__icon-menu {
-    width: 40px;
-    height: 43px;
-  }
-}
-
-@media (min-width: 768px) {
-  .header__icon-menu {
-    width: 44px;
-    height: 44px;
-  }
-}
-
 .header__account-button:hover {
   cursor: pointer;
   opacity: 0.6;
@@ -159,74 +106,111 @@
   opacity: 0.6;
 }
 
+.header__menu-button {
+  display: none;
+}
+
+.header__button-entrance {
+  display: none;
+}
+
+.header__button-container_films {
+  display: none;
+}
+
+.header__button-container {
+  display: none;
+}
+
 /*Страница Landing*/
-.landing-page .header {
-  background-color: var(--promo);
-}
+/*.landing-page .header {*/
+/*  background-color: var(--promo);*/
+/*}*/
 
-.landing-page .header__button-container_films {
-  display: none;
-}
+/*.landing-page .header__button-container_films {*/
+/*  display: none;*/
+/*}*/
 
-.landing-page .header__button-container {
-  display: none;
-}
-
-.landing-page .header__menu-button {
-  display: none;
-}
-
-/*Страница Movies*/
-.movies-page .header__button-entrance {
-  display: none;
-}
-
-.movies-page .header__button-container_films {
-  display: none;
-}
-
-.movies-page .header__button-container {
-  display: none;
-}
+/*.landing-page .header__button-container {*/
+/*  display: none;*/
+/*}*/
 
 /*Страница Profile*/
-.profile-page .header__button-entrance {
-  display: none;
+/*.profile-page .header__button-entrance {*/
+/*  display: none;*/
+/*}*/
+
+/*.profile-page .header__button-container_films {*/
+/*  display: none;*/
+/*}*/
+
+/*.profile-page .header__button-container {*/
+/*  display: none;*/
+/*}*/
+
+@media (min-width: 320px) {
+  .header__mobile-toggle {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    display: inline-flex;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .header__icon-menu {
+    width: 40px;
+    height: 43px;
+  }
 }
 
-.profile-page .header__button-container_films {
-  display: none;
-}
+@media (min-width: 768px) {
+  .header {
+    padding-inline: 30px;
+    padding-top: 17px;
+  }
 
-.profile-page .header__button-container {
-  display: none;
+  .header__icon-menu {
+    width: 44px;
+    height: 44px;
+  }
+
+  .header__button {
+    font-size: 12px;
+    line-height: 16px;
+    min-height: 32px;
+    min-width: 76px;
+  }
+
+  .header__button-entrance {
+    gap: 30px;
+  }
 }
 
 @media (min-width: 769px) {
-  .movies-page .header__button-container_films {
+  .header__button-container_films {
     display: flex;
   }
 
-  .movies-page .header__button-container {
+  .header__button-container {
     display: flex;
   }
 
-  .movies-page .header__menu-button {
+  .header__menu-button {
     display: none;
   }
 
-  .profile-page .header__button-container_films {
-    display: flex;
-  }
-  .profile-page .header__button-container {
-    display: flex;
-  }
-
-  .profile-page .header__menu-button {
+  .header__menu-button {
     display: none;
   }
 
   .header__mobile-toggle {
     display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding-inline: 70px;
   }
 }

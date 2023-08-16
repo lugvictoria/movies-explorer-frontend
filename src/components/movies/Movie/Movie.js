@@ -6,16 +6,12 @@ import SearchBlock, { getInitialSearch } from "../Search/Search";
 import { useEffect, useMemo, useState } from "react";
 import useFetch from "../../../hooks/useFetch";
 import MoviesApi from "../../../utils/MoviesApi";
-import "./Movie.css";
+import NotFound from "../../NotFound";
 import PageAwait from "../../PageAwait";
+import "./Movie.css";
 import MoviesFilter from "../../../utils/MoviesFilter";
+import { SIZE_CONFIG } from "../../../defines";
 
-const SIZE_CONFIG = [
-  { name: "lg", width: 1280, row: 4, initial: 16, adding: 4 },
-  { name: "md", width: 1137, row: 3, initial: 12, adding: 3 },
-  { name: "sm", width: 595, row: 2, initial: 8, adding: 2 },
-  { name: "xs", width: 0, row: 1, initial: 5, adding: 2 },
-];
 
 function getSizeConfig() {
   const width = window.innerWidth;
@@ -26,14 +22,6 @@ function getSizeConfig() {
   }
 
   return config[config.length - 1];
-}
-
-function NotFound() {
-  return (
-    <div>
-      <p style={{ textAlign: "center" }}>Ничего не найдено</p>
-    </div>
-  );
 }
 
 // TODO: Добавить сохранение в ls отфильтрованных фильмов
@@ -87,7 +75,7 @@ function Movies() {
     <div className="movies-page">
       <Header/>
       <main>
-        <SearchBlock onChange={(state) => setSearch(state)}/>
+        <SearchBlock onChange={(state) => setSearch(state)} useHistory/>
 
         <PageAwait isLoading={isLoading} error={error}>
           {slicedMovies.length

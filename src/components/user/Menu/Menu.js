@@ -49,7 +49,7 @@ const Menu = ({ isActive, tooggleActive }) => {
                 </NavLink>
               </div>
 
-              <Link className="menu__link" to="/signin">
+              <Link className="menu__link" to="/profile">
                 <span className="menu__link__text">Аккаунт</span>
                 <div className="menu__link__img">
                   <img src={small} alt="Войти в аккаунт" />

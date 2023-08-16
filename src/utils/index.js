@@ -23,7 +23,6 @@ export function validateJsonByJoiSchema(json, schema, initial) {
   }
 }
 
-
 export function toCapitalize(str) {
   return str ? str[0].toUpperCase() + str.slice(1) : "";
 }
