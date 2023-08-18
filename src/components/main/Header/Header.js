@@ -10,7 +10,7 @@ import "./Header.css";
 
 function Header({ isThemed = false }) {
   const [isRightActive, setRightActive] = useState(false);
-  
+
   const { user } = useAuthContext();
 
   function toggleRightMenu(value) {
@@ -67,11 +67,9 @@ function Header({ isThemed = false }) {
           {/* </div> */}
 
           <div className="header__button-container">
-            <Link to="/profile">
-              <img
-                src={account}
-                alt="аккаунт"/>
-            </Link>
+           <Link to='/profile' className='header__account-button' aria-label='Перейти на страницу профиля'>
+          Аккаунт
+        </Link>
           </div>
 
           <button className="header__mobile-toggle">
