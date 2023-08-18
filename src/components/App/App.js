@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     element: <AuthLayout/>,
-    loader: () => defer({ userPromise: MainApi.validate() }),
+    loader: () => defer({ userPromise: MainApi.checkToken() }),
     children: [
       {
         path: "/",

@@ -4,6 +4,10 @@
 /* Шрифтовая схема - Inter*/
 @import url(../../vendor/fonts/inter-web/inter.css);
 
+body, body * {
+  box-sizing: border-box;
+}
+
 .page {
   width: 100%;
   margin: 0;

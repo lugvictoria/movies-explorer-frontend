@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-import account from "../../../images/profile.svg";
+import { Link, NavLink } from "react-router-dom";
 import close from "../../../images/Group.svg";
 import small from "../../../images/icon__COLOR_icon-main_small.svg";
 import "./Menu.css";
 
-const Menu = ({ isActive, tooggleActive }) => {
+const Menu = ({ isActive, toggleActive }) => {
   const closeMenu = () => {
-    tooggleActive(!isActive);
+    toggleActive(!isActive);
   };
 
   return (
@@ -52,13 +50,13 @@ const Menu = ({ isActive, tooggleActive }) => {
               <Link className="menu__link" to="/profile">
                 <span className="menu__link__text">Аккаунт</span>
                 <div className="menu__link__img">
-                  <img src={small} alt="Войти в аккаунт" />
+                  <img src={small} alt="Войти в аккаунт"/>
                 </div>
               </Link>
             </div>
 
             <div
-              onClick={() => tooggleActive(!isActive)}
+              onClick={() => toggleActive(!isActive)}
               className={"menu__button"}
             >
               <img
