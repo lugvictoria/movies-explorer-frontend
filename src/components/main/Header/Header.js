@@ -1,5 +1,4 @@
 import logo from "../../../images/logo.svg";
-import account from "../../../images/profile.svg";
 import menu from "../../../images/menu.svg";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
