@@ -1,7 +1,7 @@
-function NotFound() {
+function NotFound({ text = "Ничего не найдено" }) {
   return (
     <div>
-      <p style={{ textAlign: "center" }}>Ничего не найдено</p>
+      <p style={{ textAlign: "center" }}>{text}</p>
     </div>
   );
 }

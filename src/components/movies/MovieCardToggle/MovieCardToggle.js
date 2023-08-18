@@ -1,18 +1,15 @@
-import { useState } from "react";
+import classNames from "classnames";
 import "./MovieCardToggle.css";
 
-function MovieCardToggle({ onToggle }) {
-  const [isActive, setActive] = useState(false);
-
+function MovieCardToggle({ isActive = false, onToggle }) {
   return (
     <button
-      className={`movie-card__toggle ${
-        isActive ? "movie-card__toggle__active" : ""
-      }`.trim()}
+      className={classNames("movie-card__toggle", isActive ? "movie-card__toggle__active" : "")}
       onClick={() => {
-        setActive((prev) => !prev);
-        if (onToggle) onToggle();
+        if (!onToggle) return;
+        onToggle(!isActive);
       }}
+      title={isActive ? "Удалить фильм из сохраненных" : "Добавить фильм в сохраненные"}
     ></button>
   );
 }

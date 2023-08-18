@@ -5,19 +5,19 @@ import { validateJson } from "./index";
 class MainApi {
   static async register({ name, email, password }) {
     const url = API_BACKEND + "/signup";
-    const resp = await fetch(url, MainApi.#initPost({ name, email, password }));
+    const resp = await fetch(url, MainApi.#initAuthPost({ name, email, password }));
 
-    return await MainApi.#handleError(resp);
+    return await MainApi.#handleAuthError(resp);
   }
 
   static async login({ email, password }) {
     const url = API_BACKEND + "/signin";
-    const resp = await fetch(url, MainApi.#initPost({ email, password }));
+    const resp = await fetch(url, MainApi.#initAuthPost({ email, password }));
 
-    return await MainApi.#handleError(resp);
+    return await MainApi.#handleAuthError(resp);
   }
 
-  static async validate() {
+  static async checkToken() {
     const url = API_BACKEND + "/users/me";
 
     try {
@@ -44,7 +44,7 @@ class MainApi {
     }
   }
 
-  static async #handleError(resp) {
+  static async #handleAuthError(resp) {
     const { result, value } = validateJson(await resp.text());
     if (!result) throw new Error(value || SERVER_ERROR);
 
@@ -65,12 +65,98 @@ class MainApi {
     return value;
   }
 
-  static #initPost(body) {
+  static #initAuthPost(body) {
     return {
       method: "POST",
       body: JSON.stringify(body),
       headers: { "Content-Type": "application/json; charset=utf-8" },
     };
+  }
+
+  // **************************
+
+  static async removeSavedMovie(ownerId) {
+    const url = API_BACKEND + "/movies/" + ownerId;
+
+    const options = {
+      method: "DELETE",
+      headers: MainApi.#getAuthorization(),
+    };
+
+    const resp = await fetch(url, options);
+    const json = await resp.text();
+    const data = JSON.parse(json);
+
+    if (!resp.ok) {
+      throw new Error(data?.message);
+    }
+
+    return data;
+  }
+
+  static async addSavedMovie(movieDto) {
+    const url = API_BACKEND + "/movies";
+
+    const options = {
+      method: "POST",
+      body: JSON.stringify(movieDto),
+      headers: {
+        ...MainApi.#getAuthorization(),
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+
+    const resp = await fetch(url, options);
+    const json = await resp.text();
+    const data = JSON.parse(json);
+
+    if (!resp.ok) {
+      throw new Error(data?.message);
+    }
+
+    return data;
+  }
+
+  static async getSavedMovies() {
+    const url = API_BACKEND + "/movies";
+
+    const options = {
+      method: "GET",
+      headers: MainApi.#getAuthorization(),
+    };
+
+    const resp = await fetch(url, options);
+    const json = await resp.text();
+    const data = JSON.parse(json);
+
+    if (!resp.ok) {
+      throw new Error(data?.message);
+    }
+
+    return data;
+  }
+
+  static async updateProfile({ name, email }) {
+    const url = API_BACKEND + "/users/me";
+
+    const options = {
+      method: "PATCH",
+      body: JSON.stringify({ name, email }),
+      headers: {
+        ...MainApi.#getAuthorization(),
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+
+    const resp = await fetch(url, options);
+    const json = await resp.text();
+    const data = JSON.parse(json);
+
+    if (!resp.ok) {
+      throw new Error(data?.message);
+    }
+
+    return data;
   }
 
   static #getAuthorization() {

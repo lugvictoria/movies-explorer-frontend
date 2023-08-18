@@ -1,9 +1,8 @@
 import MovieCardToggle from "../MovieCardToggle/MovieCardToggle";
-import "./MovieCard.css";
-import { API_SERVICE } from "../../../defines";
 import MovieCardRemove from "../MovieCardRemove/MovieCardRemove";
+import "./MovieCard.css";
 
-function MovieCard({ movie, type = undefined }) {
+function MovieCard({ movie, type, toggleReducer }) {
   function convertToHoursAndMinutes(duration) {
     const hours = Math.floor(duration / 60);
     const minutes = duration % 60;
@@ -11,11 +10,15 @@ function MovieCard({ movie, type = undefined }) {
     return hours + "ч" + minutes + "м";
   }
 
+  function isMovieHasOwner() {
+    return "owner" in movie && typeof movie.owner === "object" && Object.keys(movie.owner).length > 0;
+  }
+
   return (
     <li className="movie-card">
       <a href={movie.trailerLink} target="_blank" rel="noreferrer">
         <img
-          src={API_SERVICE + "/" + movie.image.formats.thumbnail.url}
+          src={movie.thumbnail}
           alt={`Кадр из фильма ${movie.nameRU}`}
           className="movie-card__photo"
         />
@@ -31,8 +34,19 @@ function MovieCard({ movie, type = undefined }) {
         </h3>
 
         {type === "saved"
-          ? <MovieCardRemove/>
-          : <MovieCardToggle/>
+          ? (
+            <MovieCardRemove
+              onRemove={() => toggleReducer("remove", movie)}
+            />
+          )
+          : (
+            <MovieCardToggle
+              isActive={isMovieHasOwner()}
+              onToggle={(value) => {
+                toggleReducer(value ? "add" : "remove", movie);
+              }}
+            />
+          )
         }
       </div>
 

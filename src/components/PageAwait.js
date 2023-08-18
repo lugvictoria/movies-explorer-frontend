@@ -1,11 +1,16 @@
 import Preloader from "./movies/Preloader/Preloader";
-import Error from "./error/Error";
+import PageError from "./error/PageError";
+
 
 function PageAwait({ isLoading, error, children }) {
   if (isLoading) return <Preloader/>;
-  if (error.status) return <Error/>;
+
+  if (error.status) {
+    console.error(error.message);
+    return <PageError/>;
+  }
 
   return children;
 }
 
-export default PageAwait
+export default PageAwait;

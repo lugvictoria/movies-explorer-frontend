@@ -2,7 +2,7 @@ import { Await, useLoaderData, useOutlet } from "react-router-dom";
 import { Suspense } from "react";
 import Preloader from "../movies/Preloader/Preloader";
 import { AuthProvider } from "./AuthProvider";
-import Error from "../error/Error";
+import PageError from "../error/PageError";
 
 const AuthLoader = () => (
   <div
@@ -26,7 +26,7 @@ const AuthLayout = () => {
     <Suspense fallback={<AuthLoader/>}>
       <Await
         resolve={userPromise}
-        errorElement={<Error/>}
+        errorElement={<PageError/>}
         children={(user) => (
           <AuthProvider userData={user}>{outlet}</AuthProvider>
         )}

@@ -1,9 +1,8 @@
 import { useMemo, useState } from "react";
 import useFetch from "../../../hooks/useFetch";
 import { toCapitalize, validateFormField } from "../../../utils";
-import "../Auth/Authorization.css";
 import MainApi from "../../../utils/MainApi";
-import Authorization from "../Auth/Authorization";
+import Authorization from "../Authorization/Authorization";
 import useFormValidate from "../../../hooks/useFormValidate";
 
 const initialData = {
@@ -54,7 +53,7 @@ function Register() {
           value={form.name}
           autoComplete="nope"
           onChange={({ target }) => {
-            const value = toCapitalize(target.value.trim());
+            const value = toCapitalize(target.value.replaceAll(" ", ""));
             const error = validateFormField(value, "testName");
 
             setForm((prev) => ({ ...prev, name: value }));
@@ -77,7 +76,7 @@ function Register() {
           required
           value={form.email}
           onChange={({ target }) => {
-            const value = target.value.trim();
+            const value = target.value.replaceAll(" ", "");
             const error = validateFormField(value, "testEmail");
 
             setForm((prev) => ({ ...prev, email: value }));
@@ -100,7 +99,7 @@ function Register() {
           required
           value={form.password}
           onChange={({ target }) => {
-            const value = target.value.trim();
+            const value = target.value.replace(" ", "");
             const error = validateFormField(value, "testPassword");
 
             setForm(prev => ({ ...prev, password: value }));

@@ -1,7 +1,3 @@
-const REGEXPS = {
-  LETTERS_WITH_SPACE: /^[a-zA-Z\s]*$/,
-};
-
 class FormValidate {
   static pattern = {
     // name: /[^a-zа-яё ]/iu,

@@ -3,21 +3,33 @@ import Footer from "../../main/Footer/Footer";
 import Header from "../../main/Header/Header";
 import MoviesCardList from "../MovieCardList/MovieCardList";
 import SearchForm, { getInitialSearch } from "../Search/Search";
-import testData from "../../../utils/testData";
-import "./SavedMovies.css";
 import MoviesFilter from "../../../utils/MoviesFilter";
+import "./SavedMovies.css";
+import MainApi from "../../../utils/MainApi";
+import useFetch from "../../../hooks/useFetch";
+import NotFound from "../../NotFound";
+import PageAwait from "../../PageAwait";
 
 function SavedMovies() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState(() => getInitialSearch());
 
+  const [fetching, isLoading, error] = useFetch(async () => {
+    const data = await MainApi.getSavedMovies();
+    setMovies(data);
+  }, true);
+
   useEffect(() => {
-    setMovies(testData);
+    fetching().then();
   }, []);
 
   const filteredMovies = useMemo(() => {
     return MoviesFilter.doStuff(movies, search);
   }, [movies, search]);
+
+  function removeSavedMovie(id) {
+    setMovies((prev) => prev.filter(it => it.movieId !== id));
+  }
 
   return (
     <div className="movies-page">
@@ -25,7 +37,24 @@ function SavedMovies() {
 
       <main>
         <SearchForm onChange={(state) => setSearch(state)}/>
-        <MoviesCardList type="saved" movies={filteredMovies}/>
+
+        <PageAwait isLoading={isLoading} error={error}>
+          {filteredMovies.length
+            ? (
+              <MoviesCardList
+                type="saved"
+                movies={filteredMovies}
+                removeMovie={removeSavedMovie}
+              />
+            )
+            : (
+              <NotFound
+                text={!movies.length ? "У вас нет сохраненных фильмов" : undefined}
+              />
+            )
+          }
+        </PageAwait>
+
       </main>
 
       <Footer/>

@@ -4,25 +4,22 @@ const initial = {
   status: false, message: "",
 };
 
-const useFetch = (callback) => {
-  const [isLoading, setLoading] = useState(false);
+const useFetch = (callback, initialLoading = false) => {
+  const [isLoading, setLoading] = useState(initialLoading);
   const [error, setError] = useState(initial);
 
   const fetching = async (...args) => {
-    setError(initial);
-
     try {
       setLoading(true);
+      setError(initial);
 
       if (typeof callback !== "undefined" && typeof callback === "function") {
-        return await callback(...args);
+        await callback(...args);
       }
     } catch (e) {
       setError({
         status: true, message: e.message,
       });
-
-      return undefined;
     } finally {
       setLoading(false);
     }

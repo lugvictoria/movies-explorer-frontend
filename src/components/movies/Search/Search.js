@@ -1,47 +1,22 @@
 import { useEffect, useState } from "react";
 import Checkbox from "../Checkbox/Checkbox";
-import { LS_SEARCH_KEY } from "../../../defines";
-import "./Search.css";
 import find from "../../../images/find.svg";
-import Joi from "joi";
-import { validateJsonByJoiSchema } from "../../../utils";
+import "./Search.css";
+
 
 export const getInitialSearch = () => ({ query: "", isShort: false });
 
-const searchSchema = Joi.object({
-  query: Joi.string().allow("").required(),
-  isShort: Joi.boolean().required(),
-});
-
-function clearHistory() {
-  window.localStorage.removeItem(LS_SEARCH_KEY);
-}
-
-
-function getSearchHistory() {
-  const json = window.localStorage.getItem(LS_SEARCH_KEY);
-  const { value, error } = validateJsonByJoiSchema(json, searchSchema, getInitialSearch());
-
-  if (error) clearHistory();
-
-  return value;
-}
-
-function Search({ onChange, filterBySubmit = undefined, useHistory = undefined }) {
+function Search({ onChange, filterBySubmit = undefined, initial = undefined }) {
   const [search, setSearch] = useState(() => {
-    return useHistory ? getSearchHistory() : getInitialSearch();
+    return initial || getInitialSearch();
   });
 
   useEffect(() => {
     if (!filterBySubmit) onChange(search);
-
-    if (useHistory) {
-      window.localStorage.setItem(LS_SEARCH_KEY, JSON.stringify(search));
-    }
   }, [search]);
 
   useEffect(() => {
-    submitOnChange()
+    submitOnChange();
   }, []);
 
   function submitOnChange() {
@@ -51,9 +26,10 @@ function Search({ onChange, filterBySubmit = undefined, useHistory = undefined }
     onChange(search);
   }
 
+
   function saveSearchQuery(e) {
     e.preventDefault();
-    submitOnChange()
+    submitOnChange();
   }
 
   return (
