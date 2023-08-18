@@ -4,14 +4,14 @@ import menu from "../../../images/menu.svg";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "../../user/Menu/Menu";
-import { useAuth } from "../../auth/AuthProvider";
+import { useAuthContext } from "../../auth/AuthProvider";
 import classNames from "classnames";
 import "./Header.css";
 
 function Header({ isThemed = false }) {
   const [isRightActive, setRightActive] = useState(false);
-
-  const { user } = useAuth();
+  
+  const { user } = useAuthContext();
 
   function toggleRightMenu(value) {
     setRightActive(value);
@@ -88,7 +88,7 @@ function Header({ isThemed = false }) {
       {user && (
         <Menu
           isActive={isRightActive}
-          tooggleActive={(value) => toggleRightMenu(value)}
+          toggleActive={(value) => toggleRightMenu(value)}
         />
       )}
     </>

@@ -1,11 +1,11 @@
-import Authorization from "../Auth/Authorization";
+import Authorization from "../Authorization/Authorization";
 import { useMemo, useState } from "react";
 import useFormValidate from "../../../hooks/useFormValidate";
 import useFetch from "../../../hooks/useFetch";
 import MainApi from "../../../utils/MainApi";
 import { validateFormField } from "../../../utils";
 import { AUTH_ERROR } from "../../../defines";
-import { useAuth } from "../../auth/AuthProvider";
+import { useAuthContext } from "../../auth/AuthProvider";
 import { Navigate } from "react-router-dom";
 
 const initialData = {
@@ -14,7 +14,7 @@ const initialData = {
 };
 
 function Login() {
-  const { user, login } = useAuth();
+  const { user, login } = useAuthContext();
 
   const [form, setForm] = useState(initialData);
   const { validate, isValid, setValidate } = useFormValidate(initialData);
@@ -22,13 +22,17 @@ function Login() {
   const [register, isLoading, error] = useFetch(async (form) => {
     setValidate(initialData);
     const data = await MainApi.login(form);
-    return data?.token || "";
+
+    login({
+      user: { ...form, _id: undefined },
+      token: data?.token || "",
+    });
   });
+
 
   async function onSubmitHandler(e) {
     e.preventDefault();
-    const token = await register(form);
-    login({ user: { email: form.email }, token });
+    await register(form);
   }
 
   const isDisabled = useMemo(() => {
@@ -57,7 +61,7 @@ function Login() {
           required
           value={form.email}
           onChange={({ target }) => {
-            const value = target.value.trim();
+            const value = target.value.replaceAll(" ", "");
             const error = validateFormField(value, "testEmail");
 
             setForm((prev) => ({ ...prev, email: value }));
@@ -74,13 +78,14 @@ function Login() {
         <input
           className="auth__password-input"
           type="password"
+
           name="password"
           placeholder=".............."
           autoComplete="current-password"
           required
           value={form.password}
           onChange={({ target }) => {
-            const value = target.value.trim();
+            const value = target.value.replaceAll(" ", "");
             const error = !value ? AUTH_ERROR.EMPTY : "";
 
             setForm(prev => ({ ...prev, password: value }));

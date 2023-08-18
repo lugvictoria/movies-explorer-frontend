@@ -1,5 +1,5 @@
 import { AnySchema } from "joi";
-import { AUTH_ERROR } from "../defines";
+import { API_SERVICE, AUTH_ERROR, SIZE_CONFIG } from "../defines";
 import FormValidate from "./FormValidate";
 
 export function validateJsonByJoiSchema(json, schema, initial) {
@@ -46,4 +46,43 @@ export function validateFormField(value, validateModule) {
     const test = FormValidate[validateModule](value);
     return test.status ? "" : test.error;
   })();
+}
+
+export function getSizeConfig() {
+  const width = window.innerWidth;
+  const config = SIZE_CONFIG.sort((a, b) => b.width - a.width);
+
+  for (const it of config) {
+    if (width >= it.width) return it;
+  }
+
+  return config[config.length - 1];
+}
+
+export function getSavedMovieDto(movie, ownerData = undefined) {
+  const dto = {
+    country: movie.country,
+    director: movie.director,
+    duration: movie.duration,
+    year: movie.year,
+    description: movie.description,
+    image: API_SERVICE + movie.image.url,
+    trailerLink: movie.trailerLink,
+    thumbnail: API_SERVICE + movie.image.formats.thumbnail.url,
+    nameRU: movie.nameRU,
+    nameEN: movie.nameEN,
+    movieId: movie.id,
+  };
+
+  if (ownerData) {
+    dto["_id"] = ownerData?._id;
+    dto["owner"] = ownerData?.owner;
+  }
+
+  return dto;
+}
+
+export function clearSavedMovieDto(savedMovie) {
+  const { _id, owner, ...savedMovieDto } = savedMovie;
+  return savedMovieDto;
 }
