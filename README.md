@@ -7,6 +7,10 @@
 - [собственное API для регистрации/авторизации и хранения сохраненных фильмов:](api.movies-lugvictoria.nomoredomains.work)
 'api.movies-lugvictoria.nomoredomains.work'
 
+### Яндекс Cloud
+-[ссылка на фронтенд на сервере виртуальной машины](movies-lugvictoria.nomoredomainsicu.ru) 'movies-lugvictoria.nomoredomainsicu.ru'
+-[ccылка на бэкенд на сервере виртуальной машины](api.movies-lugvictoria.nomoredomains.work) 'api.movies-lugvictoria.nomoredomains.work'
+
 ### Структура приложения
 
 Полностью приложение состоит из двух частей:
