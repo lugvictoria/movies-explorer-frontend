@@ -1,5 +1,5 @@
 export const API_SERVICE = "https://api.nomoreparties.co";
-export const API_BACKEND = "http://api.movies-lugvictoria.nomoredomains.work:3000";
+export const API_BACKEND = "http://api.movies-lugvictoria.nomoredomains.work";
 
 export const LS_FILTER_KEY = "_me_filtered_movies";
 export const LS_SEARCH_KEY = "_me_search_history";
