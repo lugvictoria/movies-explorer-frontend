@@ -9,8 +9,7 @@
 
 ### Git пул реквест
 
-https://github.com/lugvictoria/movies-explorer-frontend/pull/4 'https://github.com/lugvictoria/movies-explorer-frontend/pull/4'
-
+-[ссылка на пул реквест](https://github.com/lugvictoria/movies-explorer-frontend/pull/4) https://github.com/lugvictoria/movies-explorer-frontend/pull/4
 
 ### Яндекс Cloud
 -[ссылка на фронтенд на сервере виртуальной машины](movies-lugvictoria.nomoredomainsicu.ru) 'movies-lugvictoria.nomoredomainsicu.ru'
