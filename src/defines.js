@@ -1,5 +1,5 @@
 export const API_SERVICE = "https://api.nomoreparties.co";
-export const API_BACKEND = "http://api.movies-lugvictoria.nomoredomains.work";
+export const API_BACKEND = window.location.protocol + "//api.movies-lugvictoria.nomoredomains.work";
 
 export const LS_FILTER_KEY = "_me_filtered_movies";
 export const LS_SEARCH_KEY = "_me_search_history";
@@ -13,7 +13,6 @@ export const SIZE_CONFIG = [
   { name: "sm", width: 595, row: 2, initial: 8, adding: 2 },
   { name: "xs", width: 0, row: 1, initial: 5, adding: 2 },
 ];
-
 
 export const AUTH_ERROR = {
   NAME: "Введено не валидное имя",
