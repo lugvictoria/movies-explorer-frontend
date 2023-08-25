@@ -7,7 +7,7 @@ function Portfolio() {
       <ul className="portfolio__list">
         <li className="portfolio__list-item">
           <a
-            href="https://lugvictoria.github.io/how-to-learn/"
+            href=""
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
@@ -17,7 +17,7 @@ function Portfolio() {
         </li>
         <li className="portfolio__list-item">
           <a
-            href="https://lugvictoria.github.io/russian-travel/"
+            href=""
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
@@ -27,7 +27,7 @@ function Portfolio() {
         </li>
         <li className="portfolio__list-item">
           <a
-            href="https://lugvictoria.github.io/mesto/"
+            href=""
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"
@@ -36,8 +36,8 @@ function Portfolio() {
           </a>
         </li>
         {/* <li className="portfolio__list-item">
-         <a
-            href="https://lugvictoria.github.io/react-mesto-auth/"
+          <a
+            href="/"
             className="portfolio__link"
             target="_blank"
             rel="noreferrer"

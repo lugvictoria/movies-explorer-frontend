@@ -17,13 +17,14 @@ class MainApi {
     return await MainApi.#handleAuthError(resp);
   }
 
-  static async checkToken() {
+  static async checkToken(token = undefined) {
+    token ||= window.localStorage.getItem(LS_AUTH_KEY) || "";
     const url = API_BACKEND + "/users/me";
 
     try {
       const resp = await fetch(url, {
         method: "GET",
-        headers: MainApi.#getAuthorization(),
+        headers: MainApi.#getAuthorization(token),
       });
 
       const json = await resp.text();
@@ -119,10 +120,11 @@ class MainApi {
 
   static async getSavedMovies() {
     const url = API_BACKEND + "/movies";
+    const token = window.localStorage.getItem(LS_AUTH_KEY);
 
     const options = {
       method: "GET",
-      headers: MainApi.#getAuthorization(),
+      headers: { Authorization: `Bearer ${token || ""}` },
     };
 
     const resp = await fetch(url, options);
@@ -159,8 +161,8 @@ class MainApi {
     return data;
   }
 
-  static #getAuthorization() {
-    const token = window.localStorage.getItem(LS_AUTH_KEY);
+  static #getAuthorization(token) {
+    token ||= window.localStorage.getItem(LS_AUTH_KEY);
     return { Authorization: `Bearer ${token || ""}` };
   }
 }

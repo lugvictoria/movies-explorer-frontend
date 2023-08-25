@@ -22,13 +22,12 @@ function Login() {
   const [register, isLoading, error] = useFetch(async (form) => {
     setValidate(initialData);
     const data = await MainApi.login(form);
+    const user = await MainApi.checkToken(data?.token);
 
     login({
-      user: { ...form, _id: undefined },
-      token: data?.token || "",
+      user, token: data?.token || "",
     });
   });
-
 
   async function onSubmitHandler(e) {
     e.preventDefault();
@@ -78,7 +77,6 @@ function Login() {
         <input
           className="auth__password-input"
           type="password"
-
           name="password"
           placeholder=".............."
           autoComplete="current-password"

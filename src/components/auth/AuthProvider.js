@@ -11,11 +11,9 @@ const defContext = {
 
 const CurrentUserContext = createContext(defContext);
 
-
 export const AuthProvider = ({ children, userData }) => {
   const [user, setUser] = useState(userData);
   const navigate = useNavigate();
-
 
   const login = ({ user, token }) => {
     setUser(user);

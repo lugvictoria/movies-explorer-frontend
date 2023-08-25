@@ -1,5 +1,4 @@
 class MoviesFilter {
-
   static doStuff(movies, search) {
     if (!movies.length) return movies;
 
@@ -9,10 +8,8 @@ class MoviesFilter {
     return byDuration;
   }
 
-
   static byName(movies, query) {
     if (!query.trim()) return movies;
-
 
     const toSimilar = (name) => name.toLowerCase();
 
@@ -21,7 +18,6 @@ class MoviesFilter {
       return toSimilar(nameRU).includes(lowerName) || toSimilar(nameEN).includes(lowerName);
     });
   }
-
 
   static byDuration(movies, isShort) {
     return movies.filter(({ duration }) => {
