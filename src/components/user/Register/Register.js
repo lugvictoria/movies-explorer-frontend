@@ -4,6 +4,7 @@ import { toCapitalize, validateFormField } from "../../../utils";
 import MainApi from "../../../utils/MainApi";
 import Authorization from "../Authorization/Authorization";
 import useFormValidate from "../../../hooks/useFormValidate";
+import { useAuthContext } from "../../auth/AuthProvider";
 
 const initialData = {
   name: "",
@@ -14,12 +15,15 @@ const initialData = {
 function Register() {
   const [form, setForm] = useState(initialData);
   const { validate, isValid, setValidate } = useFormValidate(initialData);
+  const { login } = useAuthContext();
 
   const [register, isLoading, error] = useFetch(async (data) => {
     setValidate(initialData);
-    await MainApi.register(data);
-    setForm(initialData);
-    alert("Вы успешно зарегистрировались!");
+
+    const user = await MainApi.register(data);
+    const body = await MainApi.login({ email: form.email, password: form.password });
+
+    login({ user, token: body?.token || "" });
   });
 
   async function onSubmitHandler(e) {

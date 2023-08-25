@@ -21,6 +21,7 @@ function Profile() {
     try {
       const data = await MainApi.updateProfile(form);
       update(data);
+      alert("Данные профиля успешно обновлены!");
     } catch (e) {
       console.error(e);
       setError(e?.message || defError);
@@ -55,7 +56,7 @@ function Profile() {
     <div className="profile-page">
       <main className="profile">
         <div className="profile__container">
-          <h1 className="profile__title">Привет, Виталий!</h1>
+          <h1 className="profile__title">Привет, {user.name || "Неизвестный"}!</h1>
 
           <form
             id="profile"

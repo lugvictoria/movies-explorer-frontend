@@ -66,6 +66,7 @@ function getSearchHistory() {
 }
 
 function Movies() {
+  const [isLoaded, setLoaded] = useState(false);
   const [isHistory, setHistory] = useState(false);
   const [movies, setMovies] = useState(() => {
     const list = getLocalMovies();
@@ -92,11 +93,6 @@ function Movies() {
   });
 
   useEffect(() => {
-    if (movies.length) return;
-    fetching().then();
-  }, [isHistory]);
-
-  useEffect(() => {
     const onResizeHandler = () => {
       const config = getSizeConfig();
 
@@ -117,9 +113,12 @@ function Movies() {
   }, [movies, search]);
 
   useDidUpdateEffect(async () => {
-    if (isHistory) await fetching();
-
     const isSearchEmpty = search.query.trim() === "" && !search.isShort;
+
+    if (!isLoaded && !isSearchEmpty) {
+      await fetching();
+      setLoaded(true);
+    }
 
     if (!isSearchEmpty && !isHistory) {
       window.localStorage.setItem(LS_FILTER_KEY, JSON.stringify(filteredMovies));
@@ -130,11 +129,15 @@ function Movies() {
     else {
       window.localStorage.removeItem(LS_FILTER_KEY);
       window.localStorage.removeItem(LS_SEARCH_KEY);
+
+      if (movies.length) {
+        setMovies([]);
+        setLoaded(false);
+      }
     }
 
     setHistory(false);
-  }, [search, filteredMovies]);
-
+  }, [search, filteredMovies, isLoaded]);
 
   const slicedMovies = useMemo(() => {
     return filteredMovies.length <= sizeConfig.initial
@@ -147,13 +150,15 @@ function Movies() {
       })();
   }, [filteredMovies, page, sizeConfig]);
 
+  const isEmptySearch = useMemo(() => {
+    return search.query.trim() === "" && !search.isShort;
+  }, [search]);
 
   function insertOwnerInMovie(id, owner) {
     setMovies((prev) => {
       return prev.map(it => it.movieId !== id ? it : { ...it, ...owner });
     });
   }
-
 
   function removeOwnerFromMovie(id) {
     setMovies((prev) => {
@@ -167,6 +172,7 @@ function Movies() {
 
       <main>
         <SearchBlock
+          filterBySubmit
           onChange={(state) => setSearch(state)}
           initial={search}
         />
@@ -187,7 +193,7 @@ function Movies() {
                 )}
               </>
             )
-            : <NotFound/>}
+            : <NotFound text={isEmptySearch ? "Для поиска фильмов введите запрос в форму" : "Ничего не найдено"}/>}
         </PageAwait>
       </main>
 

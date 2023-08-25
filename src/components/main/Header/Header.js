@@ -1,7 +1,7 @@
 import logo from "../../../images/logo.svg";
 import menu from "../../../images/menu.svg";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Menu from "../../user/Menu/Menu";
 import { useAuthContext } from "../../auth/AuthProvider";
 import classNames from "classnames";
@@ -9,7 +9,6 @@ import "./Header.css";
 
 function Header({ isThemed = false }) {
   const [isRightActive, setRightActive] = useState(false);
-
   const { user } = useAuthContext();
 
   function toggleRightMenu(value) {
@@ -43,32 +42,33 @@ function Header({ isThemed = false }) {
         </header>
       ) : (
         <header id="header" className={classNames("header", isThemed ? "header_themed" : "")}>
-          <Link to="/" className="header__logo">
+          <NavLink
+            to="/"
+            className={({ isActive }) => `header__logo ${isActive ? "active" : ""}`.trim()}
+          >
             <img src={logo} alt="логотип" className="header__logo"/>
-          </Link>
+          </NavLink>
 
           <div className="header__button-container_films">
-            <Link to="/movies" className="header__button">
+            <NavLink
+              to="/movies"
+              className={({ isActive }) => `header__button ${isActive ? "active" : ""}`.trim()}
+            >
               Фильмы
-            </Link>
-            <Link to="/saved-movies" className="header__button">
+            </NavLink>
+
+            <NavLink
+              to="/saved-movies"
+              className={({ isActive }) => `header__button ${isActive ? "active" : ""}`.trim()}
+            >
               Сохранённые фильмы
-            </Link>
+            </NavLink>
           </div>
 
-          {/* <div className="header__button-entrance"> */}
-          {/*   <Link to="/signup" className="header__button"> */}
-          {/*     Регистрация */}
-          {/*   </Link> */}
-          {/*   <Link to="/signin" className="header__button header__button-green"> */}
-          {/*     Войти */}
-          {/*   </Link> */}
-          {/* </div> */}
-
           <div className="header__button-container">
-           <Link to='/profile' className='header__account-button' aria-label='Перейти на страницу профиля'>
-          Аккаунт
-        </Link>
+            <Link to="/profile" className="header__account-button" aria-label="Перейти на страницу профиля">
+              Аккаунт
+            </Link>
           </div>
 
           <button className="header__mobile-toggle">

@@ -4,11 +4,11 @@ import Header from "../../main/Header/Header";
 import MoviesCardList from "../MovieCardList/MovieCardList";
 import SearchForm, { getInitialSearch } from "../Search/Search";
 import MoviesFilter from "../../../utils/MoviesFilter";
-import "./SavedMovies.css";
 import MainApi from "../../../utils/MainApi";
 import useFetch from "../../../hooks/useFetch";
 import NotFound from "../../NotFound";
 import PageAwait from "../../PageAwait";
+import "./SavedMovies.css";
 
 function SavedMovies() {
   const [movies, setMovies] = useState([]);
@@ -36,7 +36,7 @@ function SavedMovies() {
       <Header/>
 
       <main>
-        <SearchForm onChange={(state) => setSearch(state)}/>
+        <SearchForm onChange={(state) => setSearch(state)} filterBySubmit/>
 
         <PageAwait isLoading={isLoading} error={error}>
           {filteredMovies.length
