@@ -31,7 +31,7 @@ function Header({ isThemed = false }) {
             <img src={logo} alt="логотип"/>
           </Link>
 
-          <div className="header__button-container">
+          <div className="header__button-entrance">
             <Link to="/signup" className="header__button">
               Регистрация
             </Link>
@@ -64,7 +64,6 @@ function Header({ isThemed = false }) {
               Сохранённые фильмы
             </NavLink>
           </div>
-
           <div className="header__button-container">
             <Link to="/profile" className="header__account-button" aria-label="Перейти на страницу профиля">
               Аккаунт

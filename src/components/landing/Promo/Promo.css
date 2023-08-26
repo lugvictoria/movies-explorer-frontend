@@ -26,8 +26,8 @@
   }
 }
 
-@media (min-width: 320px) {
   .promo__title {
+    max-width: 300px;
     text-align: center;
     padding-top: 320px;
     margin: auto;
@@ -37,7 +37,6 @@
     line-height: 38px;
     letter-spacing: -0.04em;
   }
-}
 
 @media (min-width: 768px) {
   .promo__title {

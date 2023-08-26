@@ -25,6 +25,8 @@
   align-items: center;
 }
 
+
+
 .header__button-entrance {
   margin-left: auto;
   display: flex;
@@ -126,9 +128,9 @@
   display: none;
 }
 
-.header__button-entrance {
+/* .header__button-entrance {
   display: none;
-}
+} */
 
 .header__button-container_films {
   display: none;
