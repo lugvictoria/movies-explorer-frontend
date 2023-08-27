@@ -62,6 +62,7 @@
   }
 
   .menu__item.active {
+    /*border-bottom: 1px solid white;*/
     text-decoration: underline;
   }
 

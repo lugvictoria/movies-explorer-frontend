@@ -1,16 +1,15 @@
 import logo from "../../../images/logo.svg";
-import account from "../../../images/profile.svg";
 import menu from "../../../images/menu.svg";
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Menu from "../../user/Menu/Menu";
+import { useAuthContext } from "../../auth/AuthProvider";
+import classNames from "classnames";
 import "./Header.css";
 
-const loggedIn = true;
-
-function Header() {
+function Header({ isThemed = false }) {
   const [isRightActive, setRightActive] = useState(false);
-  const location = useLocation();
+  const { user } = useAuthContext();
 
   function toggleRightMenu(value) {
     setRightActive(value);
@@ -26,12 +25,16 @@ function Header() {
 
   return (
     <>
-      {!loggedIn ? (
-        <header className="header" id="header">
+      {!user ? (
+        <header
+          id="header"
+          className={classNames("header", isThemed ? "header_themed" : "")}
+        >
           <Link to="/" className="header__logo">
             <img src={logo} alt="логотип" />
           </Link>
-          <div className="header__button-container">
+
+          <div className="header__button-entrance">
             <Link to="/signup" className="header__button">
               Регистрация
             </Link>
@@ -41,52 +44,63 @@ function Header() {
           </div>
         </header>
       ) : (
-        <header className="header" id="header">
-            <Link to="/" className="header__logo">
-          <img src={logo} alt="логотип" className="header__logo" />
-          </Link>
+        <header
+          id="header"
+          className={classNames("header", isThemed ? "header_themed" : "")}
+        >
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `header__logo ${isActive ? "active" : ""}`.trim()
+            }
+          >
+            <img src={logo} alt="логотип" className="header__logo" />
+          </NavLink>
+
           <div className="header__button-container_films">
-            <Link to="/movies" className="header__button">
+            <NavLink
+              to="/movies"
+              className={({ isActive }) =>
+                `header__button ${isActive ? "active" : ""}`.trim()
+              }
+            >
               Фильмы
-            </Link>
-            <Link to="/saved-movies" className="header__button">
+            </NavLink>
+
+            <NavLink
+              to="/saved-movies"
+              className={({ isActive }) =>
+                `header__button ${isActive ? "active" : ""}`.trim()
+              }
+            >
               Сохранённые фильмы
-            </Link>
+            </NavLink>
           </div>
-          <div className="header__button-entrance">
-            <Link to="/signup" className="header__button">
-              Регистрация
-            </Link>
-            <Link to="/signin" className="header__button header__button-green">
-              Войти
-            </Link>
-          </div>
-
           <div className="header__button-container">
-            <Link to="/profile">
-              <img
-              src={account}
-              alt="аккаунт" />
+            <Link
+              to="/profile"
+              className="header__account-button"
+              aria-label="Перейти на страницу профиля"
+            >
+              Аккаунт
             </Link>
           </div>
 
-          {location.pathname !== "/" && (
-            <button className="header__mobile-toggle">
-              <img
-                className="header__icon-menu"
-                src={menu}
-                alt="меню"
-                onClick={() => toggleRightMenu(true)}
-              />
-            </button>
-          )}
+          <button className="header__mobile-toggle">
+            <img
+              className="header__icon-menu"
+              src={menu}
+              alt="меню"
+              onClick={() => toggleRightMenu(true)}
+            />
+          </button>
         </header>
       )}
 
-      {location.pathname !== "/" && (
+      {user && (
         <Menu
           isActive={isRightActive}
-          tooggleActive={(value) => toggleRightMenu(value)}
+          toggleActive={(value) => toggleRightMenu(value)}
         />
       )}
     </>

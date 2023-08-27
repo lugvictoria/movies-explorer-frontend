@@ -4,7 +4,7 @@ import Portfolio from "../Portfolio/Portfolio";
 
 function Student() {
   return (
-    <section className="student__section" navId="student">
+    <section className="student__section">
       <AboutMe />
       <Portfolio />
     </section>

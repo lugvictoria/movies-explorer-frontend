@@ -1,12 +1,12 @@
 import classNames from "classnames";
 import "./SubmitButton.css";
 
-function SubmitButton({ onClick, title, className }) {
+function SubmitButton({ title, className, disabled = false }) {
   return (
     <button
       className={classNames("submit-button", className)}
-      onClick={onClick}
       type="submit"
+      disabled={disabled}
     >
       {title}
     </button>
