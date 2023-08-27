@@ -15,7 +15,10 @@ class MoviesFilter {
 
     return movies.filter(({ nameRU, nameEN }) => {
       const lowerName = toSimilar(query);
-      return toSimilar(nameRU).includes(lowerName) || toSimilar(nameEN).includes(lowerName);
+      return (
+        toSimilar(nameRU).includes(lowerName) ||
+        toSimilar(nameEN).includes(lowerName)
+      );
     });
   }
 

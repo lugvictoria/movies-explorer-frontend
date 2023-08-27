@@ -12,7 +12,6 @@ const Menu = ({ isActive, toggleActive }) => {
     <div>
       <main>
         <div className={`menu ${isActive ? "menu__active" : ""}`.trim()}>
-
           <div className="menu_box">
             <div className="menu-content">
               <div className="menu-column">
@@ -50,7 +49,7 @@ const Menu = ({ isActive, toggleActive }) => {
               <Link className="menu__link" to="/profile">
                 <span className="menu__link__text">Аккаунт</span>
                 <div className="menu__link__img">
-                  <img src={small} alt="Войти в аккаунт"/>
+                  <img src={small} alt="Войти в аккаунт" />
                 </div>
               </Link>
             </div>

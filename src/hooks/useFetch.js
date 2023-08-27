@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 const initial = {
-  status: false, message: "",
+  status: false,
+  message: "",
 };
 
 const useFetch = (callback, initialLoading = false) => {
@@ -18,7 +19,8 @@ const useFetch = (callback, initialLoading = false) => {
       }
     } catch (e) {
       setError({
-        status: true, message: e.message,
+        status: true,
+        message: e.message,
       });
     } finally {
       setLoading(false);

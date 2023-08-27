@@ -28,36 +28,34 @@ function SavedMovies() {
   }, [movies, search]);
 
   function removeSavedMovie(id) {
-    setMovies((prev) => prev.filter(it => it.movieId !== id));
+    setMovies((prev) => prev.filter((it) => it.movieId !== id));
   }
 
   return (
     <div className="movies-page">
-      <Header/>
+      <Header />
 
       <main>
-        <SearchForm onChange={(state) => setSearch(state)} filterBySubmit/>
+        <SearchForm onChange={(state) => setSearch(state)} filterBySubmit />
 
         <PageAwait isLoading={isLoading} error={error}>
-          {filteredMovies.length
-            ? (
-              <MoviesCardList
-                type="saved"
-                movies={filteredMovies}
-                removeMovie={removeSavedMovie}
-              />
-            )
-            : (
-              <NotFound
-                text={!movies.length ? "У вас нет сохраненных фильмов" : undefined}
-              />
-            )
-          }
+          {filteredMovies.length ? (
+            <MoviesCardList
+              type="saved"
+              movies={filteredMovies}
+              removeMovie={removeSavedMovie}
+            />
+          ) : (
+            <NotFound
+              text={
+                !movies.length ? "У вас нет сохраненных фильмов" : undefined
+              }
+            />
+          )}
         </PageAwait>
-
       </main>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }

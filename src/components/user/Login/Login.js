@@ -25,7 +25,8 @@ function Login() {
     const user = await MainApi.checkToken(data?.token);
 
     login({
-      user, token: data?.token || "",
+      user,
+      token: data?.token || "",
     });
   });
 
@@ -35,10 +36,10 @@ function Login() {
   }
 
   const isDisabled = useMemo(() => {
-    return Object.values(form).some(it => !it.trim());
+    return Object.values(form).some((it) => !it.trim());
   }, [form]);
 
-  if (user) return <Navigate to="/movies"/>;
+  if (user) return <Navigate to="/movies" />;
 
   return (
     <Authorization
@@ -86,12 +87,14 @@ function Login() {
             const value = target.value.replaceAll(" ", "");
             const error = !value ? AUTH_ERROR.EMPTY : "";
 
-            setForm(prev => ({ ...prev, password: value }));
+            setForm((prev) => ({ ...prev, password: value }));
             setValidate((prev) => ({ ...prev, password: error }));
           }}
         />
 
-        {validate.password && <p className="auth__error">{validate.password}</p>}
+        {validate.password && (
+          <p className="auth__error">{validate.password}</p>
+        )}
       </label>
     </Authorization>
   );

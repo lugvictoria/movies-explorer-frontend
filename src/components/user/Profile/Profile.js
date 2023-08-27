@@ -9,7 +9,10 @@ const defError = "При обновлении профиля произошла 
 function Profile() {
   const { user, logout, update } = useAuthContext();
 
-  const [form, setForm] = useState(() => ({ name: user.name, email: user.email }));
+  const [form, setForm] = useState(() => ({
+    name: user.name,
+    email: user.email,
+  }));
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
 
@@ -50,13 +53,15 @@ function Profile() {
     console.log(errors);
 
     setError(errors.filter(Boolean).join(" | "));
-  };
+  }
 
   return (
     <div className="profile-page">
       <main className="profile">
         <div className="profile__container">
-          <h1 className="profile__title">Привет, {user.name || "Неизвестный"}!</h1>
+          <h1 className="profile__title">
+            Привет, {user.name || "Неизвестный"}!
+          </h1>
 
           <form
             id="profile"
@@ -104,9 +109,7 @@ function Profile() {
           </form>
 
           <ul className="profile__links">
-            {error && (
-              <p className="profile__error-message">{error}</p>
-            )}
+            {error && <p className="profile__error-message">{error}</p>}
 
             <li className="profile__links-item">
               <button

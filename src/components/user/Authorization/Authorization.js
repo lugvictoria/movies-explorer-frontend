@@ -30,7 +30,14 @@ const MODES = {
   },
 };
 
-function Authorization({ mode = "register", isLoading, isDisabled, error, onSubmit, children }) {
+function Authorization({
+  mode = "register",
+  isLoading,
+  isDisabled,
+  error,
+  onSubmit,
+  children,
+}) {
   if (!Object.keys(MODES).includes(mode)) {
     console.error("Тип параметра `mode` не валиден!");
     return null;
@@ -52,9 +59,7 @@ function Authorization({ mode = "register", isLoading, isDisabled, error, onSubm
         <form className="auth__form" onSubmit={onSubmit}>
           {children}
 
-          {error.status && (
-            <p className="auth__error">{error.message}</p>
-          )}
+          {error.status && <p className="auth__error">{error.message}</p>}
 
           <SubmitButton
             title={MODES[mode].buttonText}

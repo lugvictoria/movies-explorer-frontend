@@ -18,35 +18,35 @@ async function userDataLoader() {
 
 const router = createBrowserRouter([
   {
-    element: <AuthLayout/>,
+    element: <AuthLayout />,
     loader: () => defer({ userPromise: userDataLoader() }),
     children: [
       {
         path: "/",
-        element: <Landing/>,
+        element: <Landing />,
       },
       {
         path: "/signup",
-        element: <Register/>,
+        element: <Register />,
       },
       {
         path: "/signin",
-        element: <Login/>,
+        element: <Login />,
       },
       {
-        element: <ProtectedLayout/>,
+        element: <ProtectedLayout />,
         children: [
           {
             path: "/movies",
-            element: <Movie/>,
+            element: <Movie />,
           },
           {
             path: "/saved-movies",
-            element: <SavedMovies/>,
+            element: <SavedMovies />,
           },
           {
             path: "/profile",
-            element: <ProfilePage/>,
+            element: <ProfilePage />,
           },
         ],
       },
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <Page404/>,
+    element: <Page404 />,
   },
 ]);
 

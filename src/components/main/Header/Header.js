@@ -26,9 +26,12 @@ function Header({ isThemed = false }) {
   return (
     <>
       {!user ? (
-        <header id="header" className={classNames("header", isThemed ? "header_themed" : "")}>
+        <header
+          id="header"
+          className={classNames("header", isThemed ? "header_themed" : "")}
+        >
           <Link to="/" className="header__logo">
-            <img src={logo} alt="логотип"/>
+            <img src={logo} alt="логотип" />
           </Link>
 
           <div className="header__button-entrance">
@@ -41,31 +44,44 @@ function Header({ isThemed = false }) {
           </div>
         </header>
       ) : (
-        <header id="header" className={classNames("header", isThemed ? "header_themed" : "")}>
+        <header
+          id="header"
+          className={classNames("header", isThemed ? "header_themed" : "")}
+        >
           <NavLink
             to="/"
-            className={({ isActive }) => `header__logo ${isActive ? "active" : ""}`.trim()}
+            className={({ isActive }) =>
+              `header__logo ${isActive ? "active" : ""}`.trim()
+            }
           >
-            <img src={logo} alt="логотип" className="header__logo"/>
+            <img src={logo} alt="логотип" className="header__logo" />
           </NavLink>
 
           <div className="header__button-container_films">
             <NavLink
               to="/movies"
-              className={({ isActive }) => `header__button ${isActive ? "active" : ""}`.trim()}
+              className={({ isActive }) =>
+                `header__button ${isActive ? "active" : ""}`.trim()
+              }
             >
               Фильмы
             </NavLink>
 
             <NavLink
               to="/saved-movies"
-              className={({ isActive }) => `header__button ${isActive ? "active" : ""}`.trim()}
+              className={({ isActive }) =>
+                `header__button ${isActive ? "active" : ""}`.trim()
+              }
             >
               Сохранённые фильмы
             </NavLink>
           </div>
           <div className="header__button-container">
-            <Link to="/profile" className="header__account-button" aria-label="Перейти на страницу профиля">
+            <Link
+              to="/profile"
+              className="header__account-button"
+              aria-label="Перейти на страницу профиля"
+            >
               Аккаунт
             </Link>
           </div>

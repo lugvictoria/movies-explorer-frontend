@@ -28,8 +28,7 @@ export function toCapitalize(str) {
 }
 
 export function validateJson(json) {
-  if (typeof json !== "string")
-    return { result: false, value: json };
+  if (typeof json !== "string") return { result: false, value: json };
 
   try {
     return { result: true, value: JSON.parse(json) };
@@ -42,10 +41,12 @@ export function validateFormField(value, validateModule) {
   if (!["testName", "testEmail", "testPassword"].includes(validateModule))
     throw new TypeError("Не валидный параметр validateModule");
 
-  return !value ? AUTH_ERROR.EMPTY : (() => {
-    const test = FormValidate[validateModule](value);
-    return test.status ? "" : test.error;
-  })();
+  return !value
+    ? AUTH_ERROR.EMPTY
+    : (() => {
+        const test = FormValidate[validateModule](value);
+        return test.status ? "" : test.error;
+      })();
 }
 
 export function getSizeConfig() {

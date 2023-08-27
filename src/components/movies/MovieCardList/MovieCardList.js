@@ -2,9 +2,14 @@ import MoviesCard from "../MovieCard/MovieCard";
 import MainApi from "../../../utils/MainApi";
 import "./MovieCardList.css";
 
-function MoviesCardList({ type = "all", movies = [], removeMovie = undefined, pushOwner = undefined }) {
+function MoviesCardList({
+  type = "all",
+  movies = [],
+  removeMovie = undefined,
+  pushOwner = undefined,
+}) {
   async function removeSavedMovie(movieId) {
-    const ownerId = movies?.find(it => it.movieId === movieId)?._id;
+    const ownerId = movies?.find((it) => it.movieId === movieId)?._id;
 
     if (!ownerId) {
       console.error("Не удалось найти ownerId!");

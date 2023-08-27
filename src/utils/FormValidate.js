@@ -16,7 +16,11 @@ class FormValidate {
     if (str.length < 2)
       return { status: false, error: "Имя не должно быть короче 2 символов" };
     if (!this.pattern.login.test(str))
-      return { status: false, error: "Поле может содержать только буквы, цифры, дефис или нижнее подчеркивание" };
+      return {
+        status: false,
+        error:
+          "Поле может содержать только буквы, цифры, дефис или нижнее подчеркивание",
+      };
 
     return { status: true };
   }
@@ -34,17 +38,35 @@ class FormValidate {
 
   static testPassword(str) {
     if (str.length < 8 || str.length > 24)
-      return { status: false, error: "Длина пароля должна быть от 8 до 24 символов" };
+      return {
+        status: false,
+        error: "Длина пароля должна быть от 8 до 24 символов",
+      };
     if (this.pattern.password.cyrillic.test(str))
-      return { status: false, error: "В введенном пароле присутствует кириллица" };
+      return {
+        status: false,
+        error: "В введенном пароле присутствует кириллица",
+      };
     if (!this.pattern.password.digit.test(str))
-      return { status: false, error: "Пароль должен содержать как минимум 1 цифру" };
+      return {
+        status: false,
+        error: "Пароль должен содержать как минимум 1 цифру",
+      };
     if (!this.pattern.password.upper.test(str))
-      return { status: false, error: "Пароль должен содержать как минимум 1 заглавную букву" };
+      return {
+        status: false,
+        error: "Пароль должен содержать как минимум 1 заглавную букву",
+      };
     if (!this.pattern.password.lower.test(str))
-      return { status: false, error: "Пароль должен содержать как минимум 1 строчную букву" };
+      return {
+        status: false,
+        error: "Пароль должен содержать как минимум 1 строчную букву",
+      };
     if (!this.pattern.password.symbol.test(str))
-      return { status: false, error: "Пароль должен содержать как минимум 1 специальный символ" };
+      return {
+        status: false,
+        error: "Пароль должен содержать как минимум 1 специальный символ",
+      };
 
     return { status: true };
   }

@@ -14,7 +14,7 @@ const AuthLoader = () => (
       alignItems: "center",
     }}
   >
-    <Preloader/>
+    <Preloader />
   </div>
 );
 
@@ -23,10 +23,10 @@ const AuthLayout = () => {
   const { userPromise } = useLoaderData();
 
   return (
-    <Suspense fallback={<AuthLoader/>}>
+    <Suspense fallback={<AuthLoader />}>
       <Await
         resolve={userPromise}
-        errorElement={<PageError/>}
+        errorElement={<PageError />}
         children={(user) => (
           <AuthProvider userData={user}>{outlet}</AuthProvider>
         )}

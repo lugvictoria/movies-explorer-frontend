@@ -18,7 +18,8 @@ const Promo = () => {
         className="promo__button"
         onClick={() => {
           nextScreenRef.current.scrollIntoView({
-            behavior: "smooth", block: "start",
+            behavior: "smooth",
+            block: "start",
           });
         }}
       >

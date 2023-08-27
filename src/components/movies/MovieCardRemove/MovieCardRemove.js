@@ -6,7 +6,7 @@ function MovieCardRemove({ onRemove }) {
     <button
       className="movie-card__remove"
       onClick={() => {
-        if (onRemove) onRemove()
+        if (onRemove) onRemove();
       }}
     >
       <img

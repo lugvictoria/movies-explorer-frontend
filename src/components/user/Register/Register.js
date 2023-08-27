@@ -6,7 +6,6 @@ import Authorization from "../Authorization/Authorization";
 import useFormValidate from "../../../hooks/useFormValidate";
 import { useAuthContext } from "../../auth/AuthProvider";
 
-
 const initialData = {
   name: "",
   email: "",
@@ -22,7 +21,10 @@ function Register() {
     setValidate(initialData);
 
     const user = await MainApi.register(data);
-    const body = await MainApi.login({ email: form.email, password: form.password });
+    const body = await MainApi.login({
+      email: form.email,
+      password: form.password,
+    });
 
     login({ user, token: body?.token || "" });
   });
@@ -33,7 +35,7 @@ function Register() {
   }
 
   const isDisabled = useMemo(() => {
-    return Object.values(form).some(it => !it.trim());
+    return Object.values(form).some((it) => !it.trim());
   }, [form]);
 
   return (
@@ -107,12 +109,14 @@ function Register() {
             const value = target.value.replace(" ", "");
             const error = validateFormField(value, "testPassword");
 
-            setForm(prev => ({ ...prev, password: value }));
+            setForm((prev) => ({ ...prev, password: value }));
             setValidate((prev) => ({ ...prev, password: error }));
           }}
         />
 
-        {validate.password && <p className="auth__error">{validate.password}</p>}
+        {validate.password && (
+          <p className="auth__error">{validate.password}</p>
+        )}
       </label>
     </Authorization>
   );

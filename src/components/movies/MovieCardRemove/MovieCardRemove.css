@@ -9,7 +9,7 @@
 }
 
 .movie-card__remove:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .movie-card__remove__icon {

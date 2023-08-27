@@ -11,7 +11,11 @@ function MovieCard({ movie, type, toggleReducer }) {
   }
 
   function isMovieHasOwner() {
-    return "owner" in movie && typeof movie.owner === "object" && Object.keys(movie.owner).length > 0;
+    return (
+      "owner" in movie &&
+      typeof movie.owner === "object" &&
+      Object.keys(movie.owner).length > 0
+    );
   }
 
   return (
@@ -24,33 +28,27 @@ function MovieCard({ movie, type, toggleReducer }) {
         />
       </a>
       <div className="movie-card__block">
-
         <h3 className="movie-card__name">
-          <a
-            href={movie.trailerLink}
-            target="_blank"
-            rel="noreferrer"
-          >{movie.nameRU}</a>
+          <a href={movie.trailerLink} target="_blank" rel="noreferrer">
+            {movie.nameRU}
+          </a>
         </h3>
 
-        {type === "saved"
-          ? (
-            <MovieCardRemove
-              onRemove={() => toggleReducer("remove", movie)}
-            />
-          )
-          : (
-            <MovieCardToggle
-              isActive={isMovieHasOwner()}
-              onToggle={(value) => {
-                toggleReducer(value ? "add" : "remove", movie);
-              }}
-            />
-          )
-        }
+        {type === "saved" ? (
+          <MovieCardRemove onRemove={() => toggleReducer("remove", movie)} />
+        ) : (
+          <MovieCardToggle
+            isActive={isMovieHasOwner()}
+            onToggle={(value) => {
+              toggleReducer(value ? "add" : "remove", movie);
+            }}
+          />
+        )}
       </div>
 
-      <p className="movie-card__time">{`${convertToHoursAndMinutes(movie.duration)}`}</p>
+      <p className="movie-card__time">{`${convertToHoursAndMinutes(
+        movie.duration
+      )}`}</p>
     </li>
   );
 }

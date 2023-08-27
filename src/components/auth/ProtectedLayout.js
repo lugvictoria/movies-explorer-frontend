@@ -3,7 +3,7 @@ import { useAuthContext } from "./AuthProvider";
 
 function ProtectedLayout() {
   const { user } = useAuthContext();
-  return user ? <Outlet/> : <Navigate to="/"/>;
+  return user ? <Outlet /> : <Navigate to="/" />;
 }
 
 export default ProtectedLayout;

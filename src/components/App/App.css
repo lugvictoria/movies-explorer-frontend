@@ -1,10 +1,11 @@
 /* Файл - normalize.css */
-@import 'normalize.css';
+@import "normalize.css";
 
 /* Шрифтовая схема - Inter*/
-@import url('../../vendor/fonts/inter-web/inter.css');
+@import url("../../vendor/fonts/inter-web/inter.css");
 
-body, body * {
+body,
+body * {
   box-sizing: border-box;
 }
 
