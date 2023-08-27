@@ -70,8 +70,6 @@ function Search({ onChange, filterBySubmit = undefined, initial = undefined }) {
           <rect width="34" height="34" rx="17" fill={isDisabled ? "#ccc" : "#4285F4"}/>
           <path d="M15 23L20 17L15 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
-        {/* <img className="search__icon" alt="Иконка поиска" src={find}/> */}
       </button>
     </form>
   );

@@ -3,6 +3,7 @@ import { API_SERVICE } from "../defines";
 class MoviesApi {
   static apiUrl = API_SERVICE + "/beatfilm-movies";
 
+  
   static async getAll() {
     const resp = await fetch(this.apiUrl, { method: "GET" });
     const json = await resp.text();

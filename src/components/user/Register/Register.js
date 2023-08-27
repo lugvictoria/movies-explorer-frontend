@@ -6,6 +6,7 @@ import Authorization from "../Authorization/Authorization";
 import useFormValidate from "../../../hooks/useFormValidate";
 import { useAuthContext } from "../../auth/AuthProvider";
 
+
 const initialData = {
   name: "",
   email: "",

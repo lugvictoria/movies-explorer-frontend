@@ -68,11 +68,13 @@ function getSearchHistory() {
 function Movies() {
   const [isLoaded, setLoaded] = useState(false);
   const [isHistory, setHistory] = useState(false);
+
   const [movies, setMovies] = useState(() => {
     const list = getLocalMovies();
     if (list.length) setHistory(true);
     return list;
   });
+
   const [search, setSearch] = useState(getSearchHistory);
   const [page, setPage] = useState(1);
   const [sizeConfig, setSizeConfig] = useState(getSizeConfig);
@@ -138,6 +140,10 @@ function Movies() {
 
     setHistory(false);
   }, [search, filteredMovies, isLoaded]);
+
+  useDidUpdateEffect(() => {
+    if (page !== 1) setPage(1);
+  }, [search]);
 
   const slicedMovies = useMemo(() => {
     return filteredMovies.length <= sizeConfig.initial
