@@ -3,7 +3,7 @@
   align-items: center;
   padding: 56px 30px 30px;
   display: flex;
-  color: var(--text-on-page);
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -72,7 +72,7 @@
   color: var(--password-input);
   display: block;
   border: 1px solid transparent;
-  background-color: var(--surface-inputs);
+  background-color: #2f2f2f;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
@@ -106,7 +106,7 @@
 
 .auth__label {
   display: block;
-  color: var(--text-on-page);
+  color: #ffffff;
   margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
@@ -117,8 +117,8 @@
 .auth__input {
   display: block;
   border: 1px solid transparent;
-  background-color: var(--surface-inputs);
-  color: var(--text-on-page);
+  background-color: #2f2f2f;
+  color: #ffffff;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
@@ -132,7 +132,7 @@
 
 .auth__input:focus {
   outline: none;
-  border: 1px solid var(--text-on-page);
+  border: 1px solid #ffffff;
 }
 
 .auth__input::placeholder {
