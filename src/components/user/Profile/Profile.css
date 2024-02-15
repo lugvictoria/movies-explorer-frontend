@@ -100,6 +100,7 @@
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
+  color: white;
 }
 
 .profile__input:disabled {
@@ -112,7 +113,7 @@
 }
 
 .profile__input::placeholder {
-  color: var(--text-on-page);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .profile__error-message {
@@ -178,6 +179,11 @@
     font-size: 13px;
     line-height: 1.23;
   }
+}
+
+.profile__link:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .profile__link:hover {

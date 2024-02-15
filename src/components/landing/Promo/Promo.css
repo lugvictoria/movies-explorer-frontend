@@ -26,23 +26,22 @@
   }
 }
 
-@media (min-width: 320px) {
-  .promo__title {
-    text-align: center;
-    padding-top: 320px;
-    margin: auto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 38px;
-    letter-spacing: -0.04em;
-  }
+.promo__title {
+  max-width: 300px;
+  text-align: center;
+  padding-top: 320px;
+  margin: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: -0.04em;
 }
 
 @media (min-width: 768px) {
   .promo__title {
     max-width: 680px;
-    padding-top: 494px;
+    padding-top: 493px;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 40px;
@@ -70,7 +69,7 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
-    margin: 24px auto 82px auto;
+    margin: 22px auto 80px auto;
     opacity: 0.5;
   }
 }
@@ -78,7 +77,7 @@
 @media (min-width: 768px) {
   .promo__subtitle {
     margin-top: 21px;
-    margin-bottom: 94px;
+    margin-bottom: 90px;
   }
 }
 
@@ -86,7 +85,7 @@
   .promo__subtitle {
     max-width: 310px;
     text-align: left;
-    margin-top: 38px;
+    margin-top: 36px;
     margin-left: 70px;
     margin-bottom: 145px;
   }
@@ -95,7 +94,7 @@
 @media (min-width: 320px) {
   .promo__button {
     width: 128px;
-    height: 35px;
+    height: 36px;
     margin: 0 auto 30px auto;
     border: 1px solid rgba(255, 255, 255, 0.6);
     box-sizing: border-box;
@@ -111,7 +110,7 @@
 
 @media (min-width: 1280px) {
   .promo__button {
-    margin-left: 69px;
+    margin-left: 70px;
     margin-bottom: 75px;
   }
 }
@@ -123,4 +122,5 @@
   font-size: 12px;
   text-align: center;
   line-height: 35px;
+  cursor: pointer;
 }

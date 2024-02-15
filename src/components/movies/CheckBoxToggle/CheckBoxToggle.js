@@ -6,9 +6,9 @@ function CheckBoxToggle() {
 
   return (
     <button
-    className={`checkbox__toggle ${
-      isActive ? "checkbox__toggle__active" : ""
-    }`.trim()}
+      className={`checkbox__toggle ${
+        isActive ? "checkbox__toggle__active" : ""
+      }`.trim()}
       onClick={() => setActive((prev) => !prev)}
     >
       <span className="checkbox__toggle__label">{isActive ? "OFF" : "ON"}</span>

@@ -6,8 +6,9 @@
   width: 16px;
   margin-right: 12px;
   padding: 0;
+  cursor: pointer;
 }
 
 .movie-card__toggle.movie-card__toggle__active {
-  background-color: #2BE080;
+  background-color: #2be080;
 }

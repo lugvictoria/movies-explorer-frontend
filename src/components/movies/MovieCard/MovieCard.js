@@ -1,40 +1,56 @@
 import MovieCardToggle from "../MovieCardToggle/MovieCardToggle";
-import { useState, useRef } from "react";
+import MovieCardRemove from "../MovieCardRemove/MovieCardRemove";
 import "./MovieCard.css";
 
-function MovieCard({ name, duration, thumbnail, type }) {
-  const [isSaved, setIsSaved] = useState(false);
-
-  function handleClickSave() {
-    setIsSaved((state) => !state);
-  }
-
-  const ref = useRef();
-
-  function handleClickDelete() {
-    setIsSaved(false);
-    ref.current.remove();
-  }
-
+function MovieCard({ movie, type, toggleReducer }) {
   function convertToHoursAndMinutes(duration) {
-    var hours = Math.floor(duration / 60);
-    var minutes = duration % 60;
+    const hours = Math.floor(duration / 60);
+    const minutes = duration % 60;
+
     return hours + "ч" + minutes + "м";
   }
 
+  function isMovieHasOwner() {
+    return (
+      "owner" in movie &&
+      typeof movie.owner === "object" &&
+      Object.keys(movie.owner).length > 0
+    );
+  }
+
   return (
-    <li className="movie-card" ref={ref}>
-      <img
-        src={thumbnail}
-        alt={`Кадр из фильма ${name}`}
-        className="movie-card__photo"
-      />
+    <li className="movie-card">
+      <a href={movie.trailerLink} target="_blank" rel="noreferrer">
+        <img
+          src={movie.thumbnail}
+          alt={`Кадр из фильма ${movie.nameRU}`}
+          className="movie-card__photo"
+        />
+      </a>
       <div className="movie-card__block">
-        <h3 className="movie-card__name">{name}</h3>
-        <MovieCardToggle />
+        <h3 className="movie-card__name">
+          <a href={movie.trailerLink} target="_blank" rel="noreferrer">
+            {movie.nameRU}
+          </a>
+        </h3>
+
+        {type === "saved" ? (
+          <MovieCardRemove onRemove={() => toggleReducer("remove", movie)} />
+        ) : (
+          <MovieCardToggle
+            isActive={isMovieHasOwner()}
+            onToggle={(value) => {
+              toggleReducer(value ? "add" : "remove", movie);
+            }}
+          />
+        )}
       </div>
-      <p className="movie-card__time">{`${convertToHoursAndMinutes(duration)}`}</p>
+
+      <p className="movie-card__time">{`${convertToHoursAndMinutes(
+        movie.duration
+      )}`}</p>
     </li>
   );
 }
+
 export default MovieCard;

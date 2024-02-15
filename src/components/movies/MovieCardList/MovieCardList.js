@@ -1,33 +1,67 @@
-import React from "react";
 import MoviesCard from "../MovieCard/MovieCard";
+import MainApi from "../../../utils/MainApi";
 import "./MovieCardList.css";
 
-import testData from "../../../utils/testData";
+function MoviesCardList({
+  type = "all",
+  movies = [],
+  removeMovie = undefined,
+  pushOwner = undefined,
+}) {
+  async function removeSavedMovie(movieId) {
+    const ownerId = movies?.find((it) => it.movieId === movieId)?._id;
 
-function MoviesCardList({ type }) {
-  const [movies, setMovies] = React.useState([]);
+    if (!ownerId) {
+      console.error("Не удалось найти ownerId!");
+      alert("Не удалось удалить фильм из сохраненных!");
+      return;
+    }
 
-  function testGetMovies() {
-    setMovies(testData);
+    try {
+      await MainApi.removeSavedMovie(ownerId);
+      if (typeof removeMovie !== "function") return;
+      removeMovie(movieId);
+    } catch (e) {
+      console.error(e);
+      alert("Не удалось удалить фильм из сохраненных!");
+    }
   }
 
-  React.useEffect(() => {
-    testGetMovies();
-  }, []);
+  async function addSavedMovie(movie) {
+    try {
+      const data = await MainApi.addSavedMovie(movie);
+      if (typeof pushOwner !== "function") return;
+
+      pushOwner(data?.movieId, {
+        _id: data?._id,
+        owner: data?.owner,
+      });
+    } catch (e) {
+      console.error(e);
+      alert("Не удалось добавить фильм в сохраненные!");
+    }
+  }
+
+  function toggleReducer(action, movie) {
+    switch (action) {
+      case "add":
+        addSavedMovie(movie).then();
+        break;
+      case "remove":
+        removeSavedMovie(movie.movieId).then();
+        break;
+    }
+  }
 
   return (
     <ul className="movie-card-list" aria-label="Список фильмов">
       {movies.map((movie) => {
         return (
           <MoviesCard
-            key={movie.id}
-            name={movie.nameRU}
-            duration={movie.duration}
-            thumbnail={
-              "https://api.nomoreparties.co/" +
-              movie.image.formats.thumbnail.url
-            }
-            // type={type}
+            movie={movie}
+            type={type}
+            toggleReducer={toggleReducer}
+            key={movie.movieId}
           />
         );
       })}
