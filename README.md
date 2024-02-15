@@ -48,4 +48,4 @@ https://www.figma.com/file/4VVPj4OIng00jjLDZ403r3/dark-5?type=design&node-id=932
 
 ## Статус разработки
 
-⚒️ _Завершен_
+⚒️ _Завершено_

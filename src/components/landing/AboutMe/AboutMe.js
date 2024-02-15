@@ -1,20 +1,20 @@
 import "./AboutMe.css";
-import photo from "../../../images/photo_student.svg";
+import photo from "../../../images/photo_student.jpg";
 
 function AboutMe() {
   return (
     <section className="about-me__section">
-      <p className="about-me__name-section">Студент</p>
+      <p className="about-me__name-section">Студентка</p>
       <div className="about-me__table">
         <div className="about-me__description">
-          <h3 className="about-me__name">Виталий</h3>
-          <p className="about-me__subtitle">Фронтенд-разработчик, 30 лет</p>
+          <h3 className="about-me__name">Виктория</h3>
+          <p className="about-me__subtitle">Фронтенд-разработчик</p>
           <p className="about-me__text">
-            Я родился и живу в Саратове, закончил факультет экономики СГУ. У
-            меня есть жена и дочь. Я люблю слушать музыку, а ещё увлекаюсь
-            бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ
-            Контур». После того, как прошёл курс по веб-разработке, начал
-            заниматься фриланс-заказами и ушёл с постоянной работы.
+            Я родилась и живу в Ростове-на-Дону, закончила факультет прикладной математики ЮФУ.
+            После окончания университета работала системным администратором. У меня есть
+            взрослый сын, он тоже работает в IT сфере. В качестве хобби увлекаюсь искусством и дизайном,
+            изготовлением дизайнерских вещей. С 2012 года работала в сфере обучения и образования.
+            После того, как прошла курс по веб-разработке, занимаюсь созданием сайтов в сфере обучения.
           </p>
           <ul className="about-me__link-list">
             <li className="about-me__link-list-item">
