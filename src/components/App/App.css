@@ -1,13 +1,8 @@
 /* Файл - normalize.css */
-@import "normalize.css";
+@import url(../../vendor/normalize.css);
 
 /* Шрифтовая схема - Inter*/
-@import url("../../vendor/fonts/inter-web/inter.css");
-
-body,
-body * {
-  box-sizing: border-box;
-}
+@import url(../../vendor/fonts/inter-web/inter.css);
 
 .page {
   width: 100%;

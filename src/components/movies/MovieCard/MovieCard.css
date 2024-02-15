@@ -1,16 +1,21 @@
 .movie-card {
+  flex-direction: column;
   background-color: #222222;
   border-radius: 10px;
   color: var(--text-on-page);
   filter: drop-shadow(16px 16px 24px #000000);
 }
 
-.movie-card a {
-  text-decoration: none;
-  color: inherit;
-  font-size: inherit;
-  display: flex;
-  flex-direction: column;
+@media (min-width: 1280px) {
+  .movie-card {
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .movie-card {
+    max-width: 400px;
+  }
 }
 
 .movie-card__block {
@@ -20,28 +25,67 @@
   padding-top: 10px;
 }
 
+@media (min-width: 768px) {
+  .movie-card__block {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movie-card__block {
+    padding-top: 10px;
+  }
+}
+
 .movie-card__name {
   max-width: 206px;
   grid-area: name;
-  margin: 0 0 0 12px;
+  margin: 0;
+  margin-left: 12px;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
   overflow-wrap: anywhere;
-  color: white;
+}
+
+@media (min-width: 768px) {
+  .movie-card__name {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 .movie-card__time {
   grid-area: duration;
   padding-top: 14px;
   padding-bottom: 14px;
-  margin: 0 0 0 12px;
+  margin: 0;
+  margin-left: 12px;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
   color: var(--text-on-caption);
+}
+
+@media (min-width: 768px) {
+  .movie-card__time {
+    font-size: 11px;
+    line-height: 13px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movie-card__time {
+    font-size: 11px;
+    line-height: 13px;
+    padding-bottom: 14px;
+  }
 }
 
 .movie-card__photo {
@@ -56,47 +100,5 @@
 .movie-card__button {
   grid-area: button;
   justify-self: center;
-  /*margin-inline: var(--gap);*/
-}
-
-@media (min-width: 768px) {
-  .movie-card__name {
-    font-size: 13px;
-    line-height: 16px;
-  }
-
-  .movie-card__block {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 12px;
-  }
-
-  .movie-card__time {
-    font-size: 11px;
-    line-height: 13px;
-    padding-top: 10px;
-    padding-bottom: 12px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .movie-card {
-    max-width: 270px;
-  }
-
-  .movie-card__block {
-    padding-top: 10px;
-  }
-
-  .movie-card__time {
-    font-size: 11px;
-    line-height: 13px;
-    padding-bottom: 14px;
-  }
-}
-
-@media (min-width: 1300px) {
-  .movie-card {
-    max-width: 400px;
-  }
+  margin-inline: var(--gap);
 }

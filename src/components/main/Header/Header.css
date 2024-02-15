@@ -8,6 +8,19 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .header {
+    padding-inline: 30px;
+    padding-top: 17px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding-inline: 70px;
+  }
+}
+
 .header__button-container_films {
   display: flex;
   gap: 16px;
@@ -19,9 +32,11 @@
 }
 
 .header__button-container {
+  max-width: 100px;
   max-height: 32px;
-  display: none;
-  column-gap: 30px;
+  display: flex;
+  max-width: 100px;
+  /* gap: 30px; */
   align-items: center;
 }
 
@@ -30,6 +45,12 @@
   display: flex;
   gap: 14px;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .header__button-entrance {
+    gap: 30px;
+  }
 }
 
 .header__right-menu-open {
@@ -68,9 +89,13 @@
   text-decoration: none;
 }
 
-.header__button.active {
-  /*border-bottom: 1px solid white;*/
-  text-decoration: underline;
+@media (min-width: 768px) {
+  .header__button {
+    font-size: 12px;
+    line-height: 16px;
+    min-height: 32px;
+    min-width: 76px;
+  }
 }
 
 .header__button:hover {
@@ -85,22 +110,11 @@
 }
 
 .header__account-button {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  padding-left: 11px;
   width: 100px;
   height: 32px;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 12px;
-  text-decoration: none;
-  color: #fff;
-  background-image: url("../../../images/account.svg");
-  background-repeat: no-repeat;
-  background-size: 26px;
-  background-position: center right 0;
+  background: #ffffff;
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 40px;
 }
 
 .header__menu-button {
@@ -110,6 +124,30 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  .header__mobile-toggle {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    display: inline-flex;
+    padding: 0;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .header__icon-menu {
+    width: 40px;
+    height: 43px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__icon-menu {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .header__account-button:hover {
@@ -122,111 +160,74 @@
   opacity: 0.6;
 }
 
-.header__menu-button {
-  display: none;
-}
-
-/* .header__button-entrance {
-  display: none;
-} */
-
-.header__button-container_films {
-  display: none;
-}
-
-/*.header__button-container {*/
-/*  display: none;*/
-/*}*/
-
 /*Страница Landing*/
-/*.landing-page .header {*/
-/*  background-color: var(--promo);*/
-/*}*/
+.landing-page .header {
+  background-color: var(--promo);
+}
 
-/*.landing-page .header__button-container_films {*/
-/*  display: none;*/
-/*}*/
+.landing-page .header__button-container_films {
+  display: none;
+}
 
-/*.landing-page .header__button-container {*/
-/*  display: none;*/
-/*}*/
+.landing-page .header__button-container {
+  display: none;
+}
+
+.landing-page .header__menu-button {
+  display: none;
+}
+
+/*Страница Movies*/
+.movies-page .header__button-entrance {
+  display: none;
+}
+
+.movies-page .header__button-container_films {
+  display: none;
+}
+
+.movies-page .header__button-container {
+  display: none;
+}
 
 /*Страница Profile*/
-/*.profile-page .header__button-entrance {*/
-/*  display: none;*/
-/*}*/
-
-/*.profile-page .header__button-container_films {*/
-/*  display: none;*/
-/*}*/
-
-/*.profile-page .header__button-container {*/
-/*  display: none;*/
-/*}*/
-
-@media (min-width: 320px) {
-  .header__mobile-toggle {
-    border: 0;
-    outline: none;
-    background-color: transparent;
-    display: inline-flex;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .header__icon-menu {
-    width: 40px;
-    height: 43px;
-  }
+.profile-page .header__button-entrance {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  .header {
-    padding-inline: 30px;
-    padding-top: 17px;
-  }
+.profile-page .header__button-container_films {
+  display: none;
+}
 
-  .header__icon-menu {
-    width: 44px;
-    height: 44px;
-  }
-
-  .header__button {
-    font-size: 12px;
-    line-height: 16px;
-    min-height: 32px;
-    min-width: 76px;
-  }
-
-  .header__button-entrance {
-    gap: 30px;
-  }
+.profile-page .header__button-container {
+  display: none;
 }
 
 @media (min-width: 769px) {
-  .header__button-container_films {
+  .movies-page .header__button-container_films {
     display: flex;
   }
 
-  .header__button-container {
+  .movies-page .header__button-container {
     display: flex;
   }
 
-  .header__menu-button {
+  .movies-page .header__menu-button {
     display: none;
   }
 
-  .header__menu-button {
+  .profile-page .header__button-container_films {
+    display: flex;
+  }
+  .profile-page .header__button-container {
+    display: flex;
+  }
+
+  .profile-page .header__menu-button {
     display: none;
   }
 
   .header__mobile-toggle {
     display: none;
-  }
-}
-
-@media (min-width: 1280px) {
-  .header {
-    padding-inline: 70px;
   }
 }

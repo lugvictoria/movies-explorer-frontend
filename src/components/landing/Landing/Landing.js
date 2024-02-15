@@ -9,10 +9,9 @@ import Student from "../Student/Student";
 function Landing() {
   return (
     <div className="landing-page">
-      <Header isThemed>
+      <Header isThemed={true}>
         <AuthLinks />
       </Header>
-
       <main>
         <Promo />
         <AboutProject />

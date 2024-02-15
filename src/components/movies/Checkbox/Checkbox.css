@@ -40,13 +40,13 @@
   height: 20px;
   border-radius: 20px;
   box-sizing: border-box;
-  background-image: url(./../../../images/smalltumboff.svg);
+  background-image: url(./../../../images/smalltumb.svg);
   color: var(--text-on-page);
 }
 
 /* Нажатое состояние - смена иконки */
-.checkbox__system-box:checked + .checkbox__custom-checkbox {
-  background-image: url(./../../../images/smalltumb.svg);
+.checkbox__system-box:checked+.checkbox__custom-checkbox {
+  background-image: url(./../../../images/smalltumboff.svg);
 }
 
 /* При наведении */
@@ -64,13 +64,13 @@
 }
 
 /* Неактивное состояние */
-.checkbox__system-box:disabled + .checkbox__custom-checkbox {
+.checkbox__system-box:disabled+.checkbox__custom-checkbox {
   opacity: 0.7;
 }
 
 /* выключенное состояние рычага */
 .checkbox__custom-checkbox::after {
-  content: "";
+  content: '';
   box-sizing: border-box;
   height: 40%;
   border-radius: 50%;
@@ -80,6 +80,6 @@
 }
 
 /* Нажатое состояние */
-.checkbox__system-box:checked + .checkbox__custom-checkbox::after {
+.checkbox__system-box:checked+.checkbox__custom-checkbox::after {
   left: 26px;
 }
