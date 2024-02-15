@@ -12,6 +12,7 @@
 -[ссылка на пул реквест](https://github.com/lugvictoria/movies-explorer-frontend/pull/4) https://github.com/lugvictoria/movies-explorer-frontend/pull/4
 
 ### Яндекс Cloud
+
 -[ссылка на фронтенд на сервере виртуальной машины](movies-lugvictoria.nomoredomainsicu.ru) 'movies-lugvictoria.nomoredomainsicu.ru'
 
 -[ccылка на бэкенд на сервере виртуальной машины](api.movies-lugvictoria.nomoredomains.work) 'api.movies-lugvictoria.nomoredomains.work'
@@ -47,4 +48,4 @@ https://www.figma.com/file/4VVPj4OIng00jjLDZ403r3/dark-5?type=design&node-id=932
 
 ## Статус разработки
 
-⚒️ _В процессе разработки_
+⚒️ _Завершен_
